@@ -1,0 +1,21 @@
+{
+  "name": "self-respect-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension that helps maintain self-respect by redirecting from harmful sites to healthier alternatives",
+  "main": "dist/content.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "npm run build && echo 'Ready to load in Chrome'",
+    "watch": "npx tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["chrome-extension", "self-respect", "digital-wellbeing", "productivity", "focus"],
+  "author": "Jesus",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-types": "^0.1.425"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
