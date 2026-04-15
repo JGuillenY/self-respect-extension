@@ -59,7 +59,9 @@ The extension now includes a comprehensive settings page with the following feat
 ### General Settings
 - **Extension Status**: Enable/disable the entire extension
 - **Notifications**: Toggle confirmation messages
-- **Redirect Delay**: Choose how long to show the blocking overlay (1-10 seconds)
+- **Auto Redirect**: Enable/disable automatic redirect to alternatives
+- **Redirect Delay**: Choose how long to show the blocking overlay before auto-redirect (1-10 seconds, only shown when auto-redirect is enabled)
+- **Blocking Level**: Select protection intensity (Soft, Puzzle, Hard)
 
 ### Category Management
 - Toggle individual categories on/off

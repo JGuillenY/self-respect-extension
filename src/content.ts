@@ -18,24 +18,26 @@ async function checkAndRedirect() {
     // Increment block counter
     await incrementBlockCounter();
 
-    // Get user settings to determine blocking level
+    // Get user settings
     const settings = await getSettings();
     const blockingLevel = settings?.blockingLevel || "soft";
+    const autoRedirect = settings?.autoRedirect !== false; // default to true
+    const redirectDelay = settings?.redirectDelay || 3;
     const redirectUrl = getRedirectUrlForDomain(currentDomain);
 
     // Handle different blocking levels
     switch (blockingLevel) {
       case "soft":
-        showSoftBlockOverlay(currentDomain, redirectUrl);
+        showSoftBlockOverlay(currentDomain, redirectUrl, autoRedirect, redirectDelay);
         break;
       case "puzzle":
-        showPuzzleBlockOverlay(currentDomain, redirectUrl);
+        showPuzzleBlockOverlay(currentDomain, redirectUrl, autoRedirect, redirectDelay);
         break;
       case "hard":
-        showHardBlockOverlay(currentDomain, redirectUrl);
+        showHardBlockOverlay(currentDomain, redirectUrl, autoRedirect, redirectDelay);
         break;
       default:
-        showSoftBlockOverlay(currentDomain, redirectUrl);
+        showSoftBlockOverlay(currentDomain, redirectUrl, autoRedirect, redirectDelay);
     }
   }
 }
@@ -121,9 +123,29 @@ function createBaseOverlay(): HTMLDivElement {
 }
 
 // Soft Block - Current implementation with redirect option
-function showSoftBlockOverlay(blockedDomain: string, redirectUrl: string) {
-  console.log("Running soft block overlay");
+function showSoftBlockOverlay(
+  blockedDomain: string, 
+  redirectUrl: string, 
+  autoRedirect: boolean = true, 
+  redirectDelay: number = 3
+) {
+  console.log("Running soft block overlay", { autoRedirect, redirectDelay });
   removeExistingOverlay();
+
+  const countdownMessage = autoRedirect 
+    ? `You'll be redirected to a healthier alternative in ${redirectDelay} seconds.`
+    : "This site may not align with your goals for self-respect and wellbeing.";
+
+  const redirectInfo = autoRedirect
+    ? `<div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+        <p style="margin: 0; font-size: 1em;">
+          Redirecting to: <br>
+          <a href="${redirectUrl}" style="color: #a3e4d7; text-decoration: underline; word-break: break-all;">
+            ${redirectUrl}
+          </a>
+        </p>
+      </div>`
+    : '';
 
   const overlay = createBaseOverlay();
   overlay.innerHTML = `
@@ -133,20 +155,12 @@ function showSoftBlockOverlay(blockedDomain: string, redirectUrl: string) {
         You were about to visit <strong>${blockedDomain}</strong>.
       </p>
       <p style="font-size: 1.1em; margin-bottom: 40px; line-height: 1.6;">
-        This site may not align with your goals for self-respect and wellbeing.
-        You'll be redirected to a healthier alternative in 3 seconds.
+        ${countdownMessage}
       </p>
-      <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
-        <p style="margin: 0; font-size: 1em;">
-          Redirecting to: <br>
-          <a href="${redirectUrl}" style="color: #a3e4d7; text-decoration: underline; word-break: break-all;">
-            ${redirectUrl}
-          </a>
-        </p>
-      </div>
+      ${redirectInfo}
       <div style="display: flex; gap: 15px; justify-content: center;">
         <button id="redirect-now" class="overlay-button primary">
-          Redirect Now
+          ${autoRedirect ? 'Redirect Now' : 'Go to Healthier Alternative'}
         </button>
         <button id="cancel-redirect" class="overlay-button secondary">
           Cancel (Temporarily Allow)
@@ -160,18 +174,46 @@ function showSoftBlockOverlay(blockedDomain: string, redirectUrl: string) {
 
   document.body.appendChild(overlay);
 
+  // Start auto-redirect timer if enabled
+  let redirectTimer: number | null = null;
+  if (autoRedirect) {
+    redirectTimer = window.setTimeout(() => {
+      window.location.href = redirectUrl;
+    }, redirectDelay * 1000);
+    
+    // Update countdown display every second
+    let timeLeft = redirectDelay;
+    const countdownInterval = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+      }
+    }, 1000);
+  }
+
   document.getElementById("redirect-now")?.addEventListener("click", () => {
+    if (redirectTimer) {
+      clearTimeout(redirectTimer);
+    }
     window.location.href = redirectUrl;
   });
 
   document.getElementById("cancel-redirect")?.addEventListener("click", () => {
+    if (redirectTimer) {
+      clearTimeout(redirectTimer);
+    }
     overlay.remove();
   });
 }
 
 // Puzzle Block - Requires solving a hard puzzle
-function showPuzzleBlockOverlay(blockedDomain: string, redirectUrl: string) {
-  console.log("Running puzzle block overlay");
+function showPuzzleBlockOverlay(
+  blockedDomain: string, 
+  redirectUrl: string,
+  autoRedirect: boolean = true,
+  redirectDelay: number = 3
+) {
+  console.log("Running puzzle block overlay", { autoRedirect, redirectDelay });
   removeExistingOverlay();
 
   const puzzle = generatePuzzle(8); // Generate hard puzzle (difficulty 8+)
@@ -227,7 +269,9 @@ function showPuzzleBlockOverlay(blockedDomain: string, redirectUrl: string) {
         </div>
         <div style="display: flex; gap: 15px; justify-content: center;">
           <button id="proceed-to-site" class="overlay-button primary">Proceed to ${blockedDomain}</button>
-          <button id="choose-alternative" class="overlay-button secondary">Choose Healthier Alternative</button>
+          <button id="choose-alternative" class="overlay-button secondary">
+            ${autoRedirect ? 'Choose Healthier Alternative' : 'Go to Healthier Alternative'}
+          </button>
         </div>
       </div>
       
@@ -312,8 +356,13 @@ function showPuzzleBlockOverlay(blockedDomain: string, redirectUrl: string) {
 }
 
 // Hard Block - No access allowed
-function showHardBlockOverlay(blockedDomain: string, redirectUrl: string) {
-  console.log("Running hard block overlay");
+function showHardBlockOverlay(
+  blockedDomain: string, 
+  redirectUrl: string,
+  autoRedirect: boolean = true,
+  redirectDelay: number = 3
+) {
+  console.log("Running hard block overlay", { autoRedirect, redirectDelay });
   removeExistingOverlay();
 
   const overlay = createBaseOverlay();
@@ -326,6 +375,7 @@ function showHardBlockOverlay(blockedDomain: string, redirectUrl: string) {
       <p style="font-size: 1.1em; margin-bottom: 40px; line-height: 1.6;">
         This site is incompatible with your self-respect goals.
         Access is not permitted under any circumstances.
+        ${autoRedirect ? `You will be redirected in ${redirectDelay} seconds.` : ''}
       </p>
       <div style="background: rgba(244, 67, 54, 0.2); padding: 25px; border-radius: 15px; margin-bottom: 30px; border: 2px solid rgba(244, 67, 54, 0.5);">
         <p style="font-size: 1.3em; margin: 0; color: #f44336; text-align: center;">
@@ -335,6 +385,7 @@ function showHardBlockOverlay(blockedDomain: string, redirectUrl: string) {
           This is your highest level of protection. No bypass options are available.
         </p>
       </div>
+      ${autoRedirect ? `
       <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
         <p style="margin: 0; font-size: 1em;">
           You will be redirected to: <br>
@@ -342,10 +393,10 @@ function showHardBlockOverlay(blockedDomain: string, redirectUrl: string) {
             ${redirectUrl}
           </a>
         </p>
-      </div>
+      </div>` : ''}
       <div style="display: flex; gap: 15px; justify-content: center;">
         <button id="redirect-now" class="overlay-button primary">
-          Go to Healthier Alternative
+          ${autoRedirect ? 'Go to Healthier Alternative' : 'Go to Healthier Alternative'}
         </button>
       </div>
       <div style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
@@ -356,7 +407,27 @@ function showHardBlockOverlay(blockedDomain: string, redirectUrl: string) {
 
   document.body.appendChild(overlay);
 
+  // Start auto-redirect timer if enabled
+  let redirectTimer: number | null = null;
+  if (autoRedirect) {
+    redirectTimer = window.setTimeout(() => {
+      window.location.href = redirectUrl;
+    }, redirectDelay * 1000);
+    
+    // Update countdown display every second
+    let timeLeft = redirectDelay;
+    const countdownInterval = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+      }
+    }, 1000);
+  }
+
   document.getElementById("redirect-now")?.addEventListener("click", () => {
+    if (redirectTimer) {
+      clearTimeout(redirectTimer);
+    }
     window.location.href = redirectUrl;
   });
 }

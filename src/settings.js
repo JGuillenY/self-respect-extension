@@ -224,6 +224,7 @@ async function initializeStorage() {
       customDomains: [],
       blockedCategories: ["Adult Content", "Social Media", "Gambling"],
       showNotifications: true,
+      autoRedirect: true,
       redirectDelay: 3,
       blockingLevel: "soft",
       lastUpdated: Date.now(),
@@ -259,13 +260,21 @@ async function loadSettings() {
   const notificationsToggle = document.getElementById("showNotifications");
   notificationsToggle.checked = settings.showNotifications;
 
+  // Auto redirect toggle
+  const autoRedirectToggle = document.getElementById("autoRedirect");
+  autoRedirectToggle.checked = settings.autoRedirect !== false; // default to true
+
   // Redirect delay
   const redirectDelay = document.getElementById("redirectDelay");
   redirectDelay.value = settings.redirectDelay.toString();
-
+  
   // Blocking level
   const blockingLevel = document.getElementById("blockingLevel");
   blockingLevel.value = settings.blockingLevel || "soft";
+  
+  // Show/hide redirect delay based on auto redirect setting
+  const redirectDelayContainer = document.getElementById("redirectDelayContainer");
+  redirectDelayContainer.style.display = autoRedirectToggle.checked ? "flex" : "none";
 
   // Update extension status in real-time
   extensionToggle.addEventListener("change", async function () {
@@ -290,6 +299,24 @@ async function loadSettings() {
         this.checked
           ? "Notifications enabled"
           : "Notifications disabled",
+      );
+    }
+  });
+
+  autoRedirectToggle.addEventListener("change", async function () {
+    const updatedSettings = await getSettings();
+    if (updatedSettings) {
+      updatedSettings.autoRedirect = this.checked;
+      await saveSettings(updatedSettings);
+      
+      // Show/hide redirect delay input
+      const redirectDelayContainer = document.getElementById("redirectDelayContainer");
+      redirectDelayContainer.style.display = this.checked ? "flex" : "none";
+      
+      showNotification(
+        this.checked
+          ? "Auto redirect enabled"
+          : "Auto redirect disabled",
       );
     }
   });

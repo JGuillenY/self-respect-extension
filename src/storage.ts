@@ -19,6 +19,7 @@ export interface UserSettings {
   customDomains: BlockedSite[];
   blockedCategories: string[]; // Category names that are enabled
   showNotifications: boolean;
+  autoRedirect: boolean;
   redirectDelay: number; // in seconds
   blockingLevel: BlockingLevel;
   lastUpdated: number;
@@ -37,6 +38,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   customDomains: [],
   blockedCategories: ["Adult Content", "Social Media", "Gambling"],
   showNotifications: true,
+  autoRedirect: true,
   redirectDelay: 3,
   blockingLevel: "soft",
   lastUpdated: Date.now(),

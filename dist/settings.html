@@ -431,8 +431,21 @@
           </label>
         </div>
 
+        <div class="toggle-group">
+          <div>
+            <div style="font-weight: 500">Auto Redirect</div>
+            <div style="font-size: 13px; opacity: 0.8">
+              Automatically redirect to healthier alternatives
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="autoRedirect" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
         <div class="settings-group">
-          <div class="setting-item">
+          <div class="setting-item" id="redirectDelayContainer">
             <label class="setting-label" for="redirectDelay"
               >Redirect Delay (seconds)</label
             >
