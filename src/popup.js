@@ -2,15 +2,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("toggleEnabled");
   const statusText = document.getElementById("statusText");
+  const blockingLevelText = document.getElementById("blockingLevelText");
   const totalBlocksEl = document.getElementById("totalBlocks");
   const todayBlocksEl = document.getElementById("todayBlocks");
   const customDomainsEl = document.getElementById("customDomains");
 
   // Load saved state and statistics
-  chrome.storage.sync.get(["enabled", "blockingStats", "blockedSites"], function (result) {
+  chrome.storage.sync.get(["enabled", "blockingStats", "blockedSites", "selfRespectSettings"], function (result) {
     // Extension enabled state
     toggle.checked = result.enabled !== false; // default to true
     updateStatus(toggle.checked);
+    
+    // Blocking level
+    const settings = result.selfRespectSettings || {};
+    const blockingLevel = settings.blockingLevel || "soft";
+    updateBlockingLevel(blockingLevel);
     
     // Statistics
     const stats = result.blockingStats || { totalBlocks: 0, todayBlocks: 0, customDomains: 0 };
@@ -57,6 +63,23 @@ document.addEventListener("DOMContentLoaded", function () {
     statusText.style.color = enabled ? "#4CAF50" : "#FF9800";
   }
   
+  function updateBlockingLevel(level) {
+    const levelMap = {
+      "soft": "Soft",
+      "puzzle": "Puzzle",
+      "hard": "Hard"
+    };
+    
+    const levelColors = {
+      "soft": "#4CAF50",    // Green
+      "puzzle": "#FF9800",   // Orange
+      "hard": "#F44336"     // Red
+    };
+    
+    blockingLevelText.textContent = levelMap[level] || "Soft";
+    blockingLevelText.style.color = levelColors[level] || "#4CAF50";
+  }
+  
   // Listen for storage changes to update statistics in real-time
   chrome.storage.onChanged.addListener(function(changes, namespace) {
     if (namespace === 'sync') {
@@ -80,6 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
             chrome.storage.sync.set({ blockingStats: stats });
           }
         });
+      }
+      
+      if (changes.selfRespectSettings) {
+        const settings = changes.selfRespectSettings.newValue || {};
+        const blockingLevel = settings.blockingLevel || "soft";
+        updateBlockingLevel(blockingLevel);
       }
     }
   });

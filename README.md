@@ -8,6 +8,7 @@ A Chrome extension that helps you maintain self-respect by redirecting from webs
   1. **Soft Block**: Gentle overlay with redirect option (default)
   2. **Puzzle Block**: Requires solving hard puzzles to proceed
   3. **Hard Block**: Absolute protection with no bypass options
+- **Blocking Level Display**: Current protection level shown in popup with color coding
 - **Smart Blocking**: Automatically detects and blocks access to sites in predefined categories
 - **Respectful Redirection**: Shows thoughtful overlays before redirecting to positive alternatives
 - **Three Main Categories**:
@@ -79,6 +80,12 @@ The extension now includes a comprehensive settings page with the following feat
 - **Blocks Today**: Daily blocking statistics
 - **Custom Domains**: Number of custom domains you've added
 - **Reset Statistics**: Clear all statistics data
+
+### Popup Display
+- **Extension Status**: Active/Paused with color coding
+- **Blocking Level**: Current protection level (Soft/Puzzle/Hard) with color coding
+- **Real-time Updates**: Statistics update automatically
+- **Quick Access**: One-click settings access
 
 ### Accessing Settings
 1. Click the extension icon in Chrome
