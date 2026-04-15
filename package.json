@@ -4,18 +4,22 @@
   "description": "Chrome extension that helps maintain self-respect by redirecting from harmful sites to healthier alternatives",
   "main": "dist/content.js",
   "scripts": {
-    "build": "node build.js",
-    "dev": "npm run build && echo 'Ready to load in Chrome'",
-    "watch": "npx tsc --watch",
-    "clean": "rm -rf dist"
+    "build": "rm -rf dist && mkdir dist && cp -r src/icons dist/icons && cp src/manifest.json dist/manifest.json && cp src/popup.html dist/popup.html && esbuild src/popup.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/popup.js && esbuild src/content.ts --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/content.js"
   },
-  "keywords": ["chrome-extension", "self-respect", "digital-wellbeing", "productivity", "focus"],
+  "keywords": [
+    "chrome-extension",
+    "self-respect",
+    "digital-wellbeing",
+    "productivity",
+    "focus"
+  ],
   "author": "Jesus",
   "license": "MIT",
   "dependencies": {
     "chrome-types": "^0.1.425"
   },
   "devDependencies": {
+    "esbuild": "0.28.0",
     "typescript": "^6.0.2"
   }
 }

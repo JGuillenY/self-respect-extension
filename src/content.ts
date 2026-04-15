@@ -1,41 +1,64 @@
-import { isDomainBlocked, getRedirectUrlForDomain } from './constants';
+import { isDomainBlocked, getRedirectUrlForDomain } from "./constants";
 
 // Check current domain on page load
 function checkAndRedirect() {
+  console.log("Running check and redirect");
   const currentDomain = window.location.hostname;
-  
+
+  console.log({ currentDomain });
+
   if (isDomainBlocked(currentDomain)) {
     console.log(`[Self Respect] Blocking domain: ${currentDomain}`);
-    
+
     const redirectUrl = getRedirectUrlForDomain(currentDomain);
-    
+
     // Create a blocking overlay before redirecting
     showBlockingOverlay(currentDomain, redirectUrl);
-    
+
     // Redirect after a short delay to show the message
-    setTimeout(() => {
-      window.location.href = redirectUrl;
-    }, 3000);
+    // setTimeout(() => {
+    //   window.location.href = redirectUrl;
+    // }, 3000);
   }
 }
 
 function showBlockingOverlay(blockedDomain: string, redirectUrl: string) {
+  console.log("Running show blocking overlay");
   // Remove any existing overlay
-  const existingOverlay = document.getElementById('self-respect-overlay');
+  const existingOverlay = document.getElementById("self-respect-overlay");
   if (existingOverlay) {
     existingOverlay.remove();
   }
-  
+
   // Create overlay
-  const overlay = document.createElement('div');
-  overlay.id = 'self-respect-overlay';
+  const overlay = document.createElement("div");
+  overlay.id = "self-respect-overlay";
   overlay.style.cssText = `
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(
+      90deg,
+      hsla(205, 46%, 10%, 1) 0%,
+      hsla(191, 28%, 23%, 1) 50%,
+      hsla(207, 41%, 27%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      90deg,
+      hsla(205, 46%, 10%, 1) 0%,
+      hsla(191, 28%, 23%, 1) 50%,
+      hsla(207, 41%, 27%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      90deg,
+      hsla(205, 46%, 10%, 1) 0%,
+      hsla(191, 28%, 23%, 1) 50%,
+      hsla(207, 41%, 27%, 1) 100%
+    );
     color: white;
     z-index: 999999;
     display: flex;
@@ -46,11 +69,11 @@ function showBlockingOverlay(blockedDomain: string, redirectUrl: string) {
     text-align: center;
     padding: 20px;
   `;
-  
+
   // Create content
   overlay.innerHTML = `
     <div style="max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px);">
-      <h1 style="font-size: 2.5em; margin-bottom: 20px;">🌱 Self Respect</h1>
+      <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊</h1>
       <p style="font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
         You were about to visit <strong>${blockedDomain}</strong>.
       </p>
@@ -97,30 +120,23 @@ function showBlockingOverlay(blockedDomain: string, redirectUrl: string) {
       </div>
     </div>
   `;
-  
+
+  console.log(document.body);
   // Add to page
   document.body.appendChild(overlay);
-  
+
   // Add event listeners
-  document.getElementById('redirect-now')?.addEventListener('click', () => {
+  document.getElementById("redirect-now")?.addEventListener("click", () => {
     window.location.href = redirectUrl;
   });
-  
-  document.getElementById('cancel-redirect')?.addEventListener('click', () => {
+
+  document.getElementById("cancel-redirect")?.addEventListener("click", () => {
     overlay.remove();
     // Could add temporary allowance logic here (e.g., allow for 5 minutes)
   });
 }
 
-// Run check when page loads
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', checkAndRedirect);
-} else {
-  checkAndRedirect();
-}
-
-// Also check on history state changes (for SPAs)
-window.addEventListener('popstate', checkAndRedirect);
+checkAndRedirect();
 
 // Export for testing
 export { checkAndRedirect, showBlockingOverlay };
