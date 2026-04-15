@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Self Respect - Settings</title>
+    <style>
+      body {
+        width: auto;
+        padding: 20px;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          sans-serif;
+        background: hsla(205, 46%, 10%, 1);
+        background: linear-gradient(
+          90deg,
+          hsla(205, 46%, 10%, 1) 0%,
+          hsla(191, 28%, 23%, 1) 50%,
+          hsla(207, 41%, 27%, 1) 100%
+        );
+        color: white;
+        margin: 0;
+        justify-items: center;
+      }
+
+      .container {
+        max-width: 800px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 0 0 25px 0;
+        text-align: center;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin: 25px 0 15px 0;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 8px;
+      }
+
+      h3 {
+        font-size: 16px;
+        margin: 20px 0 10px 0;
+        font-weight: 500;
+      }
+
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .back-button:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .section {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .toggle-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+      }
+
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+      }
+
+      .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: #4caf50;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(24px);
+      }
+
+      .category-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .category-item {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+      }
+
+      .category-item input {
+        margin-right: 12px;
+      }
+
+      .category-info {
+        flex: 1;
+      }
+
+      .category-name {
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+
+      .category-description {
+        font-size: 12px;
+        opacity: 0.8;
+      }
+
+      .category-stats {
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+
+      .custom-domains {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .add-domain-form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .domain-input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: white;
+        font-size: 14px;
+      }
+
+      .domain-input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .add-button {
+        background: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .add-button:hover {
+        background: #45a049;
+      }
+
+      .domains-list {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .domain-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 6px;
+        margin-bottom: 8px;
+      }
+
+      .domain-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .domain-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .domain-name {
+        font-family: monospace;
+        font-size: 14px;
+      }
+
+      .domain-category {
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+
+      .domain-actions {
+        display: flex;
+        gap: 5px;
+      }
+
+      .action-button {
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+
+      .action-button:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .action-button.delete {
+        background: rgba(244, 67, 54, 0.3);
+      }
+
+      .action-button.delete:hover {
+        background: rgba(244, 67, 54, 0.5);
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 30px;
+        opacity: 0.7;
+        font-style: italic;
+      }
+
+      .settings-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .setting-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .setting-label {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      .setting-control {
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: white;
+        font-size: 14px;
+      }
+
+      select.setting-control {
+        cursor: pointer;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 12px;
+        opacity: 0.8;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        opacity: 0.8;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      button {
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #4caf50;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="back-button" id="backBtn"><span>←</span> Back</button>
+
+    <div class="container">
+      <h1>⚙️ Settings</h1>
+
+      <!-- General Settings -->
+      <div class="section">
+        <h2>General Settings</h2>
+        <div class="toggle-group">
+          <div>
+            <div style="font-weight: 500">Extension Status</div>
+            <div style="font-size: 13px; opacity: 0.8">
+              Enable or disable the extension
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="extensionEnabled" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-group">
+          <div>
+            <div style="font-weight: 500">Show Notifications</div>
+            <div style="font-size: 13px; opacity: 0.8">
+              Show confirmation messages when blocking sites
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="showNotifications" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="settings-group">
+          <div class="setting-item">
+            <label class="setting-label" for="redirectDelay"
+              >Redirect Delay (seconds)</label
+            >
+            <select class="setting-control" id="redirectDelay">
+              <option value="1">1 second</option>
+              <option value="2">2 seconds</option>
+              <option value="3" selected>3 seconds</option>
+              <option value="5">5 seconds</option>
+              <option value="10">10 seconds</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blocked Categories -->
+      <div class="section">
+        <h2>Blocked Categories</h2>
+        <div class="category-list" id="categoriesList">
+          <!-- Categories will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Custom Domains -->
+      <div class="section">
+        <h2>Custom Domains</h2>
+        <p style="font-size: 14px; opacity: 0.9; margin-bottom: 15px">
+          Add your own domains to block. Enter domain names without http:// or
+          www.
+        </p>
+
+        <div class="custom-domains">
+          <div class="add-domain-form">
+            <input
+              type="text"
+              class="domain-input"
+              id="domainInput"
+              placeholder="example.com"
+            />
+            <select
+              class="setting-control"
+              id="domainCategory"
+              style="width: 120px"
+            >
+              <option value="Custom">Custom</option>
+              <option value="Adult Content">Adult Content</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Gambling">Gambling</option>
+              <option value="Distracting">Distracting</option>
+              <option value="Shopping">Shopping</option>
+            </select>
+            <button class="add-button" id="addDomainBtn">Add Domain</button>
+          </div>
+
+          <div class="domains-list" id="domainsList">
+            <div class="empty-state" id="emptyDomains">
+              No custom domains added yet
+            </div>
+            <!-- Custom domains will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+      <div class="section">
+        <h2>Statistics</h2>
+        <div class="stats-grid" id="statsGrid">
+          <!-- Statistics will be populated by JavaScript -->
+        </div>
+        <div style="text-align: center; margin-top: 15px">
+          <button class="action-button" id="resetStatsBtn">
+            Reset Statistics
+          </button>
+        </div>
+      </div>
+
+      <div class="footer">
+        Self Respect Extension v1.0.0<br />
+        Protecting your digital wellbeing and self-respect
+      </div>
+    </div>
+
+    <div id="notification" class="notification" style="display: none"></div>
+
+    <script src="settings.js"></script>
+  </body>
+</html>

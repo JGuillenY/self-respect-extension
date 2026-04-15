@@ -1,14 +1,21 @@
-import { isDomainBlocked, getRedirectUrlForDomain } from "./constants";
+import { isDomainBlocked as isPredefinedDomainBlocked, getRedirectUrlForDomain } from "./constants";
+import { isDomainBlocked as isCustomDomainBlocked, incrementBlockCounter } from "./storage";
 
 // Check current domain on page load
-function checkAndRedirect() {
+async function checkAndRedirect() {
   console.log("Running check and redirect");
   const currentDomain = window.location.hostname;
 
   console.log({ currentDomain });
 
-  if (isDomainBlocked(currentDomain)) {
+  // Check if domain is blocked (either predefined or custom)
+  const isBlocked = isPredefinedDomainBlocked(currentDomain) || await isCustomDomainBlocked(currentDomain);
+
+  if (isBlocked) {
     console.log(`[Self Respect] Blocking domain: ${currentDomain}`);
+
+    // Increment block counter
+    await incrementBlockCounter();
 
     const redirectUrl = getRedirectUrlForDomain(currentDomain);
 

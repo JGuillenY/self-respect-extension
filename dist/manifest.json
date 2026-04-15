@@ -16,11 +16,18 @@
       "run_at": "document_end"
     }
   ],
-  "permissions": ["storage"],
+  "permissions": ["storage", "tabs"],
   "action": {
     "default_popup": "./popup.html",
     "default_title": "Self Respect Settings"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["settings.html"],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": false
+    }
+  ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   }

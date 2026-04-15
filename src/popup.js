@@ -26,15 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Button events
   document
-    .getElementById("customizeBtn")
+    .getElementById("settingsBtn")
     .addEventListener("click", function () {
-      alert("Customization feature coming soon!");
+      // Open settings page
+      chrome.tabs.create({ url: chrome.runtime.getURL("settings.html") });
     });
 
   document
     .getElementById("viewStatsBtn")
     .addEventListener("click", function () {
-      alert("Statistics feature coming soon!");
+      // For now, just show a simple alert with stats
+      chrome.storage.sync.get(["blockingStats"], function (result) {
+        const stats = result.blockingStats || { totalBlocks: 0, todayBlocks: 0 };
+        alert(`Statistics:\n\nTotal Blocks: ${stats.totalBlocks}\nBlocks Today: ${stats.todayBlocks}`);
+      });
     });
 
   function updateStatus(enabled) {

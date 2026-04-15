@@ -10,7 +10,11 @@ A Chrome extension that helps you maintain self-respect by redirecting from webs
   1. **Adult Content** (30+ sites) - Redirects to educational resources about addiction
   2. **Social Media** (10+ sites) - Redirects to psychology resources about social media effects
   3. **Gambling** (15+ sites) - Redirects to problem gambling help resources
-- **Customizable**: Enable/disable with one click
+- **Custom Domain Management**: Add your own domains to block
+- **Advanced Settings**: Comprehensive settings page with granular control
+- **Local Storage**: All settings and blocked sites stored in browser storage
+- **Statistics Tracking**: Track how many sites have been blocked
+- **Customizable**: Enable/disable categories and individual sites
 - **Beautiful UI**: Modern, respectful interface with gradient design
 - **Privacy First**: No data collection, all processing happens locally
 
@@ -44,6 +48,37 @@ A Chrome extension that helps you maintain self-respect by redirecting from webs
 ### Testing
 Visit one of the blocked domains (like `pornhub.com` or `facebook.com`) to see the extension in action.
 
+## ⚙️ Settings & Customization
+
+The extension now includes a comprehensive settings page with the following features:
+
+### General Settings
+- **Extension Status**: Enable/disable the entire extension
+- **Notifications**: Toggle confirmation messages
+- **Redirect Delay**: Choose how long to show the blocking overlay (1-10 seconds)
+
+### Category Management
+- Toggle individual categories on/off
+- View how many sites are in each category
+- See descriptions of each category's purpose
+
+### Custom Domains
+- **Add Your Own Domains**: Block any website by adding its domain
+- **Categorize Domains**: Assign custom domains to categories for organization
+- **Enable/Disable**: Toggle individual custom domains
+- **Remove Domains**: Delete domains you no longer want to block
+
+### Statistics
+- **Total Blocks**: Count of all blocked site attempts
+- **Blocks Today**: Daily blocking statistics
+- **Custom Domains**: Number of custom domains you've added
+- **Reset Statistics**: Clear all statistics data
+
+### Accessing Settings
+1. Click the extension icon in Chrome
+2. Click "⚙️ Open Settings" button
+3. The settings page will open in a new tab
+
 ## 📁 Project Structure
 
 ```
@@ -51,14 +86,17 @@ self-respect-extension/
 ├── src/
 │   ├── constants.ts      # Domain lists and categories (50+ domains)
 │   ├── content.ts        # Content script with blocking logic
-│   ├── popup.html        # Settings popup UI
-│   └── popup.js          # Popup functionality
+│   ├── storage.ts        # Local storage management for settings
+│   ├── popup.html        # Main popup UI
+│   ├── popup.js          # Popup functionality
+│   ├── settings.html     # Comprehensive settings page
+│   ├── settings.js       # Settings page functionality
+│   ├── manifest.json     # Chrome extension configuration
+│   └── icons/            # Extension icons
 ├── dist/                 # Built files (created by build script)
-├── icons/                # Extension icons (16x16, 32x32, 48x48, 128x128)
-├── manifest.json         # Chrome extension configuration
 ├── package.json          # Dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
-├── build.js              # Build script
+├── build.sh              # Build script (bash)
 └── README.md            # This file
 ```
 

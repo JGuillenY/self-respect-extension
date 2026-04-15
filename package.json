@@ -4,7 +4,7 @@
   "description": "Chrome extension that helps maintain self-respect by redirecting from harmful sites to healthier alternatives",
   "main": "dist/content.js",
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && cp -r src/icons dist/icons && cp src/manifest.json dist/manifest.json && cp src/popup.html dist/popup.html && esbuild src/popup.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/popup.js && esbuild src/content.ts --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/content.js"
+    "build": "bash ./build.sh"
   },
   "keywords": [
     "chrome-extension",
