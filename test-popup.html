@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Self Respect Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-container {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .popup-preview {
+            width: 300px;
+            border: 2px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Self Respect Extension - Popup Test</h1>
+    
+    <div class="test-container">
+        <h2>Updated Popup Features</h2>
+        <p>The popup has been updated to display statistics directly instead of having a separate "View Statistics" button.</p>
+        
+        <h3>New Statistics Display:</h3>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="demo-total">0</div>
+                <div class="stat-label">Total Blocks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="demo-today">0</div>
+                <div class="stat-label">Blocks Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="demo-custom">0</div>
+                <div class="stat-label">Custom Domains</div>
+            </div>
+        </div>
+        
+        <h3>Popup Structure Changes:</h3>
+        <ul>
+            <li>Removed <code>View Statistics</code> button</li>
+            <li>Added three new statistics rows to the stats section:
+                <ul>
+                    <li><strong>Total Blocks</strong>: Cumulative count of all blocked site attempts</li>
+                    <li><strong>Blocks Today</strong>: Daily blocking statistics (resets at midnight)</li>
+                    <li><strong>Custom Domains</strong>: Number of user-added domains to block</li>
+                </ul>
+            </li>
+            <li>Statistics update in real-time using Chrome storage listeners</li>
+            <li>Only one button remains: <code>⚙️ Open Settings</code> for advanced configuration</li>
+        </ul>
+        
+        <h3>Technical Implementation:</h3>
+        <ul>
+            <li><strong>Storage Integration</strong>: Popup reads from <code>chrome.storage.sync</code> on load</li>
+            <li><strong>Real-time Updates</strong>: Listens for <code>chrome.storage.onChanged</code> events</li>
+            <li><strong>Automatic Sync</strong>: Custom domain count automatically updates in statistics</li>
+            <li><strong>Backward Compatible</strong>: Maintains all existing functionality</li>
+        </ul>
+    </div>
+    
+    <div class="test-container">
+        <h2>How to Test:</h2>
+        <ol>
+            <li>Load the extension in Chrome (chrome://extensions → Load unpacked → select <code>dist</code> folder)</li>
+            <li>Click the extension icon to open the popup</li>
+            <li>You should see:
+                <ul>
+                    <li>Extension status toggle</li>
+                    <li>Statistics section with 6 items (3 original + 3 new)</li>
+                    <li>Protected categories list</li>
+                    <li>"⚙️ Open Settings" button</li>
+                </ul>
+            </li>
+            <li>Open Settings to add custom domains</li>
+            <li>Visit a blocked site (e.g., pornhub.com) to see blocking in action</li>
+            <li>Return to popup to see updated statistics</li>
+        </ol>
+    </div>
+    
+    <div class="test-container">
+        <h2>Code Changes Summary:</h2>
+        <h3>popup.html:</h3>
+        <ul>
+            <li>Added three new <code>stat-item</code> divs for statistics display</li>
+            <li>Removed the <code>viewStatsBtn</code> button</li>
+        </ul>
+        
+        <h3>popup.js:</h3>
+        <ul>
+            <li>Added DOM element references for statistics display</li>
+            <li>Updated storage retrieval to get statistics data</li>
+            <li>Added <code>chrome.storage.onChanged</code> listener for real-time updates</li>
+            <li>Removed "View Statistics" button event handler</li>
+            <li>Added logic to sync custom domain count between storage locations</li>
+        </ul>
+    </div>
+
+    <script>
+        // Demo statistics update
+        let total = 0;
+        let today = 0;
+        let custom = 0;
+        
+        document.getElementById('demo-total').textContent = total;
+        document.getElementById('demo-today').textContent = today;
+        document.getElementById('demo-custom').textContent = custom;
+        
+        // Simulate statistics updates
+        setInterval(() => {
+            total += Math.floor(Math.random() * 3);
+            today += Math.floor(Math.random() * 2);
+            custom = Math.floor(Math.random() * 5);
+            
+            document.getElementById('demo-total').textContent = total;
+            document.getElementById('demo-today').textContent = today;
+            document.getElementById('demo-custom').textContent = custom;
+        }, 2000);
+    </script>
+</body>
+</html>
