@@ -44,5 +44,5 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["src/settings.js", "src/popup.js", "node_modules", "dist"]
 }

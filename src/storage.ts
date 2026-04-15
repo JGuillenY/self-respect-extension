@@ -12,12 +12,15 @@ export interface BlockedSite {
   createdAt: number;
 }
 
+export type BlockingLevel = "soft" | "puzzle" | "hard";
+
 export interface UserSettings {
   enabled: boolean;
   customDomains: BlockedSite[];
   blockedCategories: string[]; // Category names that are enabled
   showNotifications: boolean;
   redirectDelay: number; // in seconds
+  blockingLevel: BlockingLevel;
   lastUpdated: number;
 }
 
@@ -35,6 +38,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   blockedCategories: ["Adult Content", "Social Media", "Gambling"],
   showNotifications: true,
   redirectDelay: 3,
+  blockingLevel: "soft",
   lastUpdated: Date.now(),
 };
 

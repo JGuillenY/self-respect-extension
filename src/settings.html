@@ -380,6 +380,10 @@
         animation: slideIn 0.3s ease;
       }
 
+      .option {
+        color: #222222;
+      }
+
       @keyframes slideIn {
         from {
           transform: translateX(100%);
@@ -438,6 +442,18 @@
               <option value="3" selected>3 seconds</option>
               <option value="5">5 seconds</option>
               <option value="10">10 seconds</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label class="setting-label" for="blockingLevel"
+              >Blocking Level</label
+            >
+            <select class="setting-control" id="blockingLevel">
+              <option value="soft">Soft Block (Current - Shows overlay)</option>
+              <option value="puzzle">
+                Puzzle Block (Hard puzzle to solve)
+              </option>
+              <option value="hard">Hard Block (No access at all)</option>
             </select>
           </div>
         </div>

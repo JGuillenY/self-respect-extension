@@ -4,8 +4,12 @@ A Chrome extension that helps you maintain self-respect by redirecting from webs
 
 ## 🌟 Features
 
+- **Three Blocking Levels**: Choose your protection intensity
+  1. **Soft Block**: Gentle overlay with redirect option (default)
+  2. **Puzzle Block**: Requires solving hard puzzles to proceed
+  3. **Hard Block**: Absolute protection with no bypass options
 - **Smart Blocking**: Automatically detects and blocks access to sites in predefined categories
-- **Respectful Redirection**: Shows a thoughtful overlay before redirecting to positive alternatives
+- **Respectful Redirection**: Shows thoughtful overlays before redirecting to positive alternatives
 - **Three Main Categories**:
   1. **Adult Content** (30+ sites) - Redirects to educational resources about addiction
   2. **Social Media** (10+ sites) - Redirects to psychology resources about social media effects
@@ -85,9 +89,10 @@ The extension now includes a comprehensive settings page with the following feat
 self-respect-extension/
 ├── src/
 │   ├── constants.ts      # Domain lists and categories (50+ domains)
-│   ├── content.ts        # Content script with blocking logic
+│   ├── content.ts        # Content script with three blocking levels
 │   ├── storage.ts        # Local storage management for settings
-│   ├── popup.html        # Main popup UI
+│   ├── puzzle.ts         # Puzzle generator for puzzle blocking
+│   ├── popup.html        # Main popup UI with statistics
 │   ├── popup.js          # Popup functionality
 │   ├── settings.html     # Comprehensive settings page
 │   ├── settings.js       # Settings page functionality
@@ -97,6 +102,7 @@ self-respect-extension/
 ├── package.json          # Dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
 ├── build.sh              # Build script (bash)
+├── TESTING.md           # Detailed testing instructions
 └── README.md            # This file
 ```
 

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self Respect - Puzzle Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+        .demo-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .puzzle-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .puzzle-question {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .puzzle-answer {
+            font-family: monospace;
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .puzzle-type {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .puzzle-difficulty {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        .blocking-level {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .level-card {
+            flex: 1;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .level-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .level-card.soft {
+            border-color: #2ecc71;
+        }
+        .level-card.puzzle {
+            border-color: #f39c12;
+        }
+        .level-card.hard {
+            border-color: #e74c3c;
+        }
+        .level-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .level-desc {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .test-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .test-button:hover {
+            background: #2980b9;
+        }
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>Self Respect Extension - Three Blocking Levels</h1>
+        
+        <h2>Blocking Levels Overview</h2>
+        <div class="blocking-level">
+            <div class="level-card soft">
+                <div class="level-title">Soft Block</div>
+                <div class="level-desc">Gentle reminder with redirect option</div>
+                <ul style="text-align: left; font-size: 0.9em;">
+                    <li>Shows respectful overlay</li>
+                    <li>3-second countdown</li>
+                    <li>Cancel option available</li>
+                    <li>Redirect to alternative</li>
+                </ul>
+            </div>
+            
+            <div class="level-card puzzle">
+                <div class="level-title">Puzzle Block</div>
+                <div class="level-desc">Requires solving hard puzzles</div>
+                <ul style="text-align: left; font-size: 0.9em;">
+                    <li>Random hard puzzles</li>
+                    <li>5 attempts maximum</li>
+                    <li>10-minute time limit</li>
+                    <li>Hint system</li>
+                </ul>
+            </div>
+            
+            <div class="level-card hard">
+                <div class="level-title">Hard Block</div>
+                <div class="level-desc">Absolute protection</div>
+                <ul style="text-align: left; font-size: 0.9em;">
+                    <li>No bypass options</li>
+                    <li>Immediate redirect</li>
+                    <li>Permanent blocking</li>
+                    <li>Core values protection</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Puzzle System Demo</h2>
+        <p>Below are examples of the hard puzzles generated by the system:</p>
+        
+        <div id="puzzles-container">
+            <!-- Puzzles will be generated here -->
+        </div>
+        
+        <button class="test-button" onclick="generateNewPuzzles()">Generate New Puzzles</button>
+        
+        <h2>Technical Implementation</h2>
+        
+        <div class="feature-list">
+            <div class="feature-item">
+                <strong>Storage Integration</strong><br>
+                Settings saved in Chrome storage with real-time updates
+            </div>
+            <div class="feature-item">
+                <strong>Puzzle Generator</strong><br>
+                20+ hard puzzles across 4 categories
+            </div>
+            <div class="feature-item">
+                <strong>Real-time Statistics</strong><br>
+                Track blocks, attempts, and success rates
+            </div>
+            <div class="feature-item">
+                <strong>Responsive Design</strong><br>
+                Works on all screen sizes with gradient UI
+            </div>
+        </div>
+        
+        <h2>Code Structure</h2>
+        <div class="code-block">
+// Content script handles all blocking levels
+async function checkAndRedirect() {
+    const settings = await getSettings();
+    const blockingLevel = settings?.blockingLevel || "soft";
+    
+    switch (blockingLevel) {
+        case "soft":
+            showSoftBlockOverlay(domain, redirectUrl);
+            break;
+        case "puzzle":
+            showPuzzleBlockOverlay(domain, redirectUrl);
+            break;
+        case "hard":
+            showHardBlockOverlay(domain, redirectUrl);
+            break;
+    }
+}
+
+// Puzzle generation
+const puzzle = generatePuzzle(8); // Difficulty 8+
+        </div>
+        
+        <h2>Testing Instructions</h2>
+        <ol>
+            <li>Build the extension: <code>./build.sh</code></li>
+            <li>Load in Chrome: <code>chrome://extensions/</code> → Load unpacked</li>
+            <li>Open Settings → Set blocking level</li>
+            <li>Visit a blocked domain (e.g., pornhub.com)</li>
+            <li>Test each blocking level's behavior</li>
+        </ol>
+        
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <p>Self Respect Extension - Protecting your digital wellbeing</p>
+            <p><small>Three levels of protection for your self-respect journey</small></p>
+        </div>
+    </div>
+
+    <script>
+        // Sample puzzles from the actual puzzle generator
+        const samplePuzzles = [
+            {
+                type: 'math',
+                question: "Solve for x: 3^(2x+1) = 81",
+                answer: "1.5",
+                hint: "Rewrite 81 as a power of 3",
+                difficulty: 7
+            },
+            {
+                type: 'logic',
+                question: "You have 12 identical balls. One is slightly heavier. Using a balance scale only 3 times, find the heavy ball.",
+                answer: "Divide into 3 groups of 4, weigh 2 groups, then narrow down",
+                hint: "First weigh 4 vs 4",
+                difficulty: 9
+            },
+            {
+                type: 'pattern',
+                question: "What letter comes next: O, T, T, F, F, S, S, ?",
+                answer: "E",
+                hint: "First letters of numbers",
+                difficulty: 8
+            },
+            {
+                type: 'memory',
+                question: "Memorize this sequence for 10 seconds: 7 4 2 9 1 5 8 3 6. What was the 5th number?",
+                answer: "1",
+                hint: "Count from the beginning",
+                difficulty: 7
+            }
+        ];
+
+        function generateNewPuzzles() {
+            const container = document.getElementById('puzzles-container');
+            container.innerHTML = '';
+            
+            // Shuffle puzzles
+            const shuffled = [...samplePuzzles].sort(() => Math.random() - 0.5);
+            
+            shuffled.forEach(puzzle => {
+                const card = document.createElement('div');
+                card.className = 'puzzle-card';
+                card.innerHTML = `
+                    <div>
+                        <span class="puzzle-type">${puzzle.type.toUpperCase()}</span>
+                        <span class="puzzle-difficulty">Difficulty: ${puzzle.difficulty}/10</span>
+                    </div>
+                    <div class="puzzle-question">${puzzle.question}</div>
+                    <div>
+                        <strong>Answer:</strong> 
+                        <span class="puzzle-answer">${puzzle.answer}</span>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 0.9em; color: #7f8c8d;">
+                        <strong>Hint:</strong> ${puzzle.hint}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Generate initial puzzles
+        generateNewPuzzles();
+    </script>
+</body>
+</html>

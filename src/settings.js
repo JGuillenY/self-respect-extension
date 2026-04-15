@@ -225,6 +225,7 @@ async function initializeStorage() {
       blockedCategories: ["Adult Content", "Social Media", "Gambling"],
       showNotifications: true,
       redirectDelay: 3,
+      blockingLevel: "soft",
       lastUpdated: Date.now(),
     });
   }
@@ -262,6 +263,10 @@ async function loadSettings() {
   const redirectDelay = document.getElementById("redirectDelay");
   redirectDelay.value = settings.redirectDelay.toString();
 
+  // Blocking level
+  const blockingLevel = document.getElementById("blockingLevel");
+  blockingLevel.value = settings.blockingLevel || "soft";
+
   // Update extension status in real-time
   extensionToggle.addEventListener("change", async function () {
     const updatedSettings = await getSettings();
@@ -295,6 +300,15 @@ async function loadSettings() {
       updatedSettings.redirectDelay = parseInt(this.value);
       await saveSettings(updatedSettings);
       showNotification(`Redirect delay set to ${this.value} seconds`);
+    }
+  });
+
+  blockingLevel.addEventListener("change", async function () {
+    const updatedSettings = await getSettings();
+    if (updatedSettings) {
+      updatedSettings.blockingLevel = this.value;
+      await saveSettings(updatedSettings);
+      showNotification(`Blocking level set to ${this.value}`);
     }
   });
 }
