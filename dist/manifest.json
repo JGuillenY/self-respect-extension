@@ -1,6 +1,6 @@
 {
   "name": "Self Respect",
-  "description": "Helps you avoid sites that don't align with your self-respect goals by redirecting to healthier alternatives.",
+  "description": "__MSG_extDescription__",
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
@@ -30,5 +30,6 @@
   ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
-  }
+  },
+  "default_locale": "en"
 }

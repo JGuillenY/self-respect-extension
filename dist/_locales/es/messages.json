@@ -1,0 +1,551 @@
+{
+  "extDescription": {
+    "message": "Te ayuda a evitar sitios que no se alinean con tus objetivos de auto-respeto redirigiendo a alternativas más saludables.",
+    "description": "Page description used in manifest."
+  },
+
+  "extPopupTitle": {
+    "message": "Configuración de Auto-Respeto",
+    "description": "Popup default title."
+  },
+
+  "redirectDelayMessage": {
+    "message": "Serás redirigido a una alternativa más saludable en $DELAY$ segundos.",
+    "description": "Message that is displayed when redirect is enabled.",
+    "placeholders": {
+      "delay": {
+        "content": "$1",
+        "example": 3
+      }
+    }
+  },
+
+  "noRedirectDelayMessage": {
+    "message": "Este sitio puede no alinearse con tus objetivos de auto-respeto y bienestar.",
+    "description": "Message that is displayed when redirect is not enabled."
+  },
+
+  "redirectingTo": {
+    "message": "Redirigiendo a:"
+  },
+
+  "youWereAboutToVisit": {
+    "message": "Estabas a punto de visitar"
+  },
+
+  "redirectNow": {
+    "message": "Redirigir Ahora"
+  },
+
+  "healthierAlternative": {
+    "message": "Ir a Alternativa Más Saludable"
+  },
+
+  "cancelMessage": {
+    "message": "Cancelar (Permitir Temporalmente)"
+  },
+
+  "phrase1": {
+    "message": "Recuerda: Cada elección que haces moldea quién te conviertes."
+  },
+
+  "extensionStatusActive": {
+    "message": "Activo"
+  },
+
+  "extensionStatusPaused": {
+    "message": "Pausado"
+  },
+
+  "blockingLevelSoft": {
+    "message": "Suave"
+  },
+
+  "blockingLevelPuzzle": {
+    "message": "Rompecabezas"
+  },
+
+  "blockingLevelHard": {
+    "message": "Duro"
+  },
+
+  "popupExtensionStatus": {
+    "message": "Estado de la Extensión:"
+  },
+
+  "popupProtectedCategories": {
+    "message": "Categorías Protegidas:"
+  },
+
+  "popupBlockedDomains": {
+    "message": "Dominios Bloqueados:"
+  },
+
+  "popupStatus": {
+    "message": "Estado:"
+  },
+
+  "popupBlockingLevel": {
+    "message": "Nivel de Bloqueo:"
+  },
+
+  "popupTotalBlocks": {
+    "message": "Bloqueos Totales:"
+  },
+
+  "popupBlocksToday": {
+    "message": "Bloqueos Hoy:"
+  },
+
+  "popupCustomDomains": {
+    "message": "Dominios Personalizados:"
+  },
+
+  "popupCategoriesTitle": {
+    "message": "Categorías Protegidas:"
+  },
+
+  "categoryAdultContent": {
+    "message": "Contenido Adulto (30+ sitios)"
+  },
+
+  "categorySocialMedia": {
+    "message": "Redes Sociales (10+ sitios)"
+  },
+
+  "categoryGambling": {
+    "message": "Apuestas (15+ sitios)"
+  },
+
+  "buttonOpenSettings": {
+    "message": "Abrir Configuración"
+  },
+
+  "popupFooter": {
+    "message": "Protegiendo tu auto-respeto y bienestar digital. Cada redirección es un paso hacia tu mejor yo. Si esta extensión te ayudó, considera donar"
+  },
+
+  "settingsTitle": {
+    "message": "Auto-Respeto - Configuración"
+  },
+
+  "buttonBack": {
+    "message": "Atrás"
+  },
+
+  "settingsHeading": {
+    "message": "Configuración"
+  },
+
+  "settingsGeneral": {
+    "message": "Configuración General"
+  },
+
+  "settingsExtensionStatus": {
+    "message": "Estado de la Extensión"
+  },
+
+  "settingsExtensionStatusDesc": {
+    "message": "Activar o desactivar la extensión"
+  },
+
+  "settingsShowNotifications": {
+    "message": "Mostrar Notificaciones"
+  },
+
+  "settingsShowNotificationsDesc": {
+    "message": "Mostrar mensajes de confirmación al bloquear sitios"
+  },
+
+  "settingsAutoRedirect": {
+    "message": "Redirección Automática"
+  },
+
+  "settingsAutoRedirectDesc": {
+    "message": "Redirigir automáticamente a alternativas más saludables"
+  },
+
+  "settingsRedirectDelay": {
+    "message": "Retraso de Redirección (segundos)"
+  },
+
+  "optionOneSecond": {
+    "message": "1 segundo"
+  },
+
+  "optionTwoSeconds": {
+    "message": "2 segundos"
+  },
+
+  "optionThreeSeconds": {
+    "message": "3 segundos"
+  },
+
+  "optionFiveSeconds": {
+    "message": "5 segundos"
+  },
+
+  "optionTenSeconds": {
+    "message": "10 segundos"
+  },
+
+  "settingsBlockingLevel": {
+    "message": "Nivel de Bloqueo"
+  },
+
+  "optionSoftBlock": {
+    "message": "Bloqueo Suave (Actual - Muestra superposición)"
+  },
+
+  "optionPuzzleBlock": {
+    "message": "Bloqueo con Rompecabezas (Rompecabezas difícil para resolver)"
+  },
+
+  "optionHardBlock": {
+    "message": "Bloqueo Duro (Sin acceso en absoluto)"
+  },
+
+  "settingsBlockedCategories": {
+    "message": "Categorías Bloqueadas"
+  },
+
+  "settingsCustomDomains": {
+    "message": "Dominios Personalizados"
+  },
+
+  "settingsCustomDomainsDesc": {
+    "message": "Agrega tus propios dominios para bloquear. Ingresa nombres de dominio sin http:// o www."
+  },
+
+  "placeholderDomainExample": {
+    "message": "ejemplo.com"
+  },
+
+  "optionCategoryCustom": {
+    "message": "Personalizado"
+  },
+
+  "optionCategoryAdultContent": {
+    "message": "Contenido Adulto"
+  },
+
+  "optionCategorySocialMedia": {
+    "message": "Redes Sociales"
+  },
+
+  "optionCategoryGambling": {
+    "message": "Apuestas"
+  },
+
+  "optionCategoryDistracting": {
+    "message": "Distracción"
+  },
+
+  "optionCategoryShopping": {
+    "message": "Compras"
+  },
+
+  "buttonAddDomain": {
+    "message": "Agregar Dominio"
+  },
+
+  "emptyCustomDomains": {
+    "message": "No hay dominios personalizados agregados aún"
+  },
+
+  "settingsStatistics": {
+    "message": "Estadísticas"
+  },
+
+  "statTotalBlocks": {
+    "message": "Bloqueos Totales"
+  },
+
+  "statBlocksToday": {
+    "message": "Bloqueos Hoy"
+  },
+
+  "statCustomDomains": {
+    "message": "Dominios Personalizados"
+  },
+
+  "statLastUpdated": {
+    "message": "Última Actualización"
+  },
+
+  "buttonResetStatistics": {
+    "message": "Reiniciar Estadísticas"
+  },
+
+  "settingsFooter": {
+    "message": "Extensión de Auto-Respeto v1.0.0 Protegiendo tu bienestar digital y auto-respeto"
+  },
+
+  "notificationExtensionEnabled": {
+    "message": "Extensión activada"
+  },
+
+  "notificationExtensionDisabled": {
+    "message": "Extensión desactivada"
+  },
+
+  "notificationNotificationsEnabled": {
+    "message": "Notificaciones activadas"
+  },
+
+  "notificationNotificationsDisabled": {
+    "message": "Notificaciones desactivadas"
+  },
+
+  "notificationAutoRedirectEnabled": {
+    "message": "Redirección automática activada"
+  },
+
+  "notificationAutoRedirectDisabled": {
+    "message": "Redirección automática desactivada"
+  },
+
+  "notificationRedirectDelaySet": {
+    "message": "Retraso de redirección establecido en $DELAY$ segundos",
+    "placeholders": {
+      "delay": {
+        "content": "$1",
+        "example": 3
+      }
+    }
+  },
+
+  "notificationBlockingLevelSet": {
+    "message": "Nivel de bloqueo establecido en $LEVEL$",
+    "placeholders": {
+      "level": {
+        "content": "$1",
+        "example": "suave"
+      }
+    }
+  },
+
+  "notificationCategoryEnabled": {
+    "message": "Bloqueo de $CATEGORY$ activado",
+    "placeholders": {
+      "category": {
+        "content": "$1",
+        "example": "Contenido Adulto"
+      }
+    }
+  },
+
+  "notificationCategoryDisabled": {
+    "message": "Bloqueo de $CATEGORY$ desactivado",
+    "placeholders": {
+      "category": {
+        "content": "$1",
+        "example": "Contenido Adulto"
+      }
+    }
+  },
+
+  "notificationDomainEnabled": {
+    "message": "$DOMAIN$ activado",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "ejemplo.com"
+      }
+    }
+  },
+
+  "notificationDomainDisabled": {
+    "message": "$DOMAIN$ desactivado",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "ejemplo.com"
+      }
+    }
+  },
+
+  "notificationDomainRemoved": {
+    "message": "$DOMAIN$ eliminado",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "ejemplo.com"
+      }
+    }
+  },
+
+  "confirmResetStatistics": {
+    "message": "¿Estás seguro de que quieres reiniciar todas las estadísticas?"
+  },
+
+  "notificationStatisticsReset": {
+    "message": "Estadísticas reiniciadas"
+  },
+
+  "errorPleaseEnterDomain": {
+    "message": "Por favor ingresa un dominio"
+  },
+
+  "errorInvalidDomain": {
+    "message": "Por favor ingresa un dominio válido (ej., ejemplo.com)"
+  },
+
+  "notificationDomainAdded": {
+    "message": "$DOMAIN$ agregado a la lista de bloqueados",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "ejemplo.com"
+      }
+    }
+  },
+
+  "errorAddingDomain": {
+    "message": "Error al agregar dominio"
+  },
+
+  "categoryAdultContentName": {
+    "message": "Contenido Adulto"
+  },
+
+  "categoryAdultContentDesc": {
+    "message": "Sitios web para adultos que los usuarios pueden querer evitar por auto-respeto y bienestar"
+  },
+
+  "categorySocialMediaName": {
+    "message": "Redes Sociales"
+  },
+
+  "categorySocialMediaDesc": {
+    "message": "Plataformas principales de redes sociales que pueden consumir tiempo y afectar la autoestima"
+  },
+
+  "categoryGamblingName": {
+    "message": "Apuestas"
+  },
+
+  "categoryGamblingDesc": {
+    "message": "Sitios de apuestas en línea que pueden llevar a la adicción y daño financiero"
+  },
+
+  "puzzleBlockTitle": {
+    "message": "Auto-Respeto - Bloqueo con Rompecabezas"
+  },
+
+  "puzzleBlockDescription": {
+    "message": "Para acceder a este sitio, debes resolver un rompecabezas difícil. Esto es para asegurar que realmente quieres proceder."
+  },
+
+  "puzzleChallengeTitle": {
+    "message": "Desafío de Rompecabezas"
+  },
+
+  "placeholderEnterAnswer": {
+    "message": "Ingresa tu respuesta..."
+  },
+
+  "buttonSubmit": {
+    "message": "Enviar"
+  },
+
+  "labelAttempts": {
+    "message": "Intentos:"
+  },
+
+  "labelTimeout": {
+    "message": "Tiempo límite:"
+  },
+
+  "buttonShowHint": {
+    "message": "Mostrar Pista"
+  },
+
+  "puzzleSuccessMessage": {
+    "message": "¡Rompecabezas resuelto correctamente! Puedes proceder si aún lo deseas."
+  },
+
+  "buttonProceedToSite": {
+    "message": "Proceder a $DOMAIN$",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "ejemplo.com"
+      }
+    }
+  },
+
+  "buttonChooseAlternative": {
+    "message": "Elegir Alternativa Más Saludable"
+  },
+
+  "puzzleFooter": {
+    "message": "Este rompecabezas está diseñado para hacerte pausar y reconsiderar tu elección."
+  },
+
+  "errorPleaseEnterAnswer": {
+    "message": "Por favor ingresa una respuesta."
+  },
+
+  "feedbackCorrectAnswer": {
+    "message": "¡Correcto! Bien hecho."
+  },
+
+  "feedbackIncorrectAnswer": {
+    "message": "Incorrecto. Intenta nuevamente. Intentos: $ATTEMPTS$",
+    "placeholders": {
+      "attempts": {
+        "content": "$1",
+        "example": "1/5"
+      }
+    }
+  },
+
+  "feedbackMaxAttempts": {
+    "message": "Máximo de intentos alcanzado. La página se recargará con un nuevo rompecabezas."
+  },
+
+  "feedbackTimeout": {
+    "message": "¡Se acabó el tiempo! La página se recargará con un nuevo rompecabezas."
+  },
+
+  "hintMessage": {
+    "message": "Pista: $HINT$",
+    "placeholders": {
+      "hint": {
+        "content": "$1",
+        "example": "Piensa en números primos"
+      }
+    }
+  },
+
+  "hardBlockTitle": {
+    "message": "Auto-Respeto - Bloqueo Duro"
+  },
+
+  "hardBlockMessage": {
+    "message": "El acceso a $DOMAIN$ está permanentemente bloqueado.",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "ejemplo.com"
+      }
+    }
+  },
+
+  "hardBlockDescription": {
+    "message": "Este sitio es incompatible con tus objetivos de auto-respeto. El acceso no está permitido bajo ninguna circunstancia."
+  },
+
+  "hardBlockWarning": {
+    "message": "BLOQUEO DURO ACTIVADO"
+  },
+
+  "hardBlockWarningDesc": {
+    "message": "Este es tu nivel más alto de protección. No hay opciones de bypass disponibles."
+  },
+
+  "hardBlockFooter": {
+    "message": "Este bloqueo duro te protege de sitios que entran en conflicto con tus valores fundamentales."
+  }
+}

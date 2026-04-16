@@ -12,6 +12,7 @@ echo ""
 echo "Copying files..."
 
 cp -r src/icons dist/icons
+cp -r src/_locales dist/_locales
 cp src/manifest.json dist/manifest.json
 cp src/popup.html dist/popup.html
 cp src/settings.html dist/settings.html

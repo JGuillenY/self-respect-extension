@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Self Respect Settings</title>
+    <title>__MSG_extPopupTitle__</title>
     <style>
       body {
         width: 300px;
@@ -162,7 +162,7 @@
       <h1>Self Respect ✊</h1>
 
       <div class="status">
-        <span>Extension Status:</span>
+        <span data-i18n="popupExtensionStatus">Extension Status:</span>
         <label class="toggle">
           <input type="checkbox" id="toggleEnabled" checked />
           <span class="slider"></span>
@@ -171,58 +171,58 @@
 
       <div class="stats">
         <div class="stat-item">
-          <span>Protected Categories:</span>
+          <span data-i18n="popupProtectedCategories">Protected Categories:</span>
           <span class="stat-value" id="categoryCount">3</span>
         </div>
         <div class="stat-item">
-          <span>Blocked Domains:</span>
+          <span data-i18n="popupBlockedDomains">Blocked Domains:</span>
           <span class="stat-value" id="domainCount">50+</span>
         </div>
         <div class="stat-item">
-          <span>Status:</span>
+          <span data-i18n="popupStatus">Status:</span>
           <span class="stat-value" id="statusText">Active</span>
         </div>
         <div class="stat-item">
-          <span>Blocking Level:</span>
+          <span data-i18n="popupBlockingLevel">Blocking Level:</span>
           <span class="stat-value" id="blockingLevelText">Soft</span>
         </div>
         <div class="stat-item">
-          <span>Total Blocks:</span>
+          <span data-i18n="popupTotalBlocks">Total Blocks:</span>
           <span class="stat-value" id="totalBlocks">0</span>
         </div>
         <div class="stat-item">
-          <span>Blocks Today:</span>
+          <span data-i18n="popupBlocksToday">Blocks Today:</span>
           <span class="stat-value" id="todayBlocks">0</span>
         </div>
         <div class="stat-item">
-          <span>Custom Domains:</span>
+          <span data-i18n="popupCustomDomains">Custom Domains:</span>
           <span class="stat-value" id="customDomains">0</span>
         </div>
       </div>
 
       <div class="categories">
-        <h3 style="font-size: 14px; margin-bottom: 10px">
+        <h3 style="font-size: 14px; margin-bottom: 10px" data-i18n="popupCategoriesTitle">
           Protected Categories:
         </h3>
         <div id="categoriesList">
           <div class="category-item">
             <input type="checkbox" id="category-adult" checked disabled />
-            <label for="category-adult">Adult Content (30+ sites)</label>
+            <label for="category-adult" data-i18n="categoryAdultContent">Adult Content (30+ sites)</label>
           </div>
           <div class="category-item">
             <input type="checkbox" id="category-social" checked disabled />
-            <label for="category-social">Social Media (10+ sites)</label>
+            <label for="category-social" data-i18n="categorySocialMedia">Social Media (10+ sites)</label>
           </div>
           <div class="category-item">
             <input type="checkbox" id="category-gambling" checked disabled />
-            <label for="category-gambling">Gambling (15+ sites)</label>
+            <label for="category-gambling" data-i18n="categoryGambling">Gambling (15+ sites)</label>
           </div>
         </div>
       </div>
 
-      <button id="settingsBtn">⚙️ Open Settings</button>
+      <button id="settingsBtn">⚙️ <span data-i18n="buttonOpenSettings">Open Settings</span></button>
 
-      <div class="footer">
+      <div class="footer" data-i18n="popupFooter">
         Protecting your self-respect and digital wellbeing.<br />
         Every redirect is a step toward your better self.<br /><br />
         If this extension helped you, consider

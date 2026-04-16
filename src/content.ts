@@ -9,6 +9,8 @@ import {
 } from "./storage";
 import { generatePuzzle, validateAnswer, getHint } from "./puzzle";
 
+declare const chrome: any;
+
 // Check current domain on page load
 async function checkAndRedirect() {
   console.log("Running check and redirect");
@@ -157,13 +159,13 @@ function showSoftBlockOverlay(
   removeExistingOverlay();
 
   const countdownMessage = autoRedirect
-    ? `You'll be redirected to a healthier alternative in ${redirectDelay} seconds.`
-    : "This site may not align with your goals for self-respect and wellbeing.";
+    ? chrome.i18n.getMessage("redirectDelayMessage", [redirectDelay])
+    : chrome.i18n.getMessage("noRedirectDelayMessage");
 
   const redirectInfo = autoRedirect
     ? `<div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
         <p style="margin: 0; font-size: 1em;">
-          Redirecting to: <br>
+          ${chrome.i18n.getMessage("redirectingTo")} <br>
           <a href="${redirectUrl}" style="color: #a3e4d7; text-decoration: underline; word-break: break-all;">
             ${redirectUrl}
           </a>
@@ -176,7 +178,7 @@ function showSoftBlockOverlay(
     <div style="max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px);">
       <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊</h1>
       <p style="font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
-        You were about to visit <strong>${blockedDomain}</strong>.
+        ${chrome.i18n.getMessage("youWereAboutToVisit")} <strong>${blockedDomain}</strong>.
       </p>
       <p style="font-size: 1.1em; margin-bottom: 40px; line-height: 1.6;">
         ${countdownMessage}
@@ -184,14 +186,14 @@ function showSoftBlockOverlay(
       ${redirectInfo}
       <div style="display: flex; gap: 15px; justify-content: center;">
         <button id="redirect-now" class="overlay-button primary">
-          ${autoRedirect ? "Redirect Now" : "Go to Healthier Alternative"}
+          ${autoRedirect ? chrome.i18n.getMessage("redirectNow") : chrome.i18n.getMessage("healthierAlternative")}
         </button>
         <button id="cancel-redirect" class="overlay-button secondary">
-          Cancel (Temporarily Allow)
+          ${chrome.i18n.getMessage("cancelMessage")}
         </button>
       </div>
       <div style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
-        <p>Remember: Every choice you make shapes who you become.</p>
+        <p>${chrome.i18n.getMessage("phrase1")}</p>
       </div>
     </div>
   `;
@@ -248,13 +250,12 @@ function showPuzzleBlockOverlay(
   const overlay = createBaseOverlay();
   overlay.innerHTML = `
     <div style="max-width: 700px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px);">
-      <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊ - Puzzle Block</h1>
+      <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊ - ${chrome.i18n.getMessage("puzzleBlockTitle")}</h1>
       <p style="font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
-        You were about to visit <strong>${blockedDomain}</strong>.
+        ${chrome.i18n.getMessage("youWereAboutToVisit")} <strong>${blockedDomain}</strong>.
       </p>
       <p style="font-size: 1.1em; margin-bottom: 20px; line-height: 1.6;">
-        To access this site, you must solve a difficult puzzle.
-        This is to ensure you truly want to proceed.
+        ${chrome.i18n.getMessage("puzzleBlockDescription")}
       </p>
       
       <div style="background: rgba(0, 0, 0, 0.3); padding: 25px; border-radius: 15px; margin-bottom: 30px;">
@@ -264,7 +265,7 @@ function showPuzzleBlockOverlay(
           <input 
             type="text" 
             id="puzzle-answer" 
-            placeholder="Enter your answer..." 
+            placeholder="${chrome.i18n.getMessage("placeholderEnterAnswer")}" 
             style="
               flex: 1;
               padding: 12px 15px;
@@ -275,32 +276,32 @@ function showPuzzleBlockOverlay(
               font-size: 1em;
             "
           />
-          <button id="submit-puzzle" class="overlay-button primary">Submit</button>
+          <button id="submit-puzzle" class="overlay-button primary">${chrome.i18n.getMessage("buttonSubmit")}</button>
         </div>
         <div id="puzzle-feedback" style="min-height: 24px; margin-top: 10px;"></div>
         <div style="display: flex; justify-content: space-between; margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
-          <div>Attempts: <span id="attempt-count">0</span>/${maxAttempts}</div>
-          <div>Timeout: ${timeoutMinutes} minutes</div>
-          <button id="show-hint" class="overlay-button small">Show Hint</button>
+          <div>${chrome.i18n.getMessage("labelAttempts")} <span id="attempt-count">0</span>/${maxAttempts}</div>
+          <div>${chrome.i18n.getMessage("labelTimeout")} ${timeoutMinutes} minutes</div>
+          <button id="show-hint" class="overlay-button small">${chrome.i18n.getMessage("buttonShowHint")}</button>
         </div>
       </div>
       
       <div id="puzzle-success" style="display: none;">
         <div style="background: rgba(76, 175, 80, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
           <p style="font-size: 1.2em; margin: 0; color: #4CAF50;">
-            ✅ Puzzle solved correctly! You may proceed if you still wish to.
+            ✅ ${chrome.i18n.getMessage("puzzleSuccessMessage")}
           </p>
         </div>
         <div style="display: flex; gap: 15px; justify-content: center;">
-          <button id="proceed-to-site" class="overlay-button primary">Proceed to ${blockedDomain}</button>
+          <button id="proceed-to-site" class="overlay-button primary">${chrome.i18n.getMessage("buttonProceedToSite", [blockedDomain])}</button>
           <button id="choose-alternative" class="overlay-button secondary">
-            ${autoRedirect ? "Choose Healthier Alternative" : "Go to Healthier Alternative"}
+            ${autoRedirect ? chrome.i18n.getMessage("buttonChooseAlternative") : chrome.i18n.getMessage("healthierAlternative")}
           </button>
         </div>
       </div>
       
       <div style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
-        <p>This puzzle is designed to make you pause and reconsider your choice.</p>
+        <p>${chrome.i18n.getMessage("puzzleFooter")}</p>
       </div>
     </div>
   `;
@@ -324,7 +325,7 @@ function showPuzzleBlockOverlay(
     timeLeft--;
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      feedbackDiv!.innerHTML = `<p style="color: #f44336;">⏰ Time's up! The page will reload with a new puzzle.</p>`;
+      feedbackDiv!.innerHTML = `<p style="color: #f44336;">⏰ ${chrome.i18n.getMessage("feedbackTimeout")}</p>`;
       setTimeout(() => location.reload(), 3000);
     }
   }, 1000);
@@ -332,7 +333,7 @@ function showPuzzleBlockOverlay(
   submitButton?.addEventListener("click", () => {
     const userAnswer = answerInput.value.trim();
     if (!userAnswer) {
-      feedbackDiv!.innerHTML = `<p style="color: #ff9800;">Please enter an answer.</p>`;
+      feedbackDiv!.innerHTML = `<p style="color: #ff9800;">${chrome.i18n.getMessage("errorPleaseEnterAnswer")}</p>`;
       return;
     }
 
@@ -342,26 +343,26 @@ function showPuzzleBlockOverlay(
     if (validateAnswer(puzzle, userAnswer)) {
       // Puzzle solved!
       clearInterval(timerInterval);
-      feedbackDiv!.innerHTML = `<p style="color: #4CAF50;">✅ Correct! Well done.</p>`;
+      feedbackDiv!.innerHTML = `<p style="color: #4CAF50;">✅ ${chrome.i18n.getMessage("feedbackCorrectAnswer")}</p>`;
       puzzleSuccessDiv!.style.display = "block";
       submitButton.setAttribute("disabled", "true");
       answerInput.setAttribute("disabled", "true");
     } else {
       // Wrong answer
       if (attemptCount >= maxAttempts) {
-        feedbackDiv!.innerHTML = `<p style="color: #f44336;">❌ Maximum attempts reached. Page will reload with a new puzzle.</p>`;
+        feedbackDiv!.innerHTML = `<p style="color: #f44336;">❌ ${chrome.i18n.getMessage("feedbackMaxAttempts")}</p>`;
         submitButton.setAttribute("disabled", "true");
         answerInput.setAttribute("disabled", "true");
         setTimeout(() => location.reload(), 3000);
       } else {
-        feedbackDiv!.innerHTML = `<p style="color: #ff9800;">❌ Incorrect. Try again. Attempts: ${attemptCount}/${maxAttempts}</p>`;
+        feedbackDiv!.innerHTML = `<p style="color: #ff9800;">❌ ${chrome.i18n.getMessage("feedbackIncorrectAnswer", [`${attemptCount}/${maxAttempts}`])}</p>`;
       }
     }
   });
 
   showHintButton?.addEventListener("click", () => {
     const hint = getHint(puzzle, attemptCount);
-    feedbackDiv!.innerHTML = `<p style="color: #a3e4d7;">💡 Hint: ${hint}</p>`;
+    feedbackDiv!.innerHTML = `<p style="color: #a3e4d7;">💡 ${chrome.i18n.getMessage("hintMessage", [hint])}</p>`;
   });
 
   proceedButton?.addEventListener("click", () => {
@@ -394,21 +395,20 @@ function showHardBlockOverlay(
   const overlay = createBaseOverlay();
   overlay.innerHTML = `
     <div style="max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px);">
-      <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊ - Hard Block</h1>
+      <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊ - ${chrome.i18n.getMessage("hardBlockTitle")}</h1>
       <p style="font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
-        Access to <strong>${blockedDomain}</strong> is permanently blocked.
+        ${chrome.i18n.getMessage("hardBlockMessage", [blockedDomain])}
       </p>
       <p style="font-size: 1.1em; margin-bottom: 40px; line-height: 1.6;">
-        This site is incompatible with your self-respect goals.
-        Access is not permitted under any circumstances.
-        ${autoRedirect ? `You will be redirected in ${redirectDelay} seconds.` : ""}
+        ${chrome.i18n.getMessage("hardBlockDescription")}
+        ${autoRedirect ? chrome.i18n.getMessage("redirectDelayMessage", [redirectDelay]) : ""}
       </p>
       <div style="background: rgba(244, 67, 54, 0.2); padding: 25px; border-radius: 15px; margin-bottom: 30px; border: 2px solid rgba(244, 67, 54, 0.5);">
         <p style="font-size: 1.3em; margin: 0; color: #f44336; text-align: center;">
-          ⚠️ HARD BLOCK ACTIVATED ⚠️
+          ⚠️ ${chrome.i18n.getMessage("hardBlockWarning")} ⚠️
         </p>
         <p style="margin: 15px 0 0 0; font-size: 1.1em; opacity: 0.9;">
-          This is your highest level of protection. No bypass options are available.
+          ${chrome.i18n.getMessage("hardBlockWarningDesc")}
         </p>
       </div>
       ${
@@ -416,7 +416,7 @@ function showHardBlockOverlay(
           ? `
       <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
         <p style="margin: 0; font-size: 1em;">
-          You will be redirected to: <br>
+          ${chrome.i18n.getMessage("redirectingTo")} <br>
           <a href="${redirectUrl}" style="color: #a3e4d7; text-decoration: underline; word-break: break-all;">
             ${redirectUrl}
           </a>
@@ -426,11 +426,11 @@ function showHardBlockOverlay(
       }
       <div style="display: flex; gap: 15px; justify-content: center;">
         <button id="redirect-now" class="overlay-button primary">
-          ${autoRedirect ? "Go to Healthier Alternative" : "Go to Healthier Alternative"}
+          ${chrome.i18n.getMessage("healthierAlternative")}
         </button>
       </div>
       <div style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
-        <p>This hard block protects you from sites that conflict with your core values.</p>
+        <p>${chrome.i18n.getMessage("hardBlockFooter")}</p>
       </div>
     </div>
   `;

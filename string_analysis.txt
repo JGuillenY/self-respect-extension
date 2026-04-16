@@ -1,0 +1,119 @@
+# Strings needing localization in Self Respect Extension
+
+## From content.ts (already using i18n - all defined in en/messages.json)
+1. extDescription - ✓ defined
+2. extPopupTitle - ✓ defined  
+3. redirectDelayMessage - ✓ defined
+4. noRedirectDelayMessage - ✓ defined
+5. redirectingTo - ✓ defined
+6. youWereAboutToVisit - ✓ defined
+7. redirectNow - ✓ defined
+8. healthierAlternative - ✓ defined
+9. cancelMessage - ✓ defined
+10. phrase1 - ✓ defined
+
+## From popup.js (hardcoded strings)
+1. "Active" - line 62
+2. "Paused" - line 62
+3. "Soft" - line 68, 79
+4. "Puzzle" - line 69
+5. "Hard" - line 70
+
+## From popup.html (hardcoded strings)
+1. "Self Respect Settings" (title) - already in messages.json as extPopupTitle
+2. "Self Respect ✊" - h1
+3. "Extension Status:" - line in status div
+4. "Protected Categories:" - stats section
+5. "Blocked Domains:" - stats section  
+6. "Status:" - stats section
+7. "Blocking Level:" - stats section
+8. "Total Blocks:" - stats section
+9. "Blocks Today:" - stats section
+10. "Custom Domains:" - stats section
+11. "Protected Categories:" - h3 in categories section
+12. "Adult Content (30+ sites)" - category label
+13. "Social Media (10+ sites)" - category label
+14. "Gambling (15+ sites)" - category label
+15. "⚙️ Open Settings" - button text
+16. "Protecting your self-respect and digital wellbeing.<br />Every redirect is a step toward your better self.<br /><br />If this extension helped you, consider <a target=\"_blank\" href=\"https://www.paypal.com/paypalme/jguilleny\"><b>donating</b></a>" - footer text
+
+## From settings.js (hardcoded strings)
+1. "Extension enabled" - line 285
+2. "Extension disabled" - line 287
+3. "Notifications enabled" - line 298
+4. "Notifications disabled" - line 300
+5. "Auto redirect enabled" - line 316
+6. "Auto redirect disabled" - line 318
+7. "Redirect delay set to ${this.value} seconds" - line 329
+8. "Blocking level set to ${this.value}" - line 338
+9. "${category.name} blocking enabled" - line 381
+10. "${category.name} blocking disabled" - line 383
+11. "${site.domain} enabled" - line 441
+12. "${site.domain} disabled" - line 443
+13. "${site.domain} removed" - line 453
+14. "Are you sure you want to reset all statistics?" - line 521 (in confirm dialog)
+15. "Statistics reset" - line 523
+16. "Please enter a domain" - line 539
+17. "Please enter a valid domain (e.g., example.com)" - line 545
+18. "${domain} added to blocked list" - line 551
+19. "Error adding domain" - line 560
+
+## From settings.html (hardcoded strings)
+1. "Self Respect - Settings" - title
+2. "< Back" - back button
+3. "⚙️ Settings" - h1
+4. "General Settings" - h2
+5. "Extension Status" - toggle label
+6. "Enable or disable the extension" - toggle description
+7. "Show Notifications" - toggle label
+8. "Show confirmation messages when blocking sites" - toggle description
+9. "Auto Redirect" - toggle label
+10. "Automatically redirect to healthier alternatives" - toggle description
+11. "Redirect Delay (seconds)" - select label
+12. "1 second", "2 seconds", "3 seconds", "5 seconds", "10 seconds" - option values
+13. "Blocking Level" - select label
+14. "Soft Block (Current - Shows overlay)", "Puzzle Block (Hard puzzle to solve)", "Hard Block (No access at all)" - option values
+15. "Blocked Categories" - h2
+16. "Custom Domains" - h2
+17. "Add your own domains to block. Enter domain names without http:// or www." - description
+18. "example.com" - placeholder
+19. "Custom", "Adult Content", "Social Media", "Gambling", "Distracting", "Shopping" - category options
+20. "Add Domain" - button text
+21. "No custom domains added yet" - empty state
+22. "Statistics" - h2
+23. "Total Blocks", "Blocks Today", "Custom Domains", "Last Updated" - stat labels
+24. "Reset Statistics" - button text
+25. "Self Respect Extension v1.0.0<br />Protecting your digital wellbeing and self-respect" - footer
+
+## From DOMAIN_CATEGORIES in settings.js
+1. "Adult Content" - category name
+2. "Adult websites that users may want to avoid for self-respect and wellbeing" - category description
+3. "Social Media" - category name
+4. "Major social networking platforms that can be time-consuming and affect self-esteem" - category description
+5. "Gambling" - category name
+6. "Online gambling sites that can lead to addiction and financial harm" - category description
+
+## Additional strings in content.ts (hardcoded in puzzle and hard block overlays)
+1. "Self Respect ✊ - Puzzle Block" - puzzle overlay title
+2. "To access this site, you must solve a difficult puzzle. This is to ensure you truly want to proceed." - puzzle description
+3. "Puzzle Challenge" - puzzle section title
+4. "Enter your answer..." - input placeholder
+5. "Submit" - button text
+6. "Attempts:", "Timeout:" - labels
+7. "Show Hint" - button text
+8. "✅ Puzzle solved correctly! You may proceed if you still wish to." - success message
+9. "Proceed to ${blockedDomain}" - button text
+10. "Choose Healthier Alternative" / "Go to Healthier Alternative" - button text
+11. "This puzzle is designed to make you pause and reconsider your choice." - footer text
+12. "Please enter an answer." - validation message
+13. "✅ Correct! Well done." - correct answer feedback
+14. "❌ Incorrect. Try again. Attempts: ${attemptCount}/${maxAttempts}" - incorrect answer feedback
+15. "❌ Maximum attempts reached. Page will reload with a new puzzle." - max attempts message
+16. "⏰ Time's up! The page will reload with a new puzzle." - timeout message
+17. "💡 Hint: ${hint}" - hint message
+18. "Self Respect ✊ - Hard Block" - hard block title
+19. "Access to ${blockedDomain} is permanently blocked." - hard block message
+20. "This site is incompatible with your self-respect goals. Access is not permitted under any circumstances." - hard block description
+21. "⚠️ HARD BLOCK ACTIVATED ⚠️" - warning banner
+22. "This is your highest level of protection. No bypass options are available." - warning description
+23. "This hard block protects you from sites that conflict with your core values." - footer text

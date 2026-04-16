@@ -1,5 +1,24 @@
 // Self Respect Extension Popup
 document.addEventListener("DOMContentLoaded", function () {
+  // Localize all elements with data-i18n attributes
+  function localizePage() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(element => {
+      const messageKey = element.getAttribute('data-i18n');
+      const message = chrome.i18n.getMessage(messageKey);
+      if (message) {
+        // Check if element is an input placeholder
+        if (element.hasAttribute('placeholder')) {
+          element.setAttribute('placeholder', message);
+        } else {
+          element.textContent = message;
+        }
+      }
+    });
+  }
+  
+  // Call localization function
+  localizePage();
   const toggle = document.getElementById("toggleEnabled");
   const statusText = document.getElementById("statusText");
   const blockingLevelText = document.getElementById("blockingLevelText");
@@ -59,15 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   function updateStatus(enabled) {
-    statusText.textContent = enabled ? "Active" : "Paused";
+    statusText.textContent = enabled ? chrome.i18n.getMessage("extensionStatusActive") : chrome.i18n.getMessage("extensionStatusPaused");
     statusText.style.color = enabled ? "#4CAF50" : "#FF9800";
   }
   
   function updateBlockingLevel(level) {
     const levelMap = {
-      "soft": "Soft",
-      "puzzle": "Puzzle",
-      "hard": "Hard"
+      "soft": chrome.i18n.getMessage("blockingLevelSoft"),
+      "puzzle": chrome.i18n.getMessage("blockingLevelPuzzle"),
+      "hard": chrome.i18n.getMessage("blockingLevelHard")
     };
     
     const levelColors = {
@@ -76,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "hard": "#F44336"     // Red
     };
     
-    blockingLevelText.textContent = levelMap[level] || "Soft";
+    blockingLevelText.textContent = levelMap[level] || chrome.i18n.getMessage("blockingLevelSoft");
     blockingLevelText.style.color = levelColors[level] || "#4CAF50";
   }
   

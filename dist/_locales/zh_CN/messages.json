@@ -1,0 +1,551 @@
+{
+  "extDescription": {
+    "message": "通过重定向到更健康的替代方案，帮助您避免与自尊目标不符的网站。",
+    "description": "Page description used in manifest."
+  },
+
+  "extPopupTitle": {
+    "message": "自尊设置",
+    "description": "Popup default title."
+  },
+
+  "redirectDelayMessage": {
+    "message": "您将在 $DELAY$ 秒后被重定向到更健康的替代方案。",
+    "description": "Message that is displayed when redirect is enabled.",
+    "placeholders": {
+      "delay": {
+        "content": "$1",
+        "example": 3
+      }
+    }
+  },
+
+  "noRedirectDelayMessage": {
+    "message": "此网站可能与您的自尊和福祉目标不符。",
+    "description": "Message that is displayed when redirect is not enabled."
+  },
+
+  "redirectingTo": {
+    "message": "正在重定向到："
+  },
+
+  "youWereAboutToVisit": {
+    "message": "您即将访问"
+  },
+
+  "redirectNow": {
+    "message": "立即重定向"
+  },
+
+  "healthierAlternative": {
+    "message": "前往更健康的替代方案"
+  },
+
+  "cancelMessage": {
+    "message": "取消（临时允许）"
+  },
+
+  "phrase1": {
+    "message": "记住：您的每个选择都在塑造您将成为的人。"
+  },
+
+  "extensionStatusActive": {
+    "message": "活跃"
+  },
+
+  "extensionStatusPaused": {
+    "message": "已暂停"
+  },
+
+  "blockingLevelSoft": {
+    "message": "柔和"
+  },
+
+  "blockingLevelPuzzle": {
+    "message": "谜题"
+  },
+
+  "blockingLevelHard": {
+    "message": "严格"
+  },
+
+  "popupExtensionStatus": {
+    "message": "扩展状态："
+  },
+
+  "popupProtectedCategories": {
+    "message": "受保护类别："
+  },
+
+  "popupBlockedDomains": {
+    "message": "已阻止域名："
+  },
+
+  "popupStatus": {
+    "message": "状态："
+  },
+
+  "popupBlockingLevel": {
+    "message": "阻止级别："
+  },
+
+  "popupTotalBlocks": {
+    "message": "总阻止次数："
+  },
+
+  "popupBlocksToday": {
+    "message": "今日阻止："
+  },
+
+  "popupCustomDomains": {
+    "message": "自定义域名："
+  },
+
+  "popupCategoriesTitle": {
+    "message": "受保护类别："
+  },
+
+  "categoryAdultContent": {
+    "message": "成人内容（30+ 个网站）"
+  },
+
+  "categorySocialMedia": {
+    "message": "社交媒体（10+ 个网站）"
+  },
+
+  "categoryGambling": {
+    "message": "赌博（15+ 个网站）"
+  },
+
+  "buttonOpenSettings": {
+    "message": "打开设置"
+  },
+
+  "popupFooter": {
+    "message": "保护您的自尊和数字福祉。每次重定向都是迈向更好自我的一步。如果此扩展对您有帮助，请考虑捐赠"
+  },
+
+  "settingsTitle": {
+    "message": "自尊 - 设置"
+  },
+
+  "buttonBack": {
+    "message": "返回"
+  },
+
+  "settingsHeading": {
+    "message": "设置"
+  },
+
+  "settingsGeneral": {
+    "message": "常规设置"
+  },
+
+  "settingsExtensionStatus": {
+    "message": "扩展状态"
+  },
+
+  "settingsExtensionStatusDesc": {
+    "message": "启用或禁用扩展"
+  },
+
+  "settingsShowNotifications": {
+    "message": "显示通知"
+  },
+
+  "settingsShowNotificationsDesc": {
+    "message": "阻止网站时显示确认消息"
+  },
+
+  "settingsAutoRedirect": {
+    "message": "自动重定向"
+  },
+
+  "settingsAutoRedirectDesc": {
+    "message": "自动重定向到更健康的替代方案"
+  },
+
+  "settingsRedirectDelay": {
+    "message": "重定向延迟（秒）"
+  },
+
+  "optionOneSecond": {
+    "message": "1 秒"
+  },
+
+  "optionTwoSeconds": {
+    "message": "2 秒"
+  },
+
+  "optionThreeSeconds": {
+    "message": "3 秒"
+  },
+
+  "optionFiveSeconds": {
+    "message": "5 秒"
+  },
+
+  "optionTenSeconds": {
+    "message": "10 秒"
+  },
+
+  "settingsBlockingLevel": {
+    "message": "阻止级别"
+  },
+
+  "optionSoftBlock": {
+    "message": "柔和阻止（当前 - 显示覆盖层）"
+  },
+
+  "optionPuzzleBlock": {
+    "message": "谜题阻止（需要解决困难谜题）"
+  },
+
+  "optionHardBlock": {
+    "message": "严格阻止（完全无法访问）"
+  },
+
+  "settingsBlockedCategories": {
+    "message": "已阻止类别"
+  },
+
+  "settingsCustomDomains": {
+    "message": "自定义域名"
+  },
+
+  "settingsCustomDomainsDesc": {
+    "message": "添加您自己的域名进行阻止。输入域名时不要包含 http:// 或 www。"
+  },
+
+  "placeholderDomainExample": {
+    "message": "example.com"
+  },
+
+  "optionCategoryCustom": {
+    "message": "自定义"
+  },
+
+  "optionCategoryAdultContent": {
+    "message": "成人内容"
+  },
+
+  "optionCategorySocialMedia": {
+    "message": "社交媒体"
+  },
+
+  "optionCategoryGambling": {
+    "message": "赌博"
+  },
+
+  "optionCategoryDistracting": {
+    "message": "分散注意力"
+  },
+
+  "optionCategoryShopping": {
+    "message": "购物"
+  },
+
+  "buttonAddDomain": {
+    "message": "添加域名"
+  },
+
+  "emptyCustomDomains": {
+    "message": "尚未添加自定义域名"
+  },
+
+  "settingsStatistics": {
+    "message": "统计"
+  },
+
+  "statTotalBlocks": {
+    "message": "总阻止次数"
+  },
+
+  "statBlocksToday": {
+    "message": "今日阻止"
+  },
+
+  "statCustomDomains": {
+    "message": "自定义域名"
+  },
+
+  "statLastUpdated": {
+    "message": "最后更新"
+  },
+
+  "buttonResetStatistics": {
+    "message": "重置统计"
+  },
+
+  "settingsFooter": {
+    "message": "自尊扩展 v1.0.0 保护您的数字福祉和自尊"
+  },
+
+  "notificationExtensionEnabled": {
+    "message": "扩展已启用"
+  },
+
+  "notificationExtensionDisabled": {
+    "message": "扩展已禁用"
+  },
+
+  "notificationNotificationsEnabled": {
+    "message": "通知已启用"
+  },
+
+  "notificationNotificationsDisabled": {
+    "message": "通知已禁用"
+  },
+
+  "notificationAutoRedirectEnabled": {
+    "message": "自动重定向已启用"
+  },
+
+  "notificationAutoRedirectDisabled": {
+    "message": "自动重定向已禁用"
+  },
+
+  "notificationRedirectDelaySet": {
+    "message": "重定向延迟设置为 $DELAY$ 秒",
+    "placeholders": {
+      "delay": {
+        "content": "$1",
+        "example": 3
+      }
+    }
+  },
+
+  "notificationBlockingLevelSet": {
+    "message": "阻止级别设置为 $LEVEL$",
+    "placeholders": {
+      "level": {
+        "content": "$1",
+        "example": "柔和"
+      }
+    }
+  },
+
+  "notificationCategoryEnabled": {
+    "message": "$CATEGORY$ 阻止已启用",
+    "placeholders": {
+      "category": {
+        "content": "$1",
+        "example": "成人内容"
+      }
+    }
+  },
+
+  "notificationCategoryDisabled": {
+    "message": "$CATEGORY$ 阻止已禁用",
+    "placeholders": {
+      "category": {
+        "content": "$1",
+        "example": "成人内容"
+      }
+    }
+  },
+
+  "notificationDomainEnabled": {
+    "message": "$DOMAIN$ 已启用",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "notificationDomainDisabled": {
+    "message": "$DOMAIN$ 已禁用",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "notificationDomainRemoved": {
+    "message": "$DOMAIN$ 已移除",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "confirmResetStatistics": {
+    "message": "您确定要重置所有统计吗？"
+  },
+
+  "notificationStatisticsReset": {
+    "message": "统计已重置"
+  },
+
+  "errorPleaseEnterDomain": {
+    "message": "请输入域名"
+  },
+
+  "errorInvalidDomain": {
+    "message": "请输入有效的域名（例如，example.com）"
+  },
+
+  "notificationDomainAdded": {
+    "message": "$DOMAIN$ 已添加到阻止列表",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "errorAddingDomain": {
+    "message": "添加域名时出错"
+  },
+
+  "categoryAdultContentName": {
+    "message": "成人内容"
+  },
+
+  "categoryAdultContentDesc": {
+    "message": "用户可能因自尊和福祉而希望避免的成人网站"
+  },
+
+  "categorySocialMediaName": {
+    "message": "社交媒体"
+  },
+
+  "categorySocialMediaDesc": {
+    "message": "可能耗时且影响自尊的主要社交网络平台"
+  },
+
+  "categoryGamblingName": {
+    "message": "赌博"
+  },
+
+  "categoryGamblingDesc": {
+    "message": "可能导致成瘾和财务损害的在线赌博网站"
+  },
+
+  "puzzleBlockTitle": {
+    "message": "自尊 - 谜题阻止"
+  },
+
+  "puzzleBlockDescription": {
+    "message": "要访问此网站，您必须解决一个困难的谜题。这是为了确保您真的想要继续。"
+  },
+
+  "puzzleChallengeTitle": {
+    "message": "谜题挑战"
+  },
+
+  "placeholderEnterAnswer": {
+    "message": "输入您的答案..."
+  },
+
+  "buttonSubmit": {
+    "message": "提交"
+  },
+
+  "labelAttempts": {
+    "message": "尝试次数："
+  },
+
+  "labelTimeout": {
+    "message": "超时："
+  },
+
+  "buttonShowHint": {
+    "message": "显示提示"
+  },
+
+  "puzzleSuccessMessage": {
+    "message": "谜题正确解决！如果您仍然希望，可以继续。"
+  },
+
+  "buttonProceedToSite": {
+    "message": "继续访问 $DOMAIN$",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "buttonChooseAlternative": {
+    "message": "选择更健康的替代方案"
+  },
+
+  "puzzleFooter": {
+    "message": "此谜题旨在让您暂停并重新考虑您的选择。"
+  },
+
+  "errorPleaseEnterAnswer": {
+    "message": "请输入答案。"
+  },
+
+  "feedbackCorrectAnswer": {
+    "message": "正确！做得好。"
+  },
+
+  "feedbackIncorrectAnswer": {
+    "message": "不正确。请再试一次。尝试次数：$ATTEMPTS$",
+    "placeholders": {
+      "attempts": {
+        "content": "$1",
+        "example": "1/5"
+      }
+    }
+  },
+
+  "feedbackMaxAttempts": {
+    "message": "已达到最大尝试次数。页面将重新加载并显示新谜题。"
+  },
+
+  "feedbackTimeout": {
+    "message": "时间到！页面将重新加载并显示新谜题。"
+  },
+
+  "hintMessage": {
+    "message": "提示：$HINT$",
+    "placeholders": {
+      "hint": {
+        "content": "$1",
+        "example": "考虑质数"
+      }
+    }
+  },
+
+  "hardBlockTitle": {
+    "message": "自尊 - 严格阻止"
+  },
+
+  "hardBlockMessage": {
+    "message": "对 $DOMAIN$ 的访问已被永久阻止。",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "hardBlockDescription": {
+    "message": "此网站与您的自尊目标不兼容。在任何情况下都不允许访问。"
+  },
+
+  "hardBlockWarning": {
+    "message": "严格阻止已激活"
+  },
+
+  "hardBlockWarningDesc": {
+    "message": "这是您的最高保护级别。没有可用的绕过选项。"
+  },
+
+  "hardBlockFooter": {
+    "message": "此严格阻止保护您免受与核心价值观冲突的网站的影响。"
+  }
+}

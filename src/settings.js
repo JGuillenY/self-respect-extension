@@ -6,7 +6,9 @@
 const DOMAIN_CATEGORIES = [
   {
     name: "Adult Content",
+    i18nKey: "categoryAdultContentName",
     description: "Adult websites that users may want to avoid for self-respect and wellbeing",
+    descriptionI18nKey: "categoryAdultContentDesc",
     domains: [
       "pornhub.com",
       "www.pornhub.com",
@@ -45,7 +47,9 @@ const DOMAIN_CATEGORIES = [
   },
   {
     name: "Social Media",
+    i18nKey: "categorySocialMediaName",
     description: "Major social networking platforms that can be time-consuming and affect self-esteem",
+    descriptionI18nKey: "categorySocialMediaDesc",
     domains: [
       "facebook.com",
       "www.facebook.com",
@@ -65,7 +69,9 @@ const DOMAIN_CATEGORIES = [
   },
   {
     name: "Gambling",
+    i18nKey: "categoryGamblingName",
     description: "Online gambling sites that can lead to addiction and financial harm",
+    descriptionI18nKey: "categoryGamblingDesc",
     domains: [
       "pokerstars.com",
       "www.pokerstars.com",
@@ -284,8 +290,8 @@ async function loadSettings() {
       await saveSettings(updatedSettings);
       showNotification(
         this.checked
-          ? "Extension enabled"
-          : "Extension disabled",
+          ? chrome.i18n.getMessage("notificationExtensionEnabled")
+          : chrome.i18n.getMessage("notificationExtensionDisabled"),
       );
     }
   });
@@ -297,8 +303,8 @@ async function loadSettings() {
       await saveSettings(updatedSettings);
       showNotification(
         this.checked
-          ? "Notifications enabled"
-          : "Notifications disabled",
+          ? chrome.i18n.getMessage("notificationNotificationsEnabled")
+          : chrome.i18n.getMessage("notificationNotificationsDisabled"),
       );
     }
   });
@@ -315,8 +321,8 @@ async function loadSettings() {
       
       showNotification(
         this.checked
-          ? "Auto redirect enabled"
-          : "Auto redirect disabled",
+          ? chrome.i18n.getMessage("notificationAutoRedirectEnabled")
+          : chrome.i18n.getMessage("notificationAutoRedirectDisabled"),
       );
     }
   });
@@ -326,7 +332,7 @@ async function loadSettings() {
     if (updatedSettings) {
       updatedSettings.redirectDelay = parseInt(this.value);
       await saveSettings(updatedSettings);
-      showNotification(`Redirect delay set to ${this.value} seconds`);
+      showNotification(chrome.i18n.getMessage("notificationRedirectDelaySet", [this.value]));
     }
   });
 
@@ -335,7 +341,7 @@ async function loadSettings() {
     if (updatedSettings) {
       updatedSettings.blockingLevel = this.value;
       await saveSettings(updatedSettings);
-      showNotification(`Blocking level set to ${this.value}`);
+      showNotification(chrome.i18n.getMessage("notificationBlockingLevelSet", [this.value]));
     }
   });
 }
@@ -351,13 +357,17 @@ async function loadCategories() {
 
     const categoryItem = document.createElement("div");
     categoryItem.className = "category-item";
+    // Get localized name and description
+    const localizedName = chrome.i18n.getMessage(category.i18nKey || category.name);
+    const localizedDescription = chrome.i18n.getMessage(category.descriptionI18nKey || category.description);
+    
     categoryItem.innerHTML = `
       <input type="checkbox" id="category-${category.name
         .toLowerCase()
         .replace(/\s+/g, "-")}" ${isEnabled ? "checked" : ""} />
       <div class="category-info">
-        <div class="category-name">${category.name}</div>
-        <div class="category-description">${category.description}</div>
+        <div class="category-name">${localizedName}</div>
+        <div class="category-description">${localizedDescription}</div>
       </div>
       <div class="category-stats">${category.domains.length} sites</div>
     `;
@@ -380,8 +390,8 @@ async function loadCategories() {
         await saveSettings(updatedSettings);
         showNotification(
           this.checked
-            ? `${category.name} blocking enabled`
-            : `${category.name} blocking disabled`,
+            ? chrome.i18n.getMessage("notificationCategoryEnabled", [category.name])
+            : chrome.i18n.getMessage("notificationCategoryDisabled", [category.name]),
         );
       }
     });
@@ -440,8 +450,8 @@ async function loadCustomDomains() {
         this.dataset.enabled = newEnabled;
         showNotification(
           newEnabled
-            ? `${site.domain} enabled`
-            : `${site.domain} disabled`,
+            ? chrome.i18n.getMessage("notificationDomainEnabled", [site.domain])
+            : chrome.i18n.getMessage("notificationDomainDisabled", [site.domain]),
         );
       }
     });
@@ -450,7 +460,7 @@ async function loadCustomDomains() {
       const success = await removeBlockedSite(site.id);
       if (success) {
         domainItem.remove();
-        showNotification(`${site.domain} removed`);
+        showNotification(chrome.i18n.getMessage("notificationDomainRemoved", [site.domain]));
         
         // Show empty state if no domains left
         const remainingDomains = await getBlockedSites();
@@ -474,21 +484,31 @@ async function loadStatistics() {
   statsGrid.innerHTML = `
     <div class="stat-card">
       <div class="stat-value">${stats.totalBlocks || 0}</div>
-      <div class="stat-label">Total Blocks</div>
+      <div class="stat-label" data-i18n="statTotalBlocks">Total Blocks</div>
     </div>
     <div class="stat-card">
       <div class="stat-value">${stats.todayBlocks || 0}</div>
-      <div class="stat-label">Blocks Today</div>
+      <div class="stat-label" data-i18n="statBlocksToday">Blocks Today</div>
     </div>
     <div class="stat-card">
       <div class="stat-value">${stats.customDomains || 0}</div>
-      <div class="stat-label">Custom Domains</div>
+      <div class="stat-label" data-i18n="statCustomDomains">Custom Domains</div>
     </div>
     <div class="stat-card">
       <div class="stat-value">${new Date().toLocaleDateString()}</div>
-      <div class="stat-label">Last Updated</div>
+      <div class="stat-label" data-i18n="statLastUpdated">Last Updated</div>
     </div>
   `;
+  
+  // Localize the stat labels
+  const statLabels = statsGrid.querySelectorAll('[data-i18n]');
+  statLabels.forEach(label => {
+    const messageKey = label.getAttribute('data-i18n');
+    const message = chrome.i18n.getMessage(messageKey);
+    if (message) {
+      label.textContent = message;
+    }
+  });
 }
 
 // Setup event listeners
@@ -510,7 +530,7 @@ function setupEventListeners() {
 
   // Reset statistics button
   document.getElementById("resetStatsBtn").addEventListener("click", async function () {
-    if (confirm("Are you sure you want to reset all statistics?")) {
+    if (confirm(chrome.i18n.getMessage("confirmResetStatistics"))) {
       // Reset stats in storage
       const resetStats = {
         totalBlocks: 0,
@@ -520,7 +540,7 @@ function setupEventListeners() {
       };
       
       chrome.storage.sync.set({ blockingStats: resetStats }, function () {
-        showNotification("Statistics reset");
+        showNotification(chrome.i18n.getMessage("notificationStatisticsReset"));
         loadStatistics();
       });
     }
@@ -536,19 +556,19 @@ async function addNewDomain() {
   const category = categorySelect.value;
   
   if (!domain) {
-    showNotification("Please enter a domain", "error");
+    showNotification(chrome.i18n.getMessage("errorPleaseEnterDomain"), "error");
     return;
   }
   
   // Basic domain validation
   if (!isValidDomain(domain)) {
-    showNotification("Please enter a valid domain (e.g., example.com)", "error");
+    showNotification(chrome.i18n.getMessage("errorInvalidDomain"), "error");
     return;
   }
   
   try {
     const newSite = await addCustomDomain(domain, category);
-    showNotification(`${domain} added to blocked list`);
+    showNotification(chrome.i18n.getMessage("notificationDomainAdded", [domain]));
     
     // Clear input
     domainInput.value = "";
@@ -557,7 +577,7 @@ async function addNewDomain() {
     await loadCustomDomains();
     await loadStatistics();
   } catch (error) {
-    showNotification("Error adding domain", "error");
+    showNotification(chrome.i18n.getMessage("errorAddingDomain"), "error");
     console.error("Error adding domain:", error);
   }
 }

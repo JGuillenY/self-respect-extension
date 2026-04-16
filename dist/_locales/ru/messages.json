@@ -1,0 +1,551 @@
+{
+  "extDescription": {
+    "message": "Помогает избегать сайтов, которые не соответствуют вашим целям самоуважения, перенаправляя на более здоровые альтернативы.",
+    "description": "Page description used in manifest."
+  },
+
+  "extPopupTitle": {
+    "message": "Настройки Самоуважения",
+    "description": "Popup default title."
+  },
+
+  "redirectDelayMessage": {
+    "message": "Вы будете перенаправлены на более здоровую альтернативу через $DELAY$ секунд.",
+    "description": "Message that is displayed when redirect is enabled.",
+    "placeholders": {
+      "delay": {
+        "content": "$1",
+        "example": 3
+      }
+    }
+  },
+
+  "noRedirectDelayMessage": {
+    "message": "Этот сайт может не соответствовать вашим целям самоуважения и благополучия.",
+    "description": "Message that is displayed when redirect is not enabled."
+  },
+
+  "redirectingTo": {
+    "message": "Перенаправление на:"
+  },
+
+  "youWereAboutToVisit": {
+    "message": "Вы собирались посетить"
+  },
+
+  "redirectNow": {
+    "message": "Перенаправить Сейчас"
+  },
+
+  "healthierAlternative": {
+    "message": "Перейти к Более Здоровой Альтернативе"
+  },
+
+  "cancelMessage": {
+    "message": "Отмена (Временно Разрешить)"
+  },
+
+  "phrase1": {
+    "message": "Помните: каждый ваш выбор формирует то, кем вы становитесь."
+  },
+
+  "extensionStatusActive": {
+    "message": "Активно"
+  },
+
+  "extensionStatusPaused": {
+    "message": "Приостановлено"
+  },
+
+  "blockingLevelSoft": {
+    "message": "Мягкий"
+  },
+
+  "blockingLevelPuzzle": {
+    "message": "Головоломка"
+  },
+
+  "blockingLevelHard": {
+    "message": "Строгий"
+  },
+
+  "popupExtensionStatus": {
+    "message": "Статус Расширения:"
+  },
+
+  "popupProtectedCategories": {
+    "message": "Защищенные Категории:"
+  },
+
+  "popupBlockedDomains": {
+    "message": "Заблокированные Домены:"
+  },
+
+  "popupStatus": {
+    "message": "Статус:"
+  },
+
+  "popupBlockingLevel": {
+    "message": "Уровень Блокировки:"
+  },
+
+  "popupTotalBlocks": {
+    "message": "Всего Блокировок:"
+  },
+
+  "popupBlocksToday": {
+    "message": "Блокировок Сегодня:"
+  },
+
+  "popupCustomDomains": {
+    "message": "Пользовательские Домены:"
+  },
+
+  "popupCategoriesTitle": {
+    "message": "Защищенные Категории:"
+  },
+
+  "categoryAdultContent": {
+    "message": "Контент для Взрослых (30+ сайтов)"
+  },
+
+  "categorySocialMedia": {
+    "message": "Социальные Сети (10+ сайтов)"
+  },
+
+  "categoryGambling": {
+    "message": "Азартные Игры (15+ сайтов)"
+  },
+
+  "buttonOpenSettings": {
+    "message": "Открыть Настройки"
+  },
+
+  "popupFooter": {
+    "message": "Защищаем ваше самоуважение и цифровое благополучие. Каждое перенаправление - это шаг к лучшей версии себя. Если это расширение помогло вам, рассмотрите возможность пожертвования"
+  },
+
+  "settingsTitle": {
+    "message": "Самоуважение - Настройки"
+  },
+
+  "buttonBack": {
+    "message": "Назад"
+  },
+
+  "settingsHeading": {
+    "message": "Настройки"
+  },
+
+  "settingsGeneral": {
+    "message": "Основные Настройки"
+  },
+
+  "settingsExtensionStatus": {
+    "message": "Статус Расширения"
+  },
+
+  "settingsExtensionStatusDesc": {
+    "message": "Включить или отключить расширение"
+  },
+
+  "settingsShowNotifications": {
+    "message": "Показывать Уведомления"
+  },
+
+  "settingsShowNotificationsDesc": {
+    "message": "Показывать сообщения подтверждения при блокировке сайтов"
+  },
+
+  "settingsAutoRedirect": {
+    "message": "Автоматическое Перенаправление"
+  },
+
+  "settingsAutoRedirectDesc": {
+    "message": "Автоматически перенаправлять на более здоровые альтернативы"
+  },
+
+  "settingsRedirectDelay": {
+    "message": "Задержка Перенаправления (секунд)"
+  },
+
+  "optionOneSecond": {
+    "message": "1 секунда"
+  },
+
+  "optionTwoSeconds": {
+    "message": "2 секунды"
+  },
+
+  "optionThreeSeconds": {
+    "message": "3 секунды"
+  },
+
+  "optionFiveSeconds": {
+    "message": "5 секунд"
+  },
+
+  "optionTenSeconds": {
+    "message": "10 секунд"
+  },
+
+  "settingsBlockingLevel": {
+    "message": "Уровень Блокировки"
+  },
+
+  "optionSoftBlock": {
+    "message": "Мягкая Блокировка (Текущая - Показывает наложение)"
+  },
+
+  "optionPuzzleBlock": {
+    "message": "Блокировка с Головоломкой (Сложная головоломка для решения)"
+  },
+
+  "optionHardBlock": {
+    "message": "Строгая Блокировка (Доступ полностью запрещен)"
+  },
+
+  "settingsBlockedCategories": {
+    "message": "Заблокированные Категории"
+  },
+
+  "settingsCustomDomains": {
+    "message": "Пользовательские Домены"
+  },
+
+  "settingsCustomDomainsDesc": {
+    "message": "Добавьте свои собственные домены для блокировки. Вводите имена доменов без http:// или www."
+  },
+
+  "placeholderDomainExample": {
+    "message": "example.com"
+  },
+
+  "optionCategoryCustom": {
+    "message": "Пользовательский"
+  },
+
+  "optionCategoryAdultContent": {
+    "message": "Контент для Взрослых"
+  },
+
+  "optionCategorySocialMedia": {
+    "message": "Социальные Сети"
+  },
+
+  "optionCategoryGambling": {
+    "message": "Азартные Игры"
+  },
+
+  "optionCategoryDistracting": {
+    "message": "Отвлекающие"
+  },
+
+  "optionCategoryShopping": {
+    "message": "Покупки"
+  },
+
+  "buttonAddDomain": {
+    "message": "Добавить Домен"
+  },
+
+  "emptyCustomDomains": {
+    "message": "Пользовательские домены еще не добавлены"
+  },
+
+  "settingsStatistics": {
+    "message": "Статистика"
+  },
+
+  "statTotalBlocks": {
+    "message": "Всего Блокировок"
+  },
+
+  "statBlocksToday": {
+    "message": "Блокировок Сегодня"
+  },
+
+  "statCustomDomains": {
+    "message": "Пользовательские Домены"
+  },
+
+  "statLastUpdated": {
+    "message": "Последнее Обновление"
+  },
+
+  "buttonResetStatistics": {
+    "message": "Сбросить Статистику"
+  },
+
+  "settingsFooter": {
+    "message": "Расширение Самоуважения v1.0.0 Защищаем ваше цифровое благополучие и самоуважение"
+  },
+
+  "notificationExtensionEnabled": {
+    "message": "Расширение включено"
+  },
+
+  "notificationExtensionDisabled": {
+    "message": "Расширение отключено"
+  },
+
+  "notificationNotificationsEnabled": {
+    "message": "Уведомления включены"
+  },
+
+  "notificationNotificationsDisabled": {
+    "message": "Уведомления отключены"
+  },
+
+  "notificationAutoRedirectEnabled": {
+    "message": "Автоматическое перенаправление включено"
+  },
+
+  "notificationAutoRedirectDisabled": {
+    "message": "Автоматическое перенаправление отключено"
+  },
+
+  "notificationRedirectDelaySet": {
+    "message": "Задержка перенаправления установлена на $DELAY$ секунд",
+    "placeholders": {
+      "delay": {
+        "content": "$1",
+        "example": 3
+      }
+    }
+  },
+
+  "notificationBlockingLevelSet": {
+    "message": "Уровень блокировки установлен на $LEVEL$",
+    "placeholders": {
+      "level": {
+        "content": "$1",
+        "example": "мягкий"
+      }
+    }
+  },
+
+  "notificationCategoryEnabled": {
+    "message": "Блокировка $CATEGORY$ включена",
+    "placeholders": {
+      "category": {
+        "content": "$1",
+        "example": "Контент для Взрослых"
+      }
+    }
+  },
+
+  "notificationCategoryDisabled": {
+    "message": "Блокировка $CATEGORY$ отключена",
+    "placeholders": {
+      "category": {
+        "content": "$1",
+        "example": "Контент для Взрослых"
+      }
+    }
+  },
+
+  "notificationDomainEnabled": {
+    "message": "$DOMAIN$ включен",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "notificationDomainDisabled": {
+    "message": "$DOMAIN$ отключен",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "notificationDomainRemoved": {
+    "message": "$DOMAIN$ удален",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "confirmResetStatistics": {
+    "message": "Вы уверены, что хотите сбросить всю статистику?"
+  },
+
+  "notificationStatisticsReset": {
+    "message": "Статистика сброшена"
+  },
+
+  "errorPleaseEnterDomain": {
+    "message": "Пожалуйста, введите домен"
+  },
+
+  "errorInvalidDomain": {
+    "message": "Пожалуйста, введите действительный домен (например, example.com)"
+  },
+
+  "notificationDomainAdded": {
+    "message": "$DOMAIN$ добавлен в список блокировки",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "errorAddingDomain": {
+    "message": "Ошибка при добавлении домена"
+  },
+
+  "categoryAdultContentName": {
+    "message": "Контент для Взрослых"
+  },
+
+  "categoryAdultContentDesc": {
+    "message": "Веб-сайты для взрослых, которые пользователи могут захотеть избегать из-за самоуважения и благополучия"
+  },
+
+  "categorySocialMediaName": {
+    "message": "Социальные Сети"
+  },
+
+  "categorySocialMediaDesc": {
+    "message": "Основные платформы социальных сетей, которые могут отнимать время и влиять на самооценку"
+  },
+
+  "categoryGamblingName": {
+    "message": "Азартные Игры"
+  },
+
+  "categoryGamblingDesc": {
+    "message": "Сайты онлайн-азартных игр, которые могут привести к зависимости и финансовому ущербу"
+  },
+
+  "puzzleBlockTitle": {
+    "message": "Самоуважение - Блокировка с Головоломкой"
+  },
+
+  "puzzleBlockDescription": {
+    "message": "Чтобы получить доступ к этому сайту, вы должны решить сложную головоломку. Это необходимо, чтобы убедиться, что вы действительно хотите продолжить."
+  },
+
+  "puzzleChallengeTitle": {
+    "message": "Головоломка-Испытание"
+  },
+
+  "placeholderEnterAnswer": {
+    "message": "Введите ваш ответ..."
+  },
+
+  "buttonSubmit": {
+    "message": "Отправить"
+  },
+
+  "labelAttempts": {
+    "message": "Попытки:"
+  },
+
+  "labelTimeout": {
+    "message": "Тайм-аут:"
+  },
+
+  "buttonShowHint": {
+    "message": "Показать Подсказку"
+  },
+
+  "puzzleSuccessMessage": {
+    "message": "Головоломка решена правильно! Вы можете продолжить, если все еще хотите."
+  },
+
+  "buttonProceedToSite": {
+    "message": "Перейти на $DOMAIN$",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "buttonChooseAlternative": {
+    "message": "Выбрать Более Здоровую Альтернативу"
+  },
+
+  "puzzleFooter": {
+    "message": "Эта головоломка предназначена для того, чтобы заставить вас остановиться и пересмотреть свой выбор."
+  },
+
+  "errorPleaseEnterAnswer": {
+    "message": "Пожалуйста, введите ответ."
+  },
+
+  "feedbackCorrectAnswer": {
+    "message": "Правильно! Молодец."
+  },
+
+  "feedbackIncorrectAnswer": {
+    "message": "Неверно. Попробуйте еще раз. Попытки: $ATTEMPTS$",
+    "placeholders": {
+      "attempts": {
+        "content": "$1",
+        "example": "1/5"
+      }
+    }
+  },
+
+  "feedbackMaxAttempts": {
+    "message": "Достигнуто максимальное количество попыток. Страница будет перезагружена с новой головоломкой."
+  },
+
+  "feedbackTimeout": {
+    "message": "Время вышло! Страница будет перезагружена с новой головоломкой."
+  },
+
+  "hintMessage": {
+    "message": "Подсказка: $HINT$",
+    "placeholders": {
+      "hint": {
+        "content": "$1",
+        "example": "Подумайте о простых числах"
+      }
+    }
+  },
+
+  "hardBlockTitle": {
+    "message": "Самоуважение - Строгая Блокировка"
+  },
+
+  "hardBlockMessage": {
+    "message": "Доступ к $DOMAIN$ permanently blocked.",
+    "placeholders": {
+      "domain": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
+  "hardBlockDescription": {
+    "message": "Этот сайт несовместим с вашими целями самоуважения. Доступ не разрешен ни при каких обстоятельствах."
+  },
+
+  "hardBlockWarning": {
+    "message": "СТРОГАЯ БЛОКИРОВКА АКТИВИРОВАНА"
+  },
+
+  "hardBlockWarningDesc": {
+    "message": "Это ваш самый высокий уровень защиты. Нет доступных вариантов обхода."
+  },
+
+  "hardBlockFooter": {
+    "message": "Эта строгая блокировка защищает вас от сайтов, которые конфликтуют с вашими основными ценностями."
+  }
+}

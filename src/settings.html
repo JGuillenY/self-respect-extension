@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Self Respect - Settings</title>
+    <title>__MSG_settingsTitle__</title>
     <style>
       body {
         width: auto;
@@ -391,18 +391,18 @@
     </style>
   </head>
   <body>
-    <button class="back-button" id="backBtn"><span><</span> Back</button>
+    <button class="back-button" id="backBtn"><span><</span> <span data-i18n="buttonBack">Back</span></button>
 
     <div class="container">
-      <h1>⚙️ Settings</h1>
+      <h1>⚙️ <span data-i18n="settingsHeading">Settings</span></h1>
 
       <!-- General Settings -->
       <div class="section">
-        <h2>General Settings</h2>
+        <h2 data-i18n="settingsGeneral">General Settings</h2>
         <div class="toggle-group">
           <div>
-            <div style="font-weight: 500">Extension Status</div>
-            <div style="font-size: 13px; opacity: 0.8">
+            <div style="font-weight: 500" data-i18n="settingsExtensionStatus">Extension Status</div>
+            <div style="font-size: 13px; opacity: 0.8" data-i18n="settingsExtensionStatusDesc">
               Enable or disable the extension
             </div>
           </div>
@@ -414,8 +414,8 @@
 
         <div class="toggle-group">
           <div>
-            <div style="font-weight: 500">Show Notifications</div>
-            <div style="font-size: 13px; opacity: 0.8">
+            <div style="font-weight: 500" data-i18n="settingsShowNotifications">Show Notifications</div>
+            <div style="font-size: 13px; opacity: 0.8" data-i18n="settingsShowNotificationsDesc">
               Show confirmation messages when blocking sites
             </div>
           </div>
@@ -427,8 +427,8 @@
 
         <div class="toggle-group">
           <div>
-            <div style="font-weight: 500">Auto Redirect</div>
-            <div style="font-size: 13px; opacity: 0.8">
+            <div style="font-weight: 500" data-i18n="settingsAutoRedirect">Auto Redirect</div>
+            <div style="font-size: 13px; opacity: 0.8" data-i18n="settingsAutoRedirectDesc">
               Automatically redirect to healthier alternatives
             </div>
           </div>
@@ -440,27 +440,27 @@
 
         <div class="settings-group">
           <div class="setting-item" id="redirectDelayContainer">
-            <label class="setting-label" for="redirectDelay"
+            <label class="setting-label" for="redirectDelay" data-i18n="settingsRedirectDelay"
               >Redirect Delay (seconds)</label
             >
             <select class="setting-control" id="redirectDelay">
-              <option value="1">1 second</option>
-              <option value="2">2 seconds</option>
-              <option value="3" selected>3 seconds</option>
-              <option value="5">5 seconds</option>
-              <option value="10">10 seconds</option>
+              <option value="1" data-i18n="optionOneSecond">1 second</option>
+              <option value="2" data-i18n="optionTwoSeconds">2 seconds</option>
+              <option value="3" selected data-i18n="optionThreeSeconds">3 seconds</option>
+              <option value="5" data-i18n="optionFiveSeconds">5 seconds</option>
+              <option value="10" data-i18n="optionTenSeconds">10 seconds</option>
             </select>
           </div>
           <div class="setting-item">
-            <label class="setting-label" for="blockingLevel"
+            <label class="setting-label" for="blockingLevel" data-i18n="settingsBlockingLevel"
               >Blocking Level</label
             >
             <select class="setting-control" id="blockingLevel">
-              <option value="soft">Soft Block (Current - Shows overlay)</option>
-              <option value="puzzle">
+              <option value="soft" data-i18n="optionSoftBlock">Soft Block (Current - Shows overlay)</option>
+              <option value="puzzle" data-i18n="optionPuzzleBlock">
                 Puzzle Block (Hard puzzle to solve)
               </option>
-              <option value="hard">Hard Block (No access at all)</option>
+              <option value="hard" data-i18n="optionHardBlock">Hard Block (No access at all)</option>
             </select>
           </div>
         </div>
@@ -468,7 +468,7 @@
 
       <!-- Blocked Categories -->
       <div class="section">
-        <h2>Blocked Categories</h2>
+        <h2 data-i18n="settingsBlockedCategories">Blocked Categories</h2>
         <div class="category-list" id="categoriesList">
           <!-- Categories will be populated by JavaScript -->
         </div>
@@ -476,8 +476,8 @@
 
       <!-- Custom Domains -->
       <div class="section">
-        <h2>Custom Domains</h2>
-        <p style="font-size: 14px; opacity: 0.9; margin-bottom: 15px">
+        <h2 data-i18n="settingsCustomDomains">Custom Domains</h2>
+        <p style="font-size: 14px; opacity: 0.9; margin-bottom: 15px" data-i18n="settingsCustomDomainsDesc">
           Add your own domains to block. Enter domain names without http:// or
           www.
         </p>
@@ -488,25 +488,25 @@
               type="text"
               class="domain-input"
               id="domainInput"
-              placeholder="example.com"
+              placeholder="example.com" data-i18n="placeholderDomainExample"
             />
             <select
               class="setting-control"
               id="domainCategory"
               style="width: 120px"
             >
-              <option value="Custom">Custom</option>
-              <option value="Adult Content">Adult Content</option>
-              <option value="Social Media">Social Media</option>
-              <option value="Gambling">Gambling</option>
-              <option value="Distracting">Distracting</option>
-              <option value="Shopping">Shopping</option>
+              <option value="Custom" data-i18n="optionCategoryCustom">Custom</option>
+              <option value="Adult Content" data-i18n="optionCategoryAdultContent">Adult Content</option>
+              <option value="Social Media" data-i18n="optionCategorySocialMedia">Social Media</option>
+              <option value="Gambling" data-i18n="optionCategoryGambling">Gambling</option>
+              <option value="Distracting" data-i18n="optionCategoryDistracting">Distracting</option>
+              <option value="Shopping" data-i18n="optionCategoryShopping">Shopping</option>
             </select>
-            <button class="add-button" id="addDomainBtn">Add Domain</button>
+            <button class="add-button" id="addDomainBtn" data-i18n="buttonAddDomain">Add Domain</button>
           </div>
 
           <div class="domains-list" id="domainsList">
-            <div class="empty-state" id="emptyDomains">
+            <div class="empty-state" id="emptyDomains" data-i18n="emptyCustomDomains">
               No custom domains added yet
             </div>
             <!-- Custom domains will be populated by JavaScript -->
@@ -516,18 +516,18 @@
 
       <!-- Statistics -->
       <div class="section">
-        <h2>Statistics</h2>
+        <h2 data-i18n="settingsStatistics">Statistics</h2>
         <div class="stats-grid" id="statsGrid">
           <!-- Statistics will be populated by JavaScript -->
         </div>
         <div style="text-align: center; margin-top: 15px">
-          <button class="action-button" id="resetStatsBtn">
+          <button class="action-button" id="resetStatsBtn" data-i18n="buttonResetStatistics">
             Reset Statistics
           </button>
         </div>
       </div>
 
-      <div class="footer">
+      <div class="footer" data-i18n="settingsFooter">
         Self Respect Extension v1.0.0<br />
         Protecting your digital wellbeing and self-respect
       </div>
@@ -536,5 +536,26 @@
     <div id="notification" class="notification" style="display: none"></div>
 
     <script src="settings.js"></script>
+    <script>
+      // Localize all elements with data-i18n attributes
+      document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+          const messageKey = element.getAttribute('data-i18n');
+          const message = chrome.i18n.getMessage(messageKey);
+          if (message) {
+            // Check if element is an input placeholder
+            if (element.hasAttribute('placeholder')) {
+              element.setAttribute('placeholder', message);
+            } else if (element.tagName === 'OPTION') {
+              // For option elements, we need to set textContent
+              element.textContent = message;
+            } else {
+              element.textContent = message;
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
