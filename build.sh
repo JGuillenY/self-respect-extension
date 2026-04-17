@@ -3,19 +3,29 @@
 echo "🌱 Building Self Respect Chrome Extension..."
 echo ""
 
-# Creating directory
+# Creating directories
 rm -rf ./dist
 mkdir ./dist
+mkdir ./dist/_locales
+mkdir ./dist/_locales/en
+mkdir ./dist/_locales/es
+mkdir ./dist/_locales/pt_BR
+mkdir ./dist/_locales/zh_CN
+mkdir ./dist/_locales/ru
 
 # Copy non-javascript files
 echo ""
 echo "Copying files..."
 
 cp -r src/icons dist/icons
-cp -r src/_locales dist/_locales
 cp src/manifest.json dist/manifest.json
 cp src/popup.html dist/popup.html
 cp src/settings.html dist/settings.html
+
+# Minify locale files
+echo ""
+echo "Minifying locale files..."
+node minify-locales.js
 
 # Compile TypeScript
 echo ""
@@ -24,6 +34,10 @@ echo "Compiling TypeScript and JavaScript files..."
 esbuild src/popup.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/popup.js
 esbuild src/content.ts --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/content.js
 esbuild src/settings.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/settings.js
+
+# Creating ZIP
+rm dist.zip
+zip -r dist.zip dist
 
 echo ""
 echo "🎉 Build complete!"

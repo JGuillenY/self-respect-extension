@@ -4,7 +4,8 @@
   "description": "Chrome extension that helps maintain self-respect by redirecting from harmful sites to healthier alternatives",
   "main": "dist/content.js",
   "scripts": {
-    "build": "bash ./build.sh"
+    "build": "bash ./build.sh",
+    "minify": "jsonminify"
   },
   "keywords": [
     "chrome-extension",
@@ -16,7 +17,8 @@
   "author": "Jesus",
   "license": "MIT",
   "dependencies": {
-    "chrome-types": "^0.1.425"
+    "chrome-types": "^0.1.425",
+    "jsonminify": "^0.4.2"
   },
   "devDependencies": {
     "esbuild": "0.28.0",

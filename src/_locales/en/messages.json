@@ -3,12 +3,10 @@
     "message": "Helps you avoid sites that don't align with your self-respect goals by redirecting to healthier alternatives.",
     "description": "Page description used in manifest."
   },
-
   "extPopupTitle": {
     "message": "Self Respect Settings",
     "description": "Popup default title."
   },
-
   "redirectDelayMessage": {
     "message": "You'll be redirected to a healthier alternative in $DELAY$ seconds.",
     "description": "Message that is displayed when redirect is enabled.",
@@ -19,292 +17,290 @@
       }
     }
   },
-
   "noRedirectDelayMessage": {
     "message": "This site may not align with your goals for self-respect and wellbeing.",
     "description": "Message that is displayed when redirect is not enabled."
   },
-
   "redirectingTo": {
-    "message": "Redirecting to:"
+    "message": "Redirecting to:",
+    "description": "Label showing where user will be redirected"
   },
-
   "youWereAboutToVisit": {
-    "message": "You were about to visit"
+    "message": "You were about to visit",
+    "description": "Label showing the URL user tried to access"
   },
-
   "redirectNow": {
-    "message": "Redirect Now"
+    "message": "Redirect Now",
+    "description": "Button to redirect immediately"
   },
-
   "healthierAlternative": {
-    "message": "Go to Healthier Alternative"
+    "message": "Go to Healthier Alternative",
+    "description": "Translation for: healthierAlternative"
   },
-
   "cancelMessage": {
-    "message": "Cancel (Temporarily Allow)"
+    "message": "Cancel (Temporarily Allow)",
+    "description": "Translation for: cancelMessage"
   },
-
   "phrase1": {
-    "message": "Remember: Every choice you make shapes who you become."
+    "message": "Remember: Every choice you make shapes who you become.",
+    "description": "Translation for: phrase1"
   },
-
   "extensionStatusActive": {
-    "message": "Active"
+    "message": "Active",
+    "description": "Translation for: extensionStatusActive"
   },
-
   "extensionStatusPaused": {
-    "message": "Paused"
+    "message": "Paused",
+    "description": "Translation for: extensionStatusPaused"
   },
-
   "blockingLevelSoft": {
-    "message": "Soft"
+    "message": "Soft",
+    "description": "Translation for: blockingLevelSoft"
   },
-
   "blockingLevelPuzzle": {
-    "message": "Puzzle"
+    "message": "Puzzle",
+    "description": "Translation for: blockingLevelPuzzle"
   },
-
   "blockingLevelHard": {
-    "message": "Hard"
+    "message": "Hard",
+    "description": "Translation for: blockingLevelHard"
   },
-
   "popupExtensionStatus": {
-    "message": "Extension Status:"
+    "message": "Extension Status:",
+    "description": "Translation for: popupExtensionStatus"
   },
-
   "popupProtectedCategories": {
-    "message": "Protected Categories:"
+    "message": "Protected Categories:",
+    "description": "Translation for: popupProtectedCategories"
   },
-
   "popupBlockedDomains": {
-    "message": "Blocked Domains:"
+    "message": "Blocked Domains:",
+    "description": "Translation for: popupBlockedDomains"
   },
-
   "popupStatus": {
-    "message": "Status:"
+    "message": "Status:",
+    "description": "Translation for: popupStatus"
   },
-
   "popupBlockingLevel": {
-    "message": "Blocking Level:"
+    "message": "Blocking Level:",
+    "description": "Translation for: popupBlockingLevel"
   },
-
   "popupTotalBlocks": {
-    "message": "Total Blocks:"
+    "message": "Total Blocks:",
+    "description": "Translation for: popupTotalBlocks"
   },
-
   "popupBlocksToday": {
-    "message": "Blocks Today:"
+    "message": "Blocks Today:",
+    "description": "Translation for: popupBlocksToday"
   },
-
   "popupCustomDomains": {
-    "message": "Custom Domains:"
+    "message": "Custom Domains:",
+    "description": "Translation for: popupCustomDomains"
   },
-
   "popupCategoriesTitle": {
-    "message": "Protected Categories:"
+    "message": "Protected Categories:",
+    "description": "Translation for: popupCategoriesTitle"
   },
-
   "categoryAdultContent": {
-    "message": "Adult Content (30+ sites)"
+    "message": "Adult Content (30+ sites)",
+    "description": "Translation for: categoryAdultContent"
   },
-
   "categorySocialMedia": {
-    "message": "Social Media (10+ sites)"
+    "message": "Social Media (10+ sites)",
+    "description": "Translation for: categorySocialMedia"
   },
-
   "categoryGambling": {
-    "message": "Gambling (15+ sites)"
+    "message": "Gambling (15+ sites)",
+    "description": "Translation for: categoryGambling"
   },
-
   "buttonOpenSettings": {
-    "message": "Open Settings"
+    "message": "Open Settings",
+    "description": "Translation for: buttonOpenSettings"
   },
-
   "popupFooter": {
-    "message": "Protecting your self-respect and digital wellbeing. Every redirect is a step toward your better self. If this extension helped you, consider donating"
+    "message": "Protecting your self-respect and digital wellbeing. Every redirect is a step toward your better self. If this extension helped you, consider donating",
+    "description": "Translation for: popupFooter"
   },
-
   "settingsTitle": {
-    "message": "Self Respect - Settings"
+    "message": "Self Respect - Settings",
+    "description": "Translation for: settingsTitle"
   },
-
   "buttonBack": {
-    "message": "Back"
+    "message": "Back",
+    "description": "Translation for: buttonBack"
   },
-
   "settingsHeading": {
-    "message": "Settings"
+    "message": "Settings",
+    "description": "Translation for: settingsHeading"
   },
-
   "settingsGeneral": {
-    "message": "General Settings"
+    "message": "General Settings",
+    "description": "Translation for: settingsGeneral"
   },
-
   "settingsExtensionStatus": {
-    "message": "Extension Status"
+    "message": "Extension Status",
+    "description": "Translation for: settingsExtensionStatus"
   },
-
   "settingsExtensionStatusDesc": {
-    "message": "Enable or disable the extension"
+    "message": "Enable or disable the extension",
+    "description": "Translation for: settingsExtensionStatusDesc"
   },
-
   "settingsShowNotifications": {
-    "message": "Show Notifications"
+    "message": "Show Notifications",
+    "description": "Translation for: settingsShowNotifications"
   },
-
   "settingsShowNotificationsDesc": {
-    "message": "Show confirmation messages when blocking sites"
+    "message": "Show confirmation messages when blocking sites",
+    "description": "Translation for: settingsShowNotificationsDesc"
   },
-
   "settingsAutoRedirect": {
-    "message": "Auto Redirect"
+    "message": "Auto Redirect",
+    "description": "Translation for: settingsAutoRedirect"
   },
-
   "settingsAutoRedirectDesc": {
-    "message": "Automatically redirect to healthier alternatives"
+    "message": "Automatically redirect to healthier alternatives",
+    "description": "Translation for: settingsAutoRedirectDesc"
   },
-
   "settingsRedirectDelay": {
-    "message": "Redirect Delay (seconds)"
+    "message": "Redirect Delay (seconds)",
+    "description": "Translation for: settingsRedirectDelay"
   },
-
   "optionOneSecond": {
-    "message": "1 second"
+    "message": "1 second",
+    "description": "Translation for: optionOneSecond"
   },
-
   "optionTwoSeconds": {
-    "message": "2 seconds"
+    "message": "2 seconds",
+    "description": "Translation for: optionTwoSeconds"
   },
-
   "optionThreeSeconds": {
-    "message": "3 seconds"
+    "message": "3 seconds",
+    "description": "Translation for: optionThreeSeconds"
   },
-
   "optionFiveSeconds": {
-    "message": "5 seconds"
+    "message": "5 seconds",
+    "description": "Translation for: optionFiveSeconds"
   },
-
   "optionTenSeconds": {
-    "message": "10 seconds"
+    "message": "10 seconds",
+    "description": "Translation for: optionTenSeconds"
   },
-
   "settingsBlockingLevel": {
-    "message": "Blocking Level"
+    "message": "Blocking Level",
+    "description": "Translation for: settingsBlockingLevel"
   },
-
   "optionSoftBlock": {
-    "message": "Soft Block (Current - Shows overlay)"
+    "message": "Soft Block (Current - Shows overlay)",
+    "description": "Translation for: optionSoftBlock"
   },
-
   "optionPuzzleBlock": {
-    "message": "Puzzle Block (Hard puzzle to solve)"
+    "message": "Sudoku Challenge (Hard Sudoku to solve)",
+    "description": "Translation for: optionPuzzleBlock"
   },
-
   "optionHardBlock": {
-    "message": "Hard Block (No access at all)"
+    "message": "Hard Block (No access at all)",
+    "description": "Translation for: optionHardBlock"
   },
-
   "settingsBlockedCategories": {
-    "message": "Blocked Categories"
+    "message": "Blocked Categories",
+    "description": "Translation for: settingsBlockedCategories"
   },
-
   "settingsCustomDomains": {
-    "message": "Custom Domains"
+    "message": "Custom Domains",
+    "description": "Translation for: settingsCustomDomains"
   },
-
   "settingsCustomDomainsDesc": {
-    "message": "Add your own domains to block. Enter domain names without http:// or www."
+    "message": "Add your own domains to block. Enter domain names without http:// or www.",
+    "description": "Translation for: settingsCustomDomainsDesc"
   },
-
   "placeholderDomainExample": {
-    "message": "example.com"
+    "message": "example.com",
+    "description": "Translation for: placeholderDomainExample"
   },
-
   "optionCategoryCustom": {
-    "message": "Custom"
+    "message": "Custom",
+    "description": "Translation for: optionCategoryCustom"
   },
-
   "optionCategoryAdultContent": {
-    "message": "Adult Content"
+    "message": "Adult Content",
+    "description": "Translation for: optionCategoryAdultContent"
   },
-
   "optionCategorySocialMedia": {
-    "message": "Social Media"
+    "message": "Social Media",
+    "description": "Translation for: optionCategorySocialMedia"
   },
-
   "optionCategoryGambling": {
-    "message": "Gambling"
+    "message": "Gambling",
+    "description": "Translation for: optionCategoryGambling"
   },
-
   "optionCategoryDistracting": {
-    "message": "Distracting"
+    "message": "Distracting",
+    "description": "Translation for: optionCategoryDistracting"
   },
-
   "optionCategoryShopping": {
-    "message": "Shopping"
+    "message": "Shopping",
+    "description": "Translation for: optionCategoryShopping"
   },
-
   "buttonAddDomain": {
-    "message": "Add Domain"
+    "message": "Add Domain",
+    "description": "Translation for: buttonAddDomain"
   },
-
   "emptyCustomDomains": {
-    "message": "No custom domains added yet"
+    "message": "No custom domains added yet",
+    "description": "Translation for: emptyCustomDomains"
   },
-
   "settingsStatistics": {
-    "message": "Statistics"
+    "message": "Statistics",
+    "description": "Translation for: settingsStatistics"
   },
-
   "statTotalBlocks": {
-    "message": "Total Blocks"
+    "message": "Total Blocks",
+    "description": "Translation for: statTotalBlocks"
   },
-
   "statBlocksToday": {
-    "message": "Blocks Today"
+    "message": "Blocks Today",
+    "description": "Translation for: statBlocksToday"
   },
-
   "statCustomDomains": {
-    "message": "Custom Domains"
+    "message": "Custom Domains",
+    "description": "Translation for: statCustomDomains"
   },
-
   "statLastUpdated": {
-    "message": "Last Updated"
+    "message": "Last Updated",
+    "description": "Translation for: statLastUpdated"
   },
-
   "buttonResetStatistics": {
-    "message": "Reset Statistics"
+    "message": "Reset Statistics",
+    "description": "Translation for: buttonResetStatistics"
   },
-
   "settingsFooter": {
-    "message": "Self Respect Extension v1.0.0 Protecting your digital wellbeing and self-respect"
+    "message": "Self Respect Extension v1.0.0 Protecting your digital wellbeing and self-respect",
+    "description": "Translation for: settingsFooter"
   },
-
   "notificationExtensionEnabled": {
-    "message": "Extension enabled"
+    "message": "Extension enabled",
+    "description": "Translation for: notificationExtensionEnabled"
   },
-
   "notificationExtensionDisabled": {
-    "message": "Extension disabled"
+    "message": "Extension disabled",
+    "description": "Translation for: notificationExtensionDisabled"
   },
-
   "notificationNotificationsEnabled": {
-    "message": "Notifications enabled"
+    "message": "Notifications enabled",
+    "description": "Translation for: notificationNotificationsEnabled"
   },
-
   "notificationNotificationsDisabled": {
-    "message": "Notifications disabled"
+    "message": "Notifications disabled",
+    "description": "Translation for: notificationNotificationsDisabled"
   },
-
   "notificationAutoRedirectEnabled": {
-    "message": "Auto redirect enabled"
+    "message": "Auto redirect enabled",
+    "description": "Translation for: notificationAutoRedirectEnabled"
   },
-
   "notificationAutoRedirectDisabled": {
-    "message": "Auto redirect disabled"
+    "message": "Auto redirect disabled",
+    "description": "Translation for: notificationAutoRedirectDisabled"
   },
-
   "notificationRedirectDelaySet": {
     "message": "Redirect delay set to $DELAY$ seconds",
     "placeholders": {
@@ -312,9 +308,9 @@
         "content": "$1",
         "example": 3
       }
-    }
+    },
+    "description": "Translation for: notificationRedirectDelaySet"
   },
-
   "notificationBlockingLevelSet": {
     "message": "Blocking level set to $LEVEL$",
     "placeholders": {
@@ -322,9 +318,9 @@
         "content": "$1",
         "example": "soft"
       }
-    }
+    },
+    "description": "Translation for: notificationBlockingLevelSet"
   },
-
   "notificationCategoryEnabled": {
     "message": "$CATEGORY$ blocking enabled",
     "placeholders": {
@@ -332,9 +328,9 @@
         "content": "$1",
         "example": "Adult Content"
       }
-    }
+    },
+    "description": "Translation for: notificationCategoryEnabled"
   },
-
   "notificationCategoryDisabled": {
     "message": "$CATEGORY$ blocking disabled",
     "placeholders": {
@@ -342,9 +338,9 @@
         "content": "$1",
         "example": "Adult Content"
       }
-    }
+    },
+    "description": "Translation for: notificationCategoryDisabled"
   },
-
   "notificationDomainEnabled": {
     "message": "$DOMAIN$ enabled",
     "placeholders": {
@@ -352,9 +348,9 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainEnabled"
   },
-
   "notificationDomainDisabled": {
     "message": "$DOMAIN$ disabled",
     "placeholders": {
@@ -362,9 +358,9 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainDisabled"
   },
-
   "notificationDomainRemoved": {
     "message": "$DOMAIN$ removed",
     "placeholders": {
@@ -372,25 +368,25 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainRemoved"
   },
-
   "confirmResetStatistics": {
-    "message": "Are you sure you want to reset all statistics?"
+    "message": "Are you sure you want to reset all statistics?",
+    "description": "Translation for: confirmResetStatistics"
   },
-
   "notificationStatisticsReset": {
-    "message": "Statistics reset"
+    "message": "Statistics reset",
+    "description": "Translation for: notificationStatisticsReset"
   },
-
   "errorPleaseEnterDomain": {
-    "message": "Please enter a domain"
+    "message": "Please enter a domain",
+    "description": "Translation for: errorPleaseEnterDomain"
   },
-
   "errorInvalidDomain": {
-    "message": "Please enter a valid domain (e.g., example.com)"
+    "message": "Please enter a valid domain (e.g., example.com)",
+    "description": "Translation for: errorInvalidDomain"
   },
-
   "notificationDomainAdded": {
     "message": "$DOMAIN$ added to blocked list",
     "placeholders": {
@@ -398,73 +394,73 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainAdded"
   },
-
   "errorAddingDomain": {
-    "message": "Error adding domain"
+    "message": "Error adding domain",
+    "description": "Translation for: errorAddingDomain"
   },
-
   "categoryAdultContentName": {
-    "message": "Adult Content"
+    "message": "Adult Content",
+    "description": "Translation for: categoryAdultContentName"
   },
-
   "categoryAdultContentDesc": {
-    "message": "Adult websites that users may want to avoid for self-respect and wellbeing"
+    "message": "Adult websites that users may want to avoid for self-respect and wellbeing",
+    "description": "Translation for: categoryAdultContentDesc"
   },
-
   "categorySocialMediaName": {
-    "message": "Social Media"
+    "message": "Social Media",
+    "description": "Translation for: categorySocialMediaName"
   },
-
   "categorySocialMediaDesc": {
-    "message": "Major social networking platforms that can be time-consuming and affect self-esteem"
+    "message": "Major social networking platforms that can be time-consuming and affect self-esteem",
+    "description": "Translation for: categorySocialMediaDesc"
   },
-
   "categoryGamblingName": {
-    "message": "Gambling"
+    "message": "Gambling",
+    "description": "Translation for: categoryGamblingName"
   },
-
   "categoryGamblingDesc": {
-    "message": "Online gambling sites that can lead to addiction and financial harm"
+    "message": "Online gambling sites that can lead to addiction and financial harm",
+    "description": "Translation for: categoryGamblingDesc"
   },
-
   "puzzleBlockTitle": {
-    "message": "Self Respect - Puzzle Block"
+    "message": "Self Respect - Sudoku Challenge",
+    "description": "Translation for: puzzleBlockTitle"
   },
-
   "puzzleBlockDescription": {
-    "message": "To access this site, you must solve a difficult puzzle. This is to ensure you truly want to proceed."
+    "message": "To access this site, you must solve a hard Sudoku puzzle. This is to ensure you truly want to proceed.",
+    "description": "Translation for: puzzleBlockDescription"
   },
-
   "puzzleChallengeTitle": {
-    "message": "Puzzle Challenge"
+    "message": "Sudoku Challenge",
+    "description": "Translation for: puzzleChallengeTitle"
   },
-
   "placeholderEnterAnswer": {
-    "message": "Enter your answer..."
+    "message": "Enter your answer...",
+    "description": "Translation for: placeholderEnterAnswer"
   },
-
   "buttonSubmit": {
-    "message": "Submit"
+    "message": "Submit",
+    "description": "Translation for: buttonSubmit"
   },
-
   "labelAttempts": {
-    "message": "Attempts:"
+    "message": "Attempts:",
+    "description": "Translation for: labelAttempts"
   },
-
   "labelTimeout": {
-    "message": "Timeout:"
+    "message": "Timeout:",
+    "description": "Translation for: labelTimeout"
   },
-
   "buttonShowHint": {
-    "message": "Show Hint"
+    "message": "Show Hint",
+    "description": "Translation for: buttonShowHint"
   },
-
   "puzzleSuccessMessage": {
-    "message": "Puzzle solved correctly! You may proceed if you still wish to."
+    "message": "Sudoku solved correctly! You may proceed if you still wish to.",
+    "description": "Translation for: puzzleSuccessMessage"
   },
-
   "buttonProceedToSite": {
     "message": "Proceed to $DOMAIN$",
     "placeholders": {
@@ -472,25 +468,25 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: buttonProceedToSite"
   },
-
   "buttonChooseAlternative": {
-    "message": "Choose Healthier Alternative"
+    "message": "Choose Healthier Alternative",
+    "description": "Translation for: buttonChooseAlternative"
   },
-
   "puzzleFooter": {
-    "message": "This puzzle is designed to make you pause and reconsider your choice."
+    "message": "This Sudoku puzzle is designed to make you pause and reconsider your choice.",
+    "description": "Translation for: puzzleFooter"
   },
-
   "errorPleaseEnterAnswer": {
-    "message": "Please enter an answer."
+    "message": "Please enter an answer.",
+    "description": "Translation for: errorPleaseEnterAnswer"
   },
-
   "feedbackCorrectAnswer": {
-    "message": "Correct! Well done."
+    "message": "Correct! Well done.",
+    "description": "Translation for: feedbackCorrectAnswer"
   },
-
   "feedbackIncorrectAnswer": {
     "message": "Incorrect. Try again. Attempts: $ATTEMPTS$",
     "placeholders": {
@@ -498,17 +494,17 @@
         "content": "$1",
         "example": "1/5"
       }
-    }
+    },
+    "description": "Translation for: feedbackIncorrectAnswer"
   },
-
   "feedbackMaxAttempts": {
-    "message": "Maximum attempts reached. Page will reload with a new puzzle."
+    "message": "Maximum attempts reached. Page will reload with a new Sudoku puzzle.",
+    "description": "Translation for: feedbackMaxAttempts"
   },
-
   "feedbackTimeout": {
-    "message": "Time's up! The page will reload with a new puzzle."
+    "message": "Time's up! The page will reload with a new Sudoku puzzle.",
+    "description": "Translation for: feedbackTimeout"
   },
-
   "hintMessage": {
     "message": "Hint: $HINT$",
     "placeholders": {
@@ -516,13 +512,13 @@
         "content": "$1",
         "example": "Think about prime numbers"
       }
-    }
+    },
+    "description": "Translation for: hintMessage"
   },
-
   "hardBlockTitle": {
-    "message": "Self Respect - Hard Block"
+    "message": "Self Respect - Hard Block",
+    "description": "Translation for: hardBlockTitle"
   },
-
   "hardBlockMessage": {
     "message": "Access to $DOMAIN$ is permanently blocked.",
     "placeholders": {
@@ -530,22 +526,23 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: hardBlockMessage"
   },
-
   "hardBlockDescription": {
-    "message": "This site is incompatible with your self-respect goals. Access is not permitted under any circumstances."
+    "message": "This site is incompatible with your self-respect goals. Access is not permitted under any circumstances.",
+    "description": "Translation for: hardBlockDescription"
   },
-
   "hardBlockWarning": {
-    "message": "HARD BLOCK ACTIVATED"
+    "message": "HARD BLOCK ACTIVATED",
+    "description": "Translation for: hardBlockWarning"
   },
-
   "hardBlockWarningDesc": {
-    "message": "This is your highest level of protection. No bypass options are available."
+    "message": "This is your highest level of protection. No bypass options are available.",
+    "description": "Translation for: hardBlockWarningDesc"
   },
-
   "hardBlockFooter": {
-    "message": "This hard block protects you from sites that conflict with your core values."
+    "message": "This hard block protects you from sites that conflict with your core values.",
+    "description": "Translation for: hardBlockFooter"
   }
 }

@@ -3,12 +3,10 @@
     "message": "Помогает избегать сайтов, которые не соответствуют вашим целям самоуважения, перенаправляя на более здоровые альтернативы.",
     "description": "Page description used in manifest."
   },
-
   "extPopupTitle": {
     "message": "Настройки Самоуважения",
     "description": "Popup default title."
   },
-
   "redirectDelayMessage": {
     "message": "Вы будете перенаправлены на более здоровую альтернативу через $DELAY$ секунд.",
     "description": "Message that is displayed when redirect is enabled.",
@@ -19,292 +17,290 @@
       }
     }
   },
-
   "noRedirectDelayMessage": {
     "message": "Этот сайт может не соответствовать вашим целям самоуважения и благополучия.",
     "description": "Message that is displayed when redirect is not enabled."
   },
-
   "redirectingTo": {
-    "message": "Перенаправление на:"
+    "message": "Перенаправление на:",
+    "description": "Translation for: redirectingTo"
   },
-
   "youWereAboutToVisit": {
-    "message": "Вы собирались посетить"
+    "message": "Вы собирались посетить",
+    "description": "Translation for: youWereAboutToVisit"
   },
-
   "redirectNow": {
-    "message": "Перенаправить Сейчас"
+    "message": "Перенаправить Сейчас",
+    "description": "Translation for: redirectNow"
   },
-
   "healthierAlternative": {
-    "message": "Перейти к Более Здоровой Альтернативе"
+    "message": "Перейти к Более Здоровой Альтернативе",
+    "description": "Translation for: healthierAlternative"
   },
-
   "cancelMessage": {
-    "message": "Отмена (Временно Разрешить)"
+    "message": "Отмена (Временно Разрешить)",
+    "description": "Translation for: cancelMessage"
   },
-
   "phrase1": {
-    "message": "Помните: каждый ваш выбор формирует то, кем вы становитесь."
+    "message": "Помните: каждый ваш выбор формирует то, кем вы становитесь.",
+    "description": "Translation for: phrase1"
   },
-
   "extensionStatusActive": {
-    "message": "Активно"
+    "message": "Активно",
+    "description": "Translation for: extensionStatusActive"
   },
-
   "extensionStatusPaused": {
-    "message": "Приостановлено"
+    "message": "Приостановлено",
+    "description": "Translation for: extensionStatusPaused"
   },
-
   "blockingLevelSoft": {
-    "message": "Мягкий"
+    "message": "Мягкий",
+    "description": "Translation for: blockingLevelSoft"
   },
-
   "blockingLevelPuzzle": {
-    "message": "Головоломка"
+    "message": "Головоломка",
+    "description": "Translation for: blockingLevelPuzzle"
   },
-
   "blockingLevelHard": {
-    "message": "Строгий"
+    "message": "Строгий",
+    "description": "Translation for: blockingLevelHard"
   },
-
   "popupExtensionStatus": {
-    "message": "Статус Расширения:"
+    "message": "Статус Расширения:",
+    "description": "Translation for: popupExtensionStatus"
   },
-
   "popupProtectedCategories": {
-    "message": "Защищенные Категории:"
+    "message": "Защищенные Категории:",
+    "description": "Translation for: popupProtectedCategories"
   },
-
   "popupBlockedDomains": {
-    "message": "Заблокированные Домены:"
+    "message": "Заблокированные Домены:",
+    "description": "Translation for: popupBlockedDomains"
   },
-
   "popupStatus": {
-    "message": "Статус:"
+    "message": "Статус:",
+    "description": "Translation for: popupStatus"
   },
-
   "popupBlockingLevel": {
-    "message": "Уровень Блокировки:"
+    "message": "Уровень Блокировки:",
+    "description": "Translation for: popupBlockingLevel"
   },
-
   "popupTotalBlocks": {
-    "message": "Всего Блокировок:"
+    "message": "Всего Блокировок:",
+    "description": "Translation for: popupTotalBlocks"
   },
-
   "popupBlocksToday": {
-    "message": "Блокировок Сегодня:"
+    "message": "Блокировок Сегодня:",
+    "description": "Translation for: popupBlocksToday"
   },
-
   "popupCustomDomains": {
-    "message": "Пользовательские Домены:"
+    "message": "Пользовательские Домены:",
+    "description": "Translation for: popupCustomDomains"
   },
-
   "popupCategoriesTitle": {
-    "message": "Защищенные Категории:"
+    "message": "Защищенные Категории:",
+    "description": "Translation for: popupCategoriesTitle"
   },
-
   "categoryAdultContent": {
-    "message": "Контент для Взрослых (30+ сайтов)"
+    "message": "Контент для Взрослых (30+ сайтов)",
+    "description": "Translation for: categoryAdultContent"
   },
-
   "categorySocialMedia": {
-    "message": "Социальные Сети (10+ сайтов)"
+    "message": "Социальные Сети (10+ сайтов)",
+    "description": "Translation for: categorySocialMedia"
   },
-
   "categoryGambling": {
-    "message": "Азартные Игры (15+ сайтов)"
+    "message": "Азартные Игры (15+ сайтов)",
+    "description": "Translation for: categoryGambling"
   },
-
   "buttonOpenSettings": {
-    "message": "Открыть Настройки"
+    "message": "Открыть Настройки",
+    "description": "Translation for: buttonOpenSettings"
   },
-
   "popupFooter": {
-    "message": "Защищаем ваше самоуважение и цифровое благополучие. Каждое перенаправление - это шаг к лучшей версии себя. Если это расширение помогло вам, рассмотрите возможность пожертвования"
+    "message": "Защищаем ваше самоуважение и цифровое благополучие. Каждое перенаправление - это шаг к лучшей версии себя. Если это расширение помогло вам, рассмотрите возможность пожертвования",
+    "description": "Translation for: popupFooter"
   },
-
   "settingsTitle": {
-    "message": "Самоуважение - Настройки"
+    "message": "Самоуважение - Настройки",
+    "description": "Translation for: settingsTitle"
   },
-
   "buttonBack": {
-    "message": "Назад"
+    "message": "Назад",
+    "description": "Translation for: buttonBack"
   },
-
   "settingsHeading": {
-    "message": "Настройки"
+    "message": "Настройки",
+    "description": "Translation for: settingsHeading"
   },
-
   "settingsGeneral": {
-    "message": "Основные Настройки"
+    "message": "Основные Настройки",
+    "description": "Translation for: settingsGeneral"
   },
-
   "settingsExtensionStatus": {
-    "message": "Статус Расширения"
+    "message": "Статус Расширения",
+    "description": "Translation for: settingsExtensionStatus"
   },
-
   "settingsExtensionStatusDesc": {
-    "message": "Включить или отключить расширение"
+    "message": "Включить или отключить расширение",
+    "description": "Translation for: settingsExtensionStatusDesc"
   },
-
   "settingsShowNotifications": {
-    "message": "Показывать Уведомления"
+    "message": "Показывать Уведомления",
+    "description": "Translation for: settingsShowNotifications"
   },
-
   "settingsShowNotificationsDesc": {
-    "message": "Показывать сообщения подтверждения при блокировке сайтов"
+    "message": "Показывать сообщения подтверждения при блокировке сайтов",
+    "description": "Translation for: settingsShowNotificationsDesc"
   },
-
   "settingsAutoRedirect": {
-    "message": "Автоматическое Перенаправление"
+    "message": "Автоматическое Перенаправление",
+    "description": "Translation for: settingsAutoRedirect"
   },
-
   "settingsAutoRedirectDesc": {
-    "message": "Автоматически перенаправлять на более здоровые альтернативы"
+    "message": "Автоматически перенаправлять на более здоровые альтернативы",
+    "description": "Translation for: settingsAutoRedirectDesc"
   },
-
   "settingsRedirectDelay": {
-    "message": "Задержка Перенаправления (секунд)"
+    "message": "Задержка Перенаправления (секунд)",
+    "description": "Translation for: settingsRedirectDelay"
   },
-
   "optionOneSecond": {
-    "message": "1 секунда"
+    "message": "1 секунда",
+    "description": "Translation for: optionOneSecond"
   },
-
   "optionTwoSeconds": {
-    "message": "2 секунды"
+    "message": "2 секунды",
+    "description": "Translation for: optionTwoSeconds"
   },
-
   "optionThreeSeconds": {
-    "message": "3 секунды"
+    "message": "3 секунды",
+    "description": "Translation for: optionThreeSeconds"
   },
-
   "optionFiveSeconds": {
-    "message": "5 секунд"
+    "message": "5 секунд",
+    "description": "Translation for: optionFiveSeconds"
   },
-
   "optionTenSeconds": {
-    "message": "10 секунд"
+    "message": "10 секунд",
+    "description": "Translation for: optionTenSeconds"
   },
-
   "settingsBlockingLevel": {
-    "message": "Уровень Блокировки"
+    "message": "Уровень Блокировки",
+    "description": "Translation for: settingsBlockingLevel"
   },
-
   "optionSoftBlock": {
-    "message": "Мягкая Блокировка (Текущая - Показывает наложение)"
+    "message": "Мягкая Блокировка (Текущая - Показывает наложение)",
+    "description": "Translation for: optionSoftBlock"
   },
-
   "optionPuzzleBlock": {
-    "message": "Блокировка с Головоломкой (Сложная головоломка для решения)"
+    "message": "Испытание Судоку (Сложное Судоку для решения)",
+    "description": "Translation for: optionPuzzleBlock"
   },
-
   "optionHardBlock": {
-    "message": "Строгая Блокировка (Доступ полностью запрещен)"
+    "message": "Строгая Блокировка (Доступ полностью запрещен)",
+    "description": "Translation for: optionHardBlock"
   },
-
   "settingsBlockedCategories": {
-    "message": "Заблокированные Категории"
+    "message": "Заблокированные Категории",
+    "description": "Translation for: settingsBlockedCategories"
   },
-
   "settingsCustomDomains": {
-    "message": "Пользовательские Домены"
+    "message": "Пользовательские Домены",
+    "description": "Translation for: settingsCustomDomains"
   },
-
   "settingsCustomDomainsDesc": {
-    "message": "Добавьте свои собственные домены для блокировки. Вводите имена доменов без http:// или www."
+    "message": "Добавьте свои собственные домены для блокировки. Вводите имена доменов без http:// или www.",
+    "description": "Translation for: settingsCustomDomainsDesc"
   },
-
   "placeholderDomainExample": {
-    "message": "example.com"
+    "message": "example.com",
+    "description": "Translation for: placeholderDomainExample"
   },
-
   "optionCategoryCustom": {
-    "message": "Пользовательский"
+    "message": "Пользовательский",
+    "description": "Translation for: optionCategoryCustom"
   },
-
   "optionCategoryAdultContent": {
-    "message": "Контент для Взрослых"
+    "message": "Контент для Взрослых",
+    "description": "Translation for: optionCategoryAdultContent"
   },
-
   "optionCategorySocialMedia": {
-    "message": "Социальные Сети"
+    "message": "Социальные Сети",
+    "description": "Translation for: optionCategorySocialMedia"
   },
-
   "optionCategoryGambling": {
-    "message": "Азартные Игры"
+    "message": "Азартные Игры",
+    "description": "Translation for: optionCategoryGambling"
   },
-
   "optionCategoryDistracting": {
-    "message": "Отвлекающие"
+    "message": "Отвлекающие",
+    "description": "Translation for: optionCategoryDistracting"
   },
-
   "optionCategoryShopping": {
-    "message": "Покупки"
+    "message": "Покупки",
+    "description": "Translation for: optionCategoryShopping"
   },
-
   "buttonAddDomain": {
-    "message": "Добавить Домен"
+    "message": "Добавить Домен",
+    "description": "Translation for: buttonAddDomain"
   },
-
   "emptyCustomDomains": {
-    "message": "Пользовательские домены еще не добавлены"
+    "message": "Пользовательские домены еще не добавлены",
+    "description": "Translation for: emptyCustomDomains"
   },
-
   "settingsStatistics": {
-    "message": "Статистика"
+    "message": "Статистика",
+    "description": "Translation for: settingsStatistics"
   },
-
   "statTotalBlocks": {
-    "message": "Всего Блокировок"
+    "message": "Всего Блокировок",
+    "description": "Translation for: statTotalBlocks"
   },
-
   "statBlocksToday": {
-    "message": "Блокировок Сегодня"
+    "message": "Блокировок Сегодня",
+    "description": "Translation for: statBlocksToday"
   },
-
   "statCustomDomains": {
-    "message": "Пользовательские Домены"
+    "message": "Пользовательские Домены",
+    "description": "Translation for: statCustomDomains"
   },
-
   "statLastUpdated": {
-    "message": "Последнее Обновление"
+    "message": "Последнее Обновление",
+    "description": "Translation for: statLastUpdated"
   },
-
   "buttonResetStatistics": {
-    "message": "Сбросить Статистику"
+    "message": "Сбросить Статистику",
+    "description": "Translation for: buttonResetStatistics"
   },
-
   "settingsFooter": {
-    "message": "Расширение Самоуважения v1.0.0 Защищаем ваше цифровое благополучие и самоуважение"
+    "message": "Расширение Самоуважения v1.0.0 Защищаем ваше цифровое благополучие и самоуважение",
+    "description": "Translation for: settingsFooter"
   },
-
   "notificationExtensionEnabled": {
-    "message": "Расширение включено"
+    "message": "Расширение включено",
+    "description": "Translation for: notificationExtensionEnabled"
   },
-
   "notificationExtensionDisabled": {
-    "message": "Расширение отключено"
+    "message": "Расширение отключено",
+    "description": "Translation for: notificationExtensionDisabled"
   },
-
   "notificationNotificationsEnabled": {
-    "message": "Уведомления включены"
+    "message": "Уведомления включены",
+    "description": "Translation for: notificationNotificationsEnabled"
   },
-
   "notificationNotificationsDisabled": {
-    "message": "Уведомления отключены"
+    "message": "Уведомления отключены",
+    "description": "Translation for: notificationNotificationsDisabled"
   },
-
   "notificationAutoRedirectEnabled": {
-    "message": "Автоматическое перенаправление включено"
+    "message": "Автоматическое перенаправление включено",
+    "description": "Translation for: notificationAutoRedirectEnabled"
   },
-
   "notificationAutoRedirectDisabled": {
-    "message": "Автоматическое перенаправление отключено"
+    "message": "Автоматическое перенаправление отключено",
+    "description": "Translation for: notificationAutoRedirectDisabled"
   },
-
   "notificationRedirectDelaySet": {
     "message": "Задержка перенаправления установлена на $DELAY$ секунд",
     "placeholders": {
@@ -312,9 +308,9 @@
         "content": "$1",
         "example": 3
       }
-    }
+    },
+    "description": "Translation for: notificationRedirectDelaySet"
   },
-
   "notificationBlockingLevelSet": {
     "message": "Уровень блокировки установлен на $LEVEL$",
     "placeholders": {
@@ -322,9 +318,9 @@
         "content": "$1",
         "example": "мягкий"
       }
-    }
+    },
+    "description": "Translation for: notificationBlockingLevelSet"
   },
-
   "notificationCategoryEnabled": {
     "message": "Блокировка $CATEGORY$ включена",
     "placeholders": {
@@ -332,9 +328,9 @@
         "content": "$1",
         "example": "Контент для Взрослых"
       }
-    }
+    },
+    "description": "Translation for: notificationCategoryEnabled"
   },
-
   "notificationCategoryDisabled": {
     "message": "Блокировка $CATEGORY$ отключена",
     "placeholders": {
@@ -342,9 +338,9 @@
         "content": "$1",
         "example": "Контент для Взрослых"
       }
-    }
+    },
+    "description": "Translation for: notificationCategoryDisabled"
   },
-
   "notificationDomainEnabled": {
     "message": "$DOMAIN$ включен",
     "placeholders": {
@@ -352,9 +348,9 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainEnabled"
   },
-
   "notificationDomainDisabled": {
     "message": "$DOMAIN$ отключен",
     "placeholders": {
@@ -362,9 +358,9 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainDisabled"
   },
-
   "notificationDomainRemoved": {
     "message": "$DOMAIN$ удален",
     "placeholders": {
@@ -372,25 +368,25 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainRemoved"
   },
-
   "confirmResetStatistics": {
-    "message": "Вы уверены, что хотите сбросить всю статистику?"
+    "message": "Вы уверены, что хотите сбросить всю статистику?",
+    "description": "Translation for: confirmResetStatistics"
   },
-
   "notificationStatisticsReset": {
-    "message": "Статистика сброшена"
+    "message": "Статистика сброшена",
+    "description": "Translation for: notificationStatisticsReset"
   },
-
   "errorPleaseEnterDomain": {
-    "message": "Пожалуйста, введите домен"
+    "message": "Пожалуйста, введите домен",
+    "description": "Translation for: errorPleaseEnterDomain"
   },
-
   "errorInvalidDomain": {
-    "message": "Пожалуйста, введите действительный домен (например, example.com)"
+    "message": "Пожалуйста, введите действительный домен (например, example.com)",
+    "description": "Translation for: errorInvalidDomain"
   },
-
   "notificationDomainAdded": {
     "message": "$DOMAIN$ добавлен в список блокировки",
     "placeholders": {
@@ -398,73 +394,73 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: notificationDomainAdded"
   },
-
   "errorAddingDomain": {
-    "message": "Ошибка при добавлении домена"
+    "message": "Ошибка при добавлении домена",
+    "description": "Translation for: errorAddingDomain"
   },
-
   "categoryAdultContentName": {
-    "message": "Контент для Взрослых"
+    "message": "Контент для Взрослых",
+    "description": "Translation for: categoryAdultContentName"
   },
-
   "categoryAdultContentDesc": {
-    "message": "Веб-сайты для взрослых, которые пользователи могут захотеть избегать из-за самоуважения и благополучия"
+    "message": "Веб-сайты для взрослых, которые пользователи могут захотеть избегать из-за самоуважения и благополучия",
+    "description": "Translation for: categoryAdultContentDesc"
   },
-
   "categorySocialMediaName": {
-    "message": "Социальные Сети"
+    "message": "Социальные Сети",
+    "description": "Translation for: categorySocialMediaName"
   },
-
   "categorySocialMediaDesc": {
-    "message": "Основные платформы социальных сетей, которые могут отнимать время и влиять на самооценку"
+    "message": "Основные платформы социальных сетей, которые могут отнимать время и влиять на самооценку",
+    "description": "Translation for: categorySocialMediaDesc"
   },
-
   "categoryGamblingName": {
-    "message": "Азартные Игры"
+    "message": "Азартные Игры",
+    "description": "Translation for: categoryGamblingName"
   },
-
   "categoryGamblingDesc": {
-    "message": "Сайты онлайн-азартных игр, которые могут привести к зависимости и финансовому ущербу"
+    "message": "Сайты онлайн-азартных игр, которые могут привести к зависимости и финансовому ущербу",
+    "description": "Translation for: categoryGamblingDesc"
   },
-
   "puzzleBlockTitle": {
-    "message": "Самоуважение - Блокировка с Головоломкой"
+    "message": "Самоуважение - Испытание Судоку",
+    "description": "Translation for: puzzleBlockTitle"
   },
-
   "puzzleBlockDescription": {
-    "message": "Чтобы получить доступ к этому сайту, вы должны решить сложную головоломку. Это необходимо, чтобы убедиться, что вы действительно хотите продолжить."
+    "message": "Чтобы получить доступ к этому сайту, вы должны решить сложное Судоку. Это необходимо, чтобы убедиться, что вы действительно хотите продолжить.",
+    "description": "Translation for: puzzleBlockDescription"
   },
-
   "puzzleChallengeTitle": {
-    "message": "Головоломка-Испытание"
+    "message": "Испытание Судоку",
+    "description": "Translation for: puzzleChallengeTitle"
   },
-
   "placeholderEnterAnswer": {
-    "message": "Введите ваш ответ..."
+    "message": "Введите ваш ответ...",
+    "description": "Translation for: placeholderEnterAnswer"
   },
-
   "buttonSubmit": {
-    "message": "Отправить"
+    "message": "Отправить",
+    "description": "Translation for: buttonSubmit"
   },
-
   "labelAttempts": {
-    "message": "Попытки:"
+    "message": "Попытки:",
+    "description": "Translation for: labelAttempts"
   },
-
   "labelTimeout": {
-    "message": "Тайм-аут:"
+    "message": "Тайм-аут:",
+    "description": "Translation for: labelTimeout"
   },
-
   "buttonShowHint": {
-    "message": "Показать Подсказку"
+    "message": "Показать Подсказку",
+    "description": "Translation for: buttonShowHint"
   },
-
   "puzzleSuccessMessage": {
-    "message": "Головоломка решена правильно! Вы можете продолжить, если все еще хотите."
+    "message": "Судоку решено правильно! Вы можете продолжить, если все еще хотите.",
+    "description": "Translation for: puzzleSuccessMessage"
   },
-
   "buttonProceedToSite": {
     "message": "Перейти на $DOMAIN$",
     "placeholders": {
@@ -472,25 +468,25 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: buttonProceedToSite"
   },
-
   "buttonChooseAlternative": {
-    "message": "Выбрать Более Здоровую Альтернативу"
+    "message": "Выбрать Более Здоровую Альтернативу",
+    "description": "Translation for: buttonChooseAlternative"
   },
-
   "puzzleFooter": {
-    "message": "Эта головоломка предназначена для того, чтобы заставить вас остановиться и пересмотреть свой выбор."
+    "message": "Это Судоку предназначено для того, чтобы заставить вас остановиться и пересмотреть свой выбор.",
+    "description": "Translation for: puzzleFooter"
   },
-
   "errorPleaseEnterAnswer": {
-    "message": "Пожалуйста, введите ответ."
+    "message": "Пожалуйста, введите ответ.",
+    "description": "Translation for: errorPleaseEnterAnswer"
   },
-
   "feedbackCorrectAnswer": {
-    "message": "Правильно! Молодец."
+    "message": "Правильно! Молодец.",
+    "description": "Translation for: feedbackCorrectAnswer"
   },
-
   "feedbackIncorrectAnswer": {
     "message": "Неверно. Попробуйте еще раз. Попытки: $ATTEMPTS$",
     "placeholders": {
@@ -498,17 +494,17 @@
         "content": "$1",
         "example": "1/5"
       }
-    }
+    },
+    "description": "Translation for: feedbackIncorrectAnswer"
   },
-
   "feedbackMaxAttempts": {
-    "message": "Достигнуто максимальное количество попыток. Страница будет перезагружена с новой головоломкой."
+    "message": "Достигнуто максимальное количество попыток. Страница будет перезагружена с новым Судоку.",
+    "description": "Translation for: feedbackMaxAttempts"
   },
-
   "feedbackTimeout": {
-    "message": "Время вышло! Страница будет перезагружена с новой головоломкой."
+    "message": "Время вышло! Страница будет перезагружена с новым Судоку.",
+    "description": "Translation for: feedbackTimeout"
   },
-
   "hintMessage": {
     "message": "Подсказка: $HINT$",
     "placeholders": {
@@ -516,13 +512,13 @@
         "content": "$1",
         "example": "Подумайте о простых числах"
       }
-    }
+    },
+    "description": "Translation for: hintMessage"
   },
-
   "hardBlockTitle": {
-    "message": "Самоуважение - Строгая Блокировка"
+    "message": "Самоуважение - Строгая Блокировка",
+    "description": "Translation for: hardBlockTitle"
   },
-
   "hardBlockMessage": {
     "message": "Доступ к $DOMAIN$ permanently blocked.",
     "placeholders": {
@@ -530,22 +526,23 @@
         "content": "$1",
         "example": "example.com"
       }
-    }
+    },
+    "description": "Translation for: hardBlockMessage"
   },
-
   "hardBlockDescription": {
-    "message": "Этот сайт несовместим с вашими целями самоуважения. Доступ не разрешен ни при каких обстоятельствах."
+    "message": "Этот сайт несовместим с вашими целями самоуважения. Доступ не разрешен ни при каких обстоятельствах.",
+    "description": "Translation for: hardBlockDescription"
   },
-
   "hardBlockWarning": {
-    "message": "СТРОГАЯ БЛОКИРОВКА АКТИВИРОВАНА"
+    "message": "СТРОГАЯ БЛОКИРОВКА АКТИВИРОВАНА",
+    "description": "Translation for: hardBlockWarning"
   },
-
   "hardBlockWarningDesc": {
-    "message": "Это ваш самый высокий уровень защиты. Нет доступных вариантов обхода."
+    "message": "Это ваш самый высокий уровень защиты. Нет доступных вариантов обхода.",
+    "description": "Translation for: hardBlockWarningDesc"
   },
-
   "hardBlockFooter": {
-    "message": "Эта строгая блокировка защищает вас от сайтов, которые конфликтуют с вашими основными ценностями."
+    "message": "Эта строгая блокировка защищает вас от сайтов, которые конфликтуют с вашими основными ценностями.",
+    "description": "Translation for: hardBlockFooter"
   }
 }
