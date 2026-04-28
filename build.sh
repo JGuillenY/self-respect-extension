@@ -35,9 +35,9 @@ esbuild src/popup.js --bundle --minify --sourcemap --target=chrome58,firefox57,s
 esbuild src/content.ts --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/content.js
 esbuild src/settings.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/settings.js
 
-# Creating ZIP
-rm dist.zip
-zip -r dist.zip dist
+# Creating ZIP (files must be at root, not inside a dist/ folder)
+rm -f dist.zip
+cd dist && zip -r ../dist.zip . && cd ..
 
 echo ""
 echo "🎉 Build complete!"

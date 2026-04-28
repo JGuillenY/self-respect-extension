@@ -691,160 +691,113 @@ function isValid(board: number[][], row: number, col: number, num: number): bool
   return true;
 }
 
-function solveSudoku(board: number[][]): boolean {
-  for (let row = 0; row < 9; row++) {
-    for (let col = 0; col < 9; col++) {
-      if (board[row][col] === 0) {
-        const numbers = shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-        for (const num of numbers) {
-          if (isValid(board, row, col, num)) {
-            board[row][col] = num;
-            if (solveSudoku(board)) {
-              return true;
-            }
-            board[row][col] = 0;
-          }
-        }
-        return false;
-      }
-    }
-  }
-  return true;
-}
+// Canonical valid Sudoku grid used as a transformation seed.
+// Generated with the "shift-3" Latin square pattern — every row, column and box holds 1-9.
+const SUDOKU_SEED: readonly (readonly number[])[] = [
+  [1,2,3,4,5,6,7,8,9],
+  [4,5,6,7,8,9,1,2,3],
+  [7,8,9,1,2,3,4,5,6],
+  [2,3,4,5,6,7,8,9,1],
+  [5,6,7,8,9,1,2,3,4],
+  [8,9,1,2,3,4,5,6,7],
+  [3,4,5,6,7,8,9,1,2],
+  [6,7,8,9,1,2,3,4,5],
+  [9,1,2,3,4,5,6,7,8],
+];
 
 function generateCompleteBoard(): number[][] {
-  const board = Array(9).fill(null).map(() => Array(9).fill(0));
-  
-  // Fill diagonal 3x3 boxes (they are independent)
-  for (let box = 0; box < 3; box++) {
-    const numbers = shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-        const row = box * 3 + i;
-        const col = box * 3 + j;
-        board[row][col] = numbers[i * 3 + j];
-      }
+  // 1. Relabel digits with a random permutation of 1-9
+  const digitMap = shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  let board: number[][] = SUDOKU_SEED.map(row => row.map(d => digitMap[d - 1]));
+
+  // 2. Shuffle the 3 rows inside each row-band  (bands: rows 0-2, 3-5, 6-8)
+  for (let band = 0; band < 3; band++) {
+    const order = shuffleArray([0, 1, 2]);
+    const base = band * 3;
+    const saved = [board[base].slice(), board[base + 1].slice(), board[base + 2].slice()];
+    for (let i = 0; i < 3; i++) board[base + i] = saved[order[i]];
+  }
+
+  // 3. Shuffle the 3 columns inside each col-stack  (stacks: cols 0-2, 3-5, 6-8)
+  for (let stack = 0; stack < 3; stack++) {
+    const order = shuffleArray([0, 1, 2]);
+    const base = stack * 3;
+    for (let r = 0; r < 9; r++) {
+      const saved = [board[r][base], board[r][base + 1], board[r][base + 2]];
+      for (let i = 0; i < 3; i++) board[r][base + i] = saved[order[i]];
     }
   }
-  
-  // Solve the rest
-  solveSudoku(board);
+
+  // 4. Shuffle the 3 row-bands as whole units
+  const bandOrder = shuffleArray([0, 1, 2]);
+  const reorderedRows: number[][] = [];
+  for (const b of bandOrder) reorderedRows.push(board[b * 3], board[b * 3 + 1], board[b * 3 + 2]);
+  board = reorderedRows;
+
+  // 5. Shuffle the 3 col-stacks as whole units
+  const stackOrder = shuffleArray([0, 1, 2]);
+  board = board.map(row => {
+    const newRow: number[] = [];
+    for (const s of stackOrder) newRow.push(row[s * 3], row[s * 3 + 1], row[s * 3 + 2]);
+    return newRow;
+  });
+
+  // 6. Randomly transpose (reflects along the main diagonal)
+  if (Math.random() < 0.5) {
+    board = Array.from({ length: 9 }, (_, i) => board.map(row => row[i]));
+  }
+
   return board;
 }
 
-function removeCells(board: number[][], cellsToRemove: number): number[][] {
-  const puzzle = board.map(row => row.slice());
-  
-  // First, ensure each 3x3 box has at least 2 clues
-  const boxClues: number[][] = Array(3).fill(null).map(() => Array(3).fill(0));
-  
-  // Count initial clues in each box
-  for (let i = 0; i < 9; i++) {
-    for (let j = 0; j < 9; j++) {
-      if (puzzle[i][j] !== 0) {
-        const boxRow = Math.floor(i / 3);
-        const boxCol = Math.floor(j / 3);
-        boxClues[boxRow][boxCol]++;
-      }
-    }
-  }
-  
-  // Generate all positions
-  const positions: [number, number][] = [];
-  for (let i = 0; i < 9; i++) {
-    for (let j = 0; j < 9; j++) {
-      positions.push([i, j]);
-    }
-  }
-  
-  // Shuffle positions
-  shuffleArray(positions);
-  
-  let removed = 0;
-  let attempts = 0;
-  const maxAttempts = positions.length * 2;
-  
-  // Remove cells with constraints
-  while (removed < cellsToRemove && attempts < maxAttempts) {
-    for (let idx = 0; idx < positions.length && removed < cellsToRemove; idx++) {
-      const position = positions[idx];
-      const row = position[0];
-      const col = position[1];
-      
-      // Skip if already empty
-      if (puzzle[row][col] === 0) continue;
-      
-      const boxRow = Math.floor(row / 3);
-      const boxCol = Math.floor(col / 3);
-      
-      // Check if removing this cell would leave the box with less than 2 clues
-      if (boxClues[boxRow][boxCol] <= 2) {
-        attempts++;
-        continue;
-      }
-      
-      // Temporarily remove to check uniqueness
-      puzzle[row][col] = 0;
-      
-      // Check if puzzle still has unique solution (simplified check)
-      // For hard Sudoku, we want it to remain solvable
-      // Note: We're using a simplified approach that ensures each box has enough clues
-      
-      // Count remaining clues in the box
-      boxClues[boxRow][boxCol]--;
-      
-      // Accept removal
-      removed++;
-      attempts = 0; // Reset attempts counter on successful removal
-    }
-    
-    // If we didn't remove enough, reshuffle and try again
-    if (removed < cellsToRemove) {
-      shuffleArray(positions);
-      attempts++;
-    }
-  }
-  
-  // Final check: ensure no box is empty
-  for (let boxRow = 0; boxRow < 3; boxRow++) {
-    for (let boxCol = 0; boxCol < 3; boxCol++) {
-      let cluesInBox = 0;
-      for (let i = 0; i < 3; i++) {
-        for (let j = 0; j < 3; j++) {
-          const row = boxRow * 3 + i;
-          const col = boxCol * 3 + j;
-          if (puzzle[row][col] !== 0) cluesInBox++;
-        }
-      }
-      
-      // If a box has less than 2 clues, add some back
-      if (cluesInBox < 2) {
-        // Find positions in this box that were removed
-        const boxPositions: [number, number][] = [];
-        for (let i = 0; i < 3; i++) {
-          for (let j = 0; j < 3; j++) {
-            const row = boxRow * 3 + i;
-            const col = boxCol * 3 + j;
-            if (puzzle[row][col] === 0) {
-              boxPositions.push([row, col]);
-            }
+// Count solutions up to maxCount, stopping early for performance.
+// Modifies board in-place (caller must pass a copy).
+function countSolutions(board: number[][], maxCount: number): number {
+  for (let row = 0; row < 9; row++) {
+    for (let col = 0; col < 9; col++) {
+      if (board[row][col] === 0) {
+        let count = 0;
+        for (let num = 1; num <= 9; num++) {
+          if (isValid(board, row, col, num)) {
+            board[row][col] = num;
+            count += countSolutions(board, maxCount - count);
+            board[row][col] = 0;
+            if (count >= maxCount) return count;
           }
         }
-        
-        // Add back clues to reach minimum
-        const cluesToAdd = 2 - cluesInBox;
-        shuffleArray(boxPositions);
-        for (let i = 0; i < Math.min(cluesToAdd, boxPositions.length); i++) {
-          const position = boxPositions[i];
-          const r = position[0];
-          const c = position[1];
-          puzzle[r][c] = board[r][c]; // Restore original value
-        }
+        return count;
       }
     }
   }
-  
-  return puzzle;
+  return 1; // No empty cells — one complete solution found
+}
+
+function removeCells(solution: number[][], cellsToRemove: number): number[][] {
+  const board = solution.map(row => row.slice());
+
+  // Visit cells in random order
+  const positions: [number, number][] = [];
+  for (let i = 0; i < 9; i++)
+    for (let j = 0; j < 9; j++)
+      positions.push([i, j]);
+  shuffleArray(positions);
+
+  let removed = 0;
+  for (const pos of positions) {
+    const row = pos[0];
+    const col = pos[1];
+    if (removed >= cellsToRemove) break;
+    const saved = board[row][col];
+    board[row][col] = 0;
+    // Only keep the removal if the puzzle still has exactly one solution
+    if (countSolutions(board.map(r => r.slice()), 2) === 1) {
+      removed++;
+    } else {
+      board[row][col] = saved;
+    }
+  }
+
+  return board;
 }
 
 function formatTime(seconds: number): string {
@@ -1057,8 +1010,9 @@ function initializeSudokuGame(): void {
   const completeBoard = generateCompleteBoard();
   sudokuGameState.solution = completeBoard.map(row => row.slice());
 
-  const cellsToRemove = 55;
-  sudokuGameState.board = removeCells(completeBoard, cellsToRemove);
+  // 50 cells removed → 31 clues (hard difficulty).
+  // Uniqueness checking makes going much lower very slow.
+  sudokuGameState.board = removeCells(completeBoard, 50);
 
   // Record which cells are pre-filled clues so user answers never become unselectable
   sudokuGameState.fixedCells = sudokuGameState.board.map(row => row.map(cell => cell !== 0));
