@@ -3,16 +3,19 @@
 
 export interface DomainCategory {
   name: string;
+  i18nKey?: string;
   description: string;
+  descriptionI18nKey?: string;
   domains: string[];
-  redirectTo?: string; // Optional custom redirect URL for this category
+  redirectTo?: string;
 }
 
 export const DOMAIN_CATEGORIES: DomainCategory[] = [
   {
     name: "Adult Content",
-    description:
-      "Adult websites that users may want to avoid for self-respect and wellbeing",
+    i18nKey: "categoryAdultContentName",
+    description: "Adult websites that users may want to avoid for self-respect and wellbeing",
+    descriptionI18nKey: "categoryAdultContentDesc",
     domains: [
       "pornhub.com",
       "www.pornhub.com",
@@ -51,8 +54,9 @@ export const DOMAIN_CATEGORIES: DomainCategory[] = [
   },
   {
     name: "Social Media",
-    description:
-      "Major social networking platforms that can be time-consuming and affect self-esteem",
+    i18nKey: "categorySocialMediaName",
+    description: "Major social networking platforms that can be time-consuming and affect self-esteem",
+    descriptionI18nKey: "categorySocialMediaDesc",
     domains: [
       "facebook.com",
       "www.facebook.com",
@@ -72,8 +76,9 @@ export const DOMAIN_CATEGORIES: DomainCategory[] = [
   },
   {
     name: "Gambling",
-    description:
-      "Online gambling sites that can lead to addiction and financial harm",
+    i18nKey: "categoryGamblingName",
+    description: "Online gambling sites that can lead to addiction and financial harm",
+    descriptionI18nKey: "categoryGamblingDesc",
     domains: [
       "pokerstars.com",
       "www.pokerstars.com",
@@ -111,6 +116,16 @@ export const RSS_DOMAINS: DomainCategory[] = [
 // Default redirect URL if no category-specific redirect is provided
 export const DEFAULT_REDIRECT_URL =
   "https://www.verywellmind.com/self-respect-4158202"; // Article on self-respect
+
+// Returns the category name for a domain, or null if not found
+export function getDomainCategory(domain: string): string | null {
+  const normalizedDomain = domain.toLowerCase().trim();
+  return (
+    DOMAIN_CATEGORIES.find((category) =>
+      category.domains.some((d) => d.toLowerCase() === normalizedDomain),
+    )?.name ?? null
+  );
+}
 
 // Helper function to check if a domain is in any category
 export function isDomainBlocked(domain: string): boolean {

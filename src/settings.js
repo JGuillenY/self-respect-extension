@@ -1,100 +1,5 @@
 // Settings page for Self Respect extension
-// Note: We can't use ES6 imports in Chrome extension content scripts
-// We'll use a different approach
-
-// Define DOMAIN_CATEGORIES inline since we can't import
-const DOMAIN_CATEGORIES = [
-  {
-    name: "Adult Content",
-    i18nKey: "categoryAdultContentName",
-    description: "Adult websites that users may want to avoid for self-respect and wellbeing",
-    descriptionI18nKey: "categoryAdultContentDesc",
-    domains: [
-      "pornhub.com",
-      "www.pornhub.com",
-      "xvideos.com",
-      "www.xvideos.com",
-      "xhamster.com",
-      "www.xhamster.com",
-      "youporn.com",
-      "www.youporn.com",
-      "brazzers.com",
-      "www.brazzers.com",
-      "redtube.com",
-      "www.redtube.com",
-      "xnxx.com",
-      "www.xnxx.com",
-      "onlyfans.com",
-      "www.onlyfans.com",
-      "chaturbate.com",
-      "www.chaturbate.com",
-      "myfreecams.com",
-      "www.myfreecams.com",
-      "stripchat.com",
-      "www.stripchat.com",
-      "bongacams.com",
-      "www.bongacams.com",
-      "cam4.com",
-      "www.cam4.com",
-      "livejasmin.com",
-      "www.livejasmin.com",
-      "adultfriendfinder.com",
-      "www.adultfriendfinder.com",
-      "ashleymadison.com",
-      "www.ashleymadison.com",
-    ],
-    redirectTo: "https://www.yourbrainonporn.com",
-  },
-  {
-    name: "Social Media",
-    i18nKey: "categorySocialMediaName",
-    description: "Major social networking platforms that can be time-consuming and affect self-esteem",
-    descriptionI18nKey: "categorySocialMediaDesc",
-    domains: [
-      "facebook.com",
-      "www.facebook.com",
-      "fb.com",
-      "messenger.com",
-      "instagram.com",
-      "www.instagram.com",
-      "twitter.com",
-      "www.twitter.com",
-      "x.com",
-      "tiktok.com",
-      "www.tiktok.com",
-      "snapchat.com",
-      "www.snapchat.com",
-    ],
-    redirectTo: "https://www.psychologytoday.com/us/basics/social-media",
-  },
-  {
-    name: "Gambling",
-    i18nKey: "categoryGamblingName",
-    description: "Online gambling sites that can lead to addiction and financial harm",
-    descriptionI18nKey: "categoryGamblingDesc",
-    domains: [
-      "pokerstars.com",
-      "www.pokerstars.com",
-      "888poker.com",
-      "www.888poker.com",
-      "bet365.com",
-      "www.bet365.com",
-      "draftkings.com",
-      "www.draftkings.com",
-      "fanduel.com",
-      "www.fanduel.com",
-      "bovada.lv",
-      "www.bovada.lv",
-      "williamhill.com",
-      "www.williamhill.com",
-      "betway.com",
-      "www.betway.com",
-      "unibet.com",
-      "www.unibet.com",
-    ],
-    redirectTo: "https://www.ncpgambling.org/help-treatment/help-by-state/",
-  },
-];
+import { DOMAIN_CATEGORIES } from './constants.ts';
 
 // Storage management functions
 const STORAGE_KEYS = {
@@ -422,24 +327,39 @@ async function loadCustomDomains() {
     const domainItem = document.createElement("div");
     domainItem.className = "domain-item";
     domainItem.dataset.id = site.id;
-    domainItem.innerHTML = `
-      <div class="domain-info">
-        <span class="domain-name">${site.domain}</span>
-        <span class="domain-category">${site.category || "Custom"}</span>
-      </div>
-      <div class="domain-actions">
-        <button class="action-button toggle-domain" data-enabled="${
-          site.enabled
-        }">
-          ${site.enabled ? "Disable" : "Enable"}
-        </button>
-        <button class="action-button delete">Remove</button>
-      </div>
-    `;
 
-    // Add event listeners
-    const toggleBtn = domainItem.querySelector(".toggle-domain");
-    const deleteBtn = domainItem.querySelector(".delete");
+    // Build DOM manually for user-supplied values to prevent XSS
+    const domainInfo = document.createElement("div");
+    domainInfo.className = "domain-info";
+
+    const domainNameEl = document.createElement("span");
+    domainNameEl.className = "domain-name";
+    domainNameEl.textContent = site.domain;
+
+    const domainCategoryEl = document.createElement("span");
+    domainCategoryEl.className = "domain-category";
+    domainCategoryEl.textContent = site.category || "Custom";
+
+    domainInfo.appendChild(domainNameEl);
+    domainInfo.appendChild(domainCategoryEl);
+
+    const domainActions = document.createElement("div");
+    domainActions.className = "domain-actions";
+
+    const toggleBtn = document.createElement("button");
+    toggleBtn.className = "action-button toggle-domain";
+    toggleBtn.dataset.enabled = String(site.enabled);
+    toggleBtn.textContent = site.enabled ? "Disable" : "Enable";
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.className = "action-button delete";
+    deleteBtn.textContent = "Remove";
+
+    domainActions.appendChild(toggleBtn);
+    domainActions.appendChild(deleteBtn);
+
+    domainItem.appendChild(domainInfo);
+    domainItem.appendChild(domainActions);
 
     toggleBtn.addEventListener("click", async function () {
       const newEnabled = !site.enabled;
@@ -495,7 +415,7 @@ async function loadStatistics() {
       <div class="stat-label" data-i18n="statCustomDomains">Custom Domains</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value">${new Date().toLocaleDateString()}</div>
+      <div class="stat-value">${stats.lastReset ? new Date(stats.lastReset).toLocaleDateString() : "-"}</div>
       <div class="stat-label" data-i18n="statLastUpdated">Last Updated</div>
     </div>
   `;
@@ -597,9 +517,8 @@ function showNotification(message, type = "success") {
 
 // Basic domain validation
 function isValidDomain(domain) {
-  // Simple domain validation - can be enhanced
   const domainRegex = /^[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z]{2,})+$/;
-  return domainRegex.test(domain) || domain.includes(".");
+  return domainRegex.test(domain);
 }
 
 // Export for testing

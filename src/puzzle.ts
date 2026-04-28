@@ -163,31 +163,37 @@ export function generatePuzzle(difficultyMin: number = 7): Puzzle {
   };
 }
 
-// Validate puzzle answer (case-insensitive, allows some variation)
+// Safely evaluate a numeric expression of the form "a", "-a", "a/b", or "-a/b"
+function safeParseNumber(expr: string): number | null {
+  const trimmed = expr.trim();
+  const fractionMatch = trimmed.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)$/);
+  if (fractionMatch) {
+    const num = parseFloat(fractionMatch[1]);
+    const den = parseFloat(fractionMatch[2]);
+    if (den === 0) return null;
+    return num / den;
+  }
+  const num = parseFloat(trimmed);
+  return isNaN(num) ? null : num;
+}
+
+// Validate puzzle answer (case-insensitive, allows equivalent numeric forms)
 export function validateAnswer(puzzle: Puzzle, userAnswer: string): boolean {
-  const normalizedUserAnswer = userAnswer.toLowerCase().trim();
-  const normalizedCorrectAnswer = puzzle.answer.toLowerCase().trim();
-  
-  // Exact match
-  if (normalizedUserAnswer === normalizedCorrectAnswer) {
+  const normalizedUser = userAnswer.toLowerCase().trim();
+  const normalizedCorrect = puzzle.answer.toLowerCase().trim();
+
+  if (normalizedUser === normalizedCorrect) {
     return true;
   }
-  
-  // For math answers, allow different formats
+
   if (puzzle.type === 'math') {
-    // Allow 1/3 vs 0.333, etc.
-    try {
-      const userNum = eval(normalizedUserAnswer.replace(/[^0-9\.\/\-]/g, ''));
-      const correctNum = eval(normalizedCorrectAnswer.replace(/[^0-9\.\/\-]/g, ''));
-      
-      if (Math.abs(userNum - correctNum) < 0.001) {
-        return true;
-      }
-    } catch (e) {
-      // If eval fails, fall through to false
+    const userNum = safeParseNumber(normalizedUser);
+    const correctNum = safeParseNumber(normalizedCorrect);
+    if (userNum !== null && correctNum !== null) {
+      return Math.abs(userNum - correctNum) < 0.001;
     }
   }
-  
+
   return false;
 }
 

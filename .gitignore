@@ -2,3 +2,4 @@ dist
 node_modules
 dist.pem
 dist.crx
+publishing-notes.md

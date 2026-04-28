@@ -27,13 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const customDomainsEl = document.getElementById("customDomains");
 
   // Load saved state and statistics
-  chrome.storage.sync.get(["enabled", "blockingStats", "blockedSites", "selfRespectSettings"], function (result) {
-    // Extension enabled state
-    toggle.checked = result.enabled !== false; // default to true
-    updateStatus(toggle.checked);
-    
-    // Blocking level
+  chrome.storage.sync.get(["blockingStats", "blockedSites", "selfRespectSettings"], function (result) {
+    // Extension enabled state — stored inside selfRespectSettings, not as a top-level key
     const settings = result.selfRespectSettings || {};
+    toggle.checked = settings.enabled !== false; // default to true
+    updateStatus(toggle.checked);
     const blockingLevel = settings.blockingLevel || "soft";
     updateBlockingLevel(blockingLevel);
     
@@ -57,15 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Toggle event
   toggle.addEventListener("change", function () {
     const enabled = this.checked;
-    chrome.storage.sync.set({ enabled: enabled });
+    // Write enabled into selfRespectSettings so content.ts reads the same key
+    chrome.storage.sync.get(['selfRespectSettings'], function (result) {
+      const settings = result.selfRespectSettings || {};
+      settings.enabled = enabled;
+      chrome.storage.sync.set({ selfRespectSettings: settings });
+    });
     updateStatus(enabled);
 
-    // Send message to content script
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.tabs.sendMessage(tabs[0].id, {
-        type: "EXTENSION_TOGGLE",
-        enabled: enabled,
-      });
+      if (tabs[0]) {
+        chrome.tabs.sendMessage(tabs[0].id, {
+          type: "EXTENSION_TOGGLE",
+          enabled: enabled,
+        });
+      }
     });
   });
 

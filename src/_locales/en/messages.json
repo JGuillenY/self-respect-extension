@@ -426,7 +426,7 @@
     "description": "Translation for: categoryGamblingDesc"
   },
   "puzzleBlockTitle": {
-    "message": "Self Respect - Sudoku Challenge",
+    "message": "Self Respect ✊ - Sudoku Challenge",
     "description": "Translation for: puzzleBlockTitle"
   },
   "puzzleBlockDescription": {
@@ -492,7 +492,7 @@
     "placeholders": {
       "attempts": {
         "content": "$1",
-        "example": "1/5"
+        "example": 1
       }
     },
     "description": "Translation for: feedbackIncorrectAnswer"
@@ -544,5 +544,55 @@
   "hardBlockFooter": {
     "message": "This hard block protects you from sites that conflict with your core values.",
     "description": "Translation for: hardBlockFooter"
+  },
+  "sudokuTimeLabel": {
+    "message": "Time",
+    "description": "Label for the timer in the Sudoku puzzle overlay"
+  },
+  "sudokuDifficultyLabel": {
+    "message": "Difficulty",
+    "description": "Label for the difficulty stat in the Sudoku puzzle overlay"
+  },
+  "sudokuHowToTitle": {
+    "message": "How to Solve Sudoku",
+    "description": "Title of the instructions section in the Sudoku overlay"
+  },
+  "sudokuRule1": {
+    "message": "Fill the grid so every row, column, and 3×3 box contains digits 1–9",
+    "description": "First Sudoku rule shown in instructions"
+  },
+  "sudokuRule2": {
+    "message": "Click a cell to select it, then choose a number from the pad",
+    "description": "Second Sudoku rule shown in instructions"
+  },
+  "sudokuRule3": {
+    "message": "Use Check Solution to validate your progress",
+    "description": "Third Sudoku rule shown in instructions"
+  },
+  "sudokuRule4": {
+    "message": "Complete the puzzle to proceed to the website",
+    "description": "Fourth Sudoku rule shown in instructions"
+  },
+  "sudokuSolvedTitle": {
+    "message": "🎉 Puzzle Solved!",
+    "description": "Heading shown when the Sudoku puzzle is solved"
+  },
+  "sudokuSolvedMessage": {
+    "message": "You successfully completed the Sudoku puzzle in $TIME$.",
+    "description": "Message shown when Sudoku is solved, includes elapsed time",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "02:45"
+      }
+    }
+  },
+  "sudokuCheckSolution": {
+    "message": "Check Solution",
+    "description": "Button label to check the current Sudoku solution"
+  },
+  "sudokuClearBtn": {
+    "message": "Clear",
+    "description": "Button label to clear a Sudoku cell"
   }
 }

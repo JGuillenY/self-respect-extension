@@ -1,14 +1,14 @@
 {
   "extDescription": {
-    "message": "通过重定向到更健康的替代方案，帮助您避免与自尊目标不符的网站。",
+    "message": "\u901a\u8fc7\u91cd\u5b9a\u5411\u5230\u66f4\u5065\u5eb7\u7684\u66ff\u4ee3\u65b9\u6848\uff0c\u5e2e\u52a9\u60a8\u907f\u514d\u4e0e\u81ea\u5c0a\u76ee\u6807\u4e0d\u7b26\u7684\u7f51\u7ad9\u3002",
     "description": "Page description used in manifest."
   },
   "extPopupTitle": {
-    "message": "自尊设置",
+    "message": "\u81ea\u5c0a\u8bbe\u7f6e",
     "description": "Popup default title."
   },
   "redirectDelayMessage": {
-    "message": "您将在 $DELAY$ 秒后被重定向到更健康的替代方案。",
+    "message": "\u60a8\u5c06\u5728 $DELAY$ \u79d2\u540e\u88ab\u91cd\u5b9a\u5411\u5230\u66f4\u5065\u5eb7\u7684\u66ff\u4ee3\u65b9\u6848\u3002",
     "description": "Message that is displayed when redirect is enabled.",
     "placeholders": {
       "delay": {
@@ -18,199 +18,199 @@
     }
   },
   "noRedirectDelayMessage": {
-    "message": "此网站可能与您的自尊和福祉目标不符。",
+    "message": "\u6b64\u7f51\u7ad9\u53ef\u80fd\u4e0e\u60a8\u7684\u81ea\u5c0a\u548c\u798f\u7949\u76ee\u6807\u4e0d\u7b26\u3002",
     "description": "Message that is displayed when redirect is not enabled."
   },
   "redirectingTo": {
-    "message": "正在重定向到：",
+    "message": "\u6b63\u5728\u91cd\u5b9a\u5411\u5230\uff1a",
     "description": "Translation for: redirectingTo"
   },
   "youWereAboutToVisit": {
-    "message": "您即将访问",
+    "message": "\u60a8\u5373\u5c06\u8bbf\u95ee",
     "description": "Translation for: youWereAboutToVisit"
   },
   "redirectNow": {
-    "message": "立即重定向",
+    "message": "\u7acb\u5373\u91cd\u5b9a\u5411",
     "description": "Translation for: redirectNow"
   },
   "healthierAlternative": {
-    "message": "前往更健康的替代方案",
+    "message": "\u524d\u5f80\u66f4\u5065\u5eb7\u7684\u66ff\u4ee3\u65b9\u6848",
     "description": "Translation for: healthierAlternative"
   },
   "cancelMessage": {
-    "message": "取消（临时允许）",
+    "message": "\u53d6\u6d88\uff08\u4e34\u65f6\u5141\u8bb8\uff09",
     "description": "Translation for: cancelMessage"
   },
   "phrase1": {
-    "message": "记住：您的每个选择都在塑造您将成为的人。",
+    "message": "\u8bb0\u4f4f\uff1a\u60a8\u7684\u6bcf\u4e2a\u9009\u62e9\u90fd\u5728\u5851\u9020\u60a8\u5c06\u6210\u4e3a\u7684\u4eba\u3002",
     "description": "Translation for: phrase1"
   },
   "extensionStatusActive": {
-    "message": "活跃",
+    "message": "\u6d3b\u8dc3",
     "description": "Translation for: extensionStatusActive"
   },
   "extensionStatusPaused": {
-    "message": "已暂停",
+    "message": "\u5df2\u6682\u505c",
     "description": "Translation for: extensionStatusPaused"
   },
   "blockingLevelSoft": {
-    "message": "柔和",
+    "message": "\u67d4\u548c",
     "description": "Translation for: blockingLevelSoft"
   },
   "blockingLevelPuzzle": {
-    "message": "谜题",
+    "message": "\u8c1c\u9898",
     "description": "Translation for: blockingLevelPuzzle"
   },
   "blockingLevelHard": {
-    "message": "严格",
+    "message": "\u4e25\u683c",
     "description": "Translation for: blockingLevelHard"
   },
   "popupExtensionStatus": {
-    "message": "扩展状态：",
+    "message": "\u6269\u5c55\u72b6\u6001\uff1a",
     "description": "Translation for: popupExtensionStatus"
   },
   "popupProtectedCategories": {
-    "message": "受保护类别：",
+    "message": "\u53d7\u4fdd\u62a4\u7c7b\u522b\uff1a",
     "description": "Translation for: popupProtectedCategories"
   },
   "popupBlockedDomains": {
-    "message": "已阻止域名：",
+    "message": "\u5df2\u963b\u6b62\u57df\u540d\uff1a",
     "description": "Translation for: popupBlockedDomains"
   },
   "popupStatus": {
-    "message": "状态：",
+    "message": "\u72b6\u6001\uff1a",
     "description": "Translation for: popupStatus"
   },
   "popupBlockingLevel": {
-    "message": "阻止级别：",
+    "message": "\u963b\u6b62\u7ea7\u522b\uff1a",
     "description": "Translation for: popupBlockingLevel"
   },
   "popupTotalBlocks": {
-    "message": "总阻止次数：",
+    "message": "\u603b\u963b\u6b62\u6b21\u6570\uff1a",
     "description": "Translation for: popupTotalBlocks"
   },
   "popupBlocksToday": {
-    "message": "今日阻止：",
+    "message": "\u4eca\u65e5\u963b\u6b62\uff1a",
     "description": "Translation for: popupBlocksToday"
   },
   "popupCustomDomains": {
-    "message": "自定义域名：",
+    "message": "\u81ea\u5b9a\u4e49\u57df\u540d\uff1a",
     "description": "Translation for: popupCustomDomains"
   },
   "popupCategoriesTitle": {
-    "message": "受保护类别：",
+    "message": "\u53d7\u4fdd\u62a4\u7c7b\u522b\uff1a",
     "description": "Translation for: popupCategoriesTitle"
   },
   "categoryAdultContent": {
-    "message": "成人内容（30+ 个网站）",
+    "message": "\u6210\u4eba\u5185\u5bb9\uff0830+ \u4e2a\u7f51\u7ad9\uff09",
     "description": "Translation for: categoryAdultContent"
   },
   "categorySocialMedia": {
-    "message": "社交媒体（10+ 个网站）",
+    "message": "\u793e\u4ea4\u5a92\u4f53\uff0810+ \u4e2a\u7f51\u7ad9\uff09",
     "description": "Translation for: categorySocialMedia"
   },
   "categoryGambling": {
-    "message": "赌博（15+ 个网站）",
+    "message": "\u8d4c\u535a\uff0815+ \u4e2a\u7f51\u7ad9\uff09",
     "description": "Translation for: categoryGambling"
   },
   "buttonOpenSettings": {
-    "message": "打开设置",
+    "message": "\u6253\u5f00\u8bbe\u7f6e",
     "description": "Translation for: buttonOpenSettings"
   },
   "popupFooter": {
-    "message": "保护您的自尊和数字福祉。每次重定向都是迈向更好自我的一步。如果此扩展对您有帮助，请考虑捐赠",
+    "message": "\u4fdd\u62a4\u60a8\u7684\u81ea\u5c0a\u548c\u6570\u5b57\u798f\u7949\u3002\u6bcf\u6b21\u91cd\u5b9a\u5411\u90fd\u662f\u8fc8\u5411\u66f4\u597d\u81ea\u6211\u7684\u4e00\u6b65\u3002\u5982\u679c\u6b64\u6269\u5c55\u5bf9\u60a8\u6709\u5e2e\u52a9\uff0c\u8bf7\u8003\u8651\u6350\u8d60",
     "description": "Translation for: popupFooter"
   },
   "settingsTitle": {
-    "message": "自尊 - 设置",
+    "message": "\u81ea\u5c0a - \u8bbe\u7f6e",
     "description": "Translation for: settingsTitle"
   },
   "buttonBack": {
-    "message": "返回",
+    "message": "\u8fd4\u56de",
     "description": "Translation for: buttonBack"
   },
   "settingsHeading": {
-    "message": "设置",
+    "message": "\u8bbe\u7f6e",
     "description": "Translation for: settingsHeading"
   },
   "settingsGeneral": {
-    "message": "常规设置",
+    "message": "\u5e38\u89c4\u8bbe\u7f6e",
     "description": "Translation for: settingsGeneral"
   },
   "settingsExtensionStatus": {
-    "message": "扩展状态",
+    "message": "\u6269\u5c55\u72b6\u6001",
     "description": "Translation for: settingsExtensionStatus"
   },
   "settingsExtensionStatusDesc": {
-    "message": "启用或禁用扩展",
+    "message": "\u542f\u7528\u6216\u7981\u7528\u6269\u5c55",
     "description": "Translation for: settingsExtensionStatusDesc"
   },
   "settingsShowNotifications": {
-    "message": "显示通知",
+    "message": "\u663e\u793a\u901a\u77e5",
     "description": "Translation for: settingsShowNotifications"
   },
   "settingsShowNotificationsDesc": {
-    "message": "阻止网站时显示确认消息",
+    "message": "\u963b\u6b62\u7f51\u7ad9\u65f6\u663e\u793a\u786e\u8ba4\u6d88\u606f",
     "description": "Translation for: settingsShowNotificationsDesc"
   },
   "settingsAutoRedirect": {
-    "message": "自动重定向",
+    "message": "\u81ea\u52a8\u91cd\u5b9a\u5411",
     "description": "Translation for: settingsAutoRedirect"
   },
   "settingsAutoRedirectDesc": {
-    "message": "自动重定向到更健康的替代方案",
+    "message": "\u81ea\u52a8\u91cd\u5b9a\u5411\u5230\u66f4\u5065\u5eb7\u7684\u66ff\u4ee3\u65b9\u6848",
     "description": "Translation for: settingsAutoRedirectDesc"
   },
   "settingsRedirectDelay": {
-    "message": "重定向延迟（秒）",
+    "message": "\u91cd\u5b9a\u5411\u5ef6\u8fdf\uff08\u79d2\uff09",
     "description": "Translation for: settingsRedirectDelay"
   },
   "optionOneSecond": {
-    "message": "1 秒",
+    "message": "1 \u79d2",
     "description": "Translation for: optionOneSecond"
   },
   "optionTwoSeconds": {
-    "message": "2 秒",
+    "message": "2 \u79d2",
     "description": "Translation for: optionTwoSeconds"
   },
   "optionThreeSeconds": {
-    "message": "3 秒",
+    "message": "3 \u79d2",
     "description": "Translation for: optionThreeSeconds"
   },
   "optionFiveSeconds": {
-    "message": "5 秒",
+    "message": "5 \u79d2",
     "description": "Translation for: optionFiveSeconds"
   },
   "optionTenSeconds": {
-    "message": "10 秒",
+    "message": "10 \u79d2",
     "description": "Translation for: optionTenSeconds"
   },
   "settingsBlockingLevel": {
-    "message": "阻止级别",
+    "message": "\u963b\u6b62\u7ea7\u522b",
     "description": "Translation for: settingsBlockingLevel"
   },
   "optionSoftBlock": {
-    "message": "柔和阻止（当前 - 显示覆盖层）",
+    "message": "\u67d4\u548c\u963b\u6b62\uff08\u5f53\u524d - \u663e\u793a\u8986\u76d6\u5c42\uff09",
     "description": "Translation for: optionSoftBlock"
   },
   "optionPuzzleBlock": {
-    "message": "数独挑战（需要解决困难数独）",
+    "message": "\u6570\u72ec\u6311\u6218\uff08\u9700\u8981\u89e3\u51b3\u56f0\u96be\u6570\u72ec\uff09",
     "description": "Translation for: optionPuzzleBlock"
   },
   "optionHardBlock": {
-    "message": "严格阻止（完全无法访问）",
+    "message": "\u4e25\u683c\u963b\u6b62\uff08\u5b8c\u5168\u65e0\u6cd5\u8bbf\u95ee\uff09",
     "description": "Translation for: optionHardBlock"
   },
   "settingsBlockedCategories": {
-    "message": "已阻止类别",
+    "message": "\u5df2\u963b\u6b62\u7c7b\u522b",
     "description": "Translation for: settingsBlockedCategories"
   },
   "settingsCustomDomains": {
-    "message": "自定义域名",
+    "message": "\u81ea\u5b9a\u4e49\u57df\u540d",
     "description": "Translation for: settingsCustomDomains"
   },
   "settingsCustomDomainsDesc": {
-    "message": "添加您自己的域名进行阻止。输入域名时不要包含 http:// 或 www。",
+    "message": "\u6dfb\u52a0\u60a8\u81ea\u5df1\u7684\u57df\u540d\u8fdb\u884c\u963b\u6b62\u3002\u8f93\u5165\u57df\u540d\u65f6\u4e0d\u8981\u5305\u542b http:// \u6216 www\u3002",
     "description": "Translation for: settingsCustomDomainsDesc"
   },
   "placeholderDomainExample": {
@@ -218,91 +218,91 @@
     "description": "Translation for: placeholderDomainExample"
   },
   "optionCategoryCustom": {
-    "message": "自定义",
+    "message": "\u81ea\u5b9a\u4e49",
     "description": "Translation for: optionCategoryCustom"
   },
   "optionCategoryAdultContent": {
-    "message": "成人内容",
+    "message": "\u6210\u4eba\u5185\u5bb9",
     "description": "Translation for: optionCategoryAdultContent"
   },
   "optionCategorySocialMedia": {
-    "message": "社交媒体",
+    "message": "\u793e\u4ea4\u5a92\u4f53",
     "description": "Translation for: optionCategorySocialMedia"
   },
   "optionCategoryGambling": {
-    "message": "赌博",
+    "message": "\u8d4c\u535a",
     "description": "Translation for: optionCategoryGambling"
   },
   "optionCategoryDistracting": {
-    "message": "分散注意力",
+    "message": "\u5206\u6563\u6ce8\u610f\u529b",
     "description": "Translation for: optionCategoryDistracting"
   },
   "optionCategoryShopping": {
-    "message": "购物",
+    "message": "\u8d2d\u7269",
     "description": "Translation for: optionCategoryShopping"
   },
   "buttonAddDomain": {
-    "message": "添加域名",
+    "message": "\u6dfb\u52a0\u57df\u540d",
     "description": "Translation for: buttonAddDomain"
   },
   "emptyCustomDomains": {
-    "message": "尚未添加自定义域名",
+    "message": "\u5c1a\u672a\u6dfb\u52a0\u81ea\u5b9a\u4e49\u57df\u540d",
     "description": "Translation for: emptyCustomDomains"
   },
   "settingsStatistics": {
-    "message": "统计",
+    "message": "\u7edf\u8ba1",
     "description": "Translation for: settingsStatistics"
   },
   "statTotalBlocks": {
-    "message": "总阻止次数",
+    "message": "\u603b\u963b\u6b62\u6b21\u6570",
     "description": "Translation for: statTotalBlocks"
   },
   "statBlocksToday": {
-    "message": "今日阻止",
+    "message": "\u4eca\u65e5\u963b\u6b62",
     "description": "Translation for: statBlocksToday"
   },
   "statCustomDomains": {
-    "message": "自定义域名",
+    "message": "\u81ea\u5b9a\u4e49\u57df\u540d",
     "description": "Translation for: statCustomDomains"
   },
   "statLastUpdated": {
-    "message": "最后更新",
+    "message": "\u6700\u540e\u66f4\u65b0",
     "description": "Translation for: statLastUpdated"
   },
   "buttonResetStatistics": {
-    "message": "重置统计",
+    "message": "\u91cd\u7f6e\u7edf\u8ba1",
     "description": "Translation for: buttonResetStatistics"
   },
   "settingsFooter": {
-    "message": "自尊扩展 v1.0.0 保护您的数字福祉和自尊",
+    "message": "\u81ea\u5c0a\u6269\u5c55 v1.0.0 \u4fdd\u62a4\u60a8\u7684\u6570\u5b57\u798f\u7949\u548c\u81ea\u5c0a",
     "description": "Translation for: settingsFooter"
   },
   "notificationExtensionEnabled": {
-    "message": "扩展已启用",
+    "message": "\u6269\u5c55\u5df2\u542f\u7528",
     "description": "Translation for: notificationExtensionEnabled"
   },
   "notificationExtensionDisabled": {
-    "message": "扩展已禁用",
+    "message": "\u6269\u5c55\u5df2\u7981\u7528",
     "description": "Translation for: notificationExtensionDisabled"
   },
   "notificationNotificationsEnabled": {
-    "message": "通知已启用",
+    "message": "\u901a\u77e5\u5df2\u542f\u7528",
     "description": "Translation for: notificationNotificationsEnabled"
   },
   "notificationNotificationsDisabled": {
-    "message": "通知已禁用",
+    "message": "\u901a\u77e5\u5df2\u7981\u7528",
     "description": "Translation for: notificationNotificationsDisabled"
   },
   "notificationAutoRedirectEnabled": {
-    "message": "自动重定向已启用",
+    "message": "\u81ea\u52a8\u91cd\u5b9a\u5411\u5df2\u542f\u7528",
     "description": "Translation for: notificationAutoRedirectEnabled"
   },
   "notificationAutoRedirectDisabled": {
-    "message": "自动重定向已禁用",
+    "message": "\u81ea\u52a8\u91cd\u5b9a\u5411\u5df2\u7981\u7528",
     "description": "Translation for: notificationAutoRedirectDisabled"
   },
   "notificationRedirectDelaySet": {
-    "message": "重定向延迟设置为 $DELAY$ 秒",
+    "message": "\u91cd\u5b9a\u5411\u5ef6\u8fdf\u8bbe\u7f6e\u4e3a $DELAY$ \u79d2",
     "placeholders": {
       "delay": {
         "content": "$1",
@@ -312,37 +312,37 @@
     "description": "Translation for: notificationRedirectDelaySet"
   },
   "notificationBlockingLevelSet": {
-    "message": "阻止级别设置为 $LEVEL$",
+    "message": "\u963b\u6b62\u7ea7\u522b\u8bbe\u7f6e\u4e3a $LEVEL$",
     "placeholders": {
       "level": {
         "content": "$1",
-        "example": "柔和"
+        "example": "\u67d4\u548c"
       }
     },
     "description": "Translation for: notificationBlockingLevelSet"
   },
   "notificationCategoryEnabled": {
-    "message": "$CATEGORY$ 阻止已启用",
+    "message": "$CATEGORY$ \u963b\u6b62\u5df2\u542f\u7528",
     "placeholders": {
       "category": {
         "content": "$1",
-        "example": "成人内容"
+        "example": "\u6210\u4eba\u5185\u5bb9"
       }
     },
     "description": "Translation for: notificationCategoryEnabled"
   },
   "notificationCategoryDisabled": {
-    "message": "$CATEGORY$ 阻止已禁用",
+    "message": "$CATEGORY$ \u963b\u6b62\u5df2\u7981\u7528",
     "placeholders": {
       "category": {
         "content": "$1",
-        "example": "成人内容"
+        "example": "\u6210\u4eba\u5185\u5bb9"
       }
     },
     "description": "Translation for: notificationCategoryDisabled"
   },
   "notificationDomainEnabled": {
-    "message": "$DOMAIN$ 已启用",
+    "message": "$DOMAIN$ \u5df2\u542f\u7528",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -352,7 +352,7 @@
     "description": "Translation for: notificationDomainEnabled"
   },
   "notificationDomainDisabled": {
-    "message": "$DOMAIN$ 已禁用",
+    "message": "$DOMAIN$ \u5df2\u7981\u7528",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -362,7 +362,7 @@
     "description": "Translation for: notificationDomainDisabled"
   },
   "notificationDomainRemoved": {
-    "message": "$DOMAIN$ 已移除",
+    "message": "$DOMAIN$ \u5df2\u79fb\u9664",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -372,23 +372,23 @@
     "description": "Translation for: notificationDomainRemoved"
   },
   "confirmResetStatistics": {
-    "message": "您确定要重置所有统计吗？",
+    "message": "\u60a8\u786e\u5b9a\u8981\u91cd\u7f6e\u6240\u6709\u7edf\u8ba1\u5417\uff1f",
     "description": "Translation for: confirmResetStatistics"
   },
   "notificationStatisticsReset": {
-    "message": "统计已重置",
+    "message": "\u7edf\u8ba1\u5df2\u91cd\u7f6e",
     "description": "Translation for: notificationStatisticsReset"
   },
   "errorPleaseEnterDomain": {
-    "message": "请输入域名",
+    "message": "\u8bf7\u8f93\u5165\u57df\u540d",
     "description": "Translation for: errorPleaseEnterDomain"
   },
   "errorInvalidDomain": {
-    "message": "请输入有效的域名（例如，example.com）",
+    "message": "\u8bf7\u8f93\u5165\u6709\u6548\u7684\u57df\u540d\uff08\u4f8b\u5982\uff0cexample.com\uff09",
     "description": "Translation for: errorInvalidDomain"
   },
   "notificationDomainAdded": {
-    "message": "$DOMAIN$ 已添加到阻止列表",
+    "message": "$DOMAIN$ \u5df2\u6dfb\u52a0\u5230\u963b\u6b62\u5217\u8868",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -398,71 +398,71 @@
     "description": "Translation for: notificationDomainAdded"
   },
   "errorAddingDomain": {
-    "message": "添加域名时出错",
+    "message": "\u6dfb\u52a0\u57df\u540d\u65f6\u51fa\u9519",
     "description": "Translation for: errorAddingDomain"
   },
   "categoryAdultContentName": {
-    "message": "成人内容",
+    "message": "\u6210\u4eba\u5185\u5bb9",
     "description": "Translation for: categoryAdultContentName"
   },
   "categoryAdultContentDesc": {
-    "message": "用户可能因自尊和福祉而希望避免的成人网站",
+    "message": "\u7528\u6237\u53ef\u80fd\u56e0\u81ea\u5c0a\u548c\u798f\u7949\u800c\u5e0c\u671b\u907f\u514d\u7684\u6210\u4eba\u7f51\u7ad9",
     "description": "Translation for: categoryAdultContentDesc"
   },
   "categorySocialMediaName": {
-    "message": "社交媒体",
+    "message": "\u793e\u4ea4\u5a92\u4f53",
     "description": "Translation for: categorySocialMediaName"
   },
   "categorySocialMediaDesc": {
-    "message": "可能耗时且影响自尊的主要社交网络平台",
+    "message": "\u53ef\u80fd\u8017\u65f6\u4e14\u5f71\u54cd\u81ea\u5c0a\u7684\u4e3b\u8981\u793e\u4ea4\u7f51\u7edc\u5e73\u53f0",
     "description": "Translation for: categorySocialMediaDesc"
   },
   "categoryGamblingName": {
-    "message": "赌博",
+    "message": "\u8d4c\u535a",
     "description": "Translation for: categoryGamblingName"
   },
   "categoryGamblingDesc": {
-    "message": "可能导致成瘾和财务损害的在线赌博网站",
+    "message": "\u53ef\u80fd\u5bfc\u81f4\u6210\u763e\u548c\u8d22\u52a1\u635f\u5bb3\u7684\u5728\u7ebf\u8d4c\u535a\u7f51\u7ad9",
     "description": "Translation for: categoryGamblingDesc"
   },
   "puzzleBlockTitle": {
-    "message": "自尊 - 数独挑战",
+    "message": "\u81ea\u5c0a - \u6570\u72ec\u6311\u6218",
     "description": "Translation for: puzzleBlockTitle"
   },
   "puzzleBlockDescription": {
-    "message": "要访问此网站，您必须解决一个困难的数独。这是为了确保您真的想要继续。",
+    "message": "\u8981\u8bbf\u95ee\u6b64\u7f51\u7ad9\uff0c\u60a8\u5fc5\u987b\u89e3\u51b3\u4e00\u4e2a\u56f0\u96be\u7684\u6570\u72ec\u3002\u8fd9\u662f\u4e3a\u4e86\u786e\u4fdd\u60a8\u771f\u7684\u60f3\u8981\u7ee7\u7eed\u3002",
     "description": "Translation for: puzzleBlockDescription"
   },
   "puzzleChallengeTitle": {
-    "message": "数独挑战",
+    "message": "\u6570\u72ec\u6311\u6218",
     "description": "Translation for: puzzleChallengeTitle"
   },
   "placeholderEnterAnswer": {
-    "message": "输入您的答案...",
+    "message": "\u8f93\u5165\u60a8\u7684\u7b54\u6848...",
     "description": "Translation for: placeholderEnterAnswer"
   },
   "buttonSubmit": {
-    "message": "提交",
+    "message": "\u63d0\u4ea4",
     "description": "Translation for: buttonSubmit"
   },
   "labelAttempts": {
-    "message": "尝试次数：",
+    "message": "\u5c1d\u8bd5\u6b21\u6570\uff1a",
     "description": "Translation for: labelAttempts"
   },
   "labelTimeout": {
-    "message": "超时：",
+    "message": "\u8d85\u65f6\uff1a",
     "description": "Translation for: labelTimeout"
   },
   "buttonShowHint": {
-    "message": "显示提示",
+    "message": "\u663e\u793a\u63d0\u793a",
     "description": "Translation for: buttonShowHint"
   },
   "puzzleSuccessMessage": {
-    "message": "数独正确解决！如果您仍然希望，可以继续。",
+    "message": "\u6570\u72ec\u6b63\u786e\u89e3\u51b3\uff01\u5982\u679c\u60a8\u4ecd\u7136\u5e0c\u671b\uff0c\u53ef\u4ee5\u7ee7\u7eed\u3002",
     "description": "Translation for: puzzleSuccessMessage"
   },
   "buttonProceedToSite": {
-    "message": "继续访问 $DOMAIN$",
+    "message": "\u7ee7\u7eed\u8bbf\u95ee $DOMAIN$",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -472,55 +472,55 @@
     "description": "Translation for: buttonProceedToSite"
   },
   "buttonChooseAlternative": {
-    "message": "选择更健康的替代方案",
+    "message": "\u9009\u62e9\u66f4\u5065\u5eb7\u7684\u66ff\u4ee3\u65b9\u6848",
     "description": "Translation for: buttonChooseAlternative"
   },
   "puzzleFooter": {
-    "message": "此数独旨在让您暂停并重新考虑您的选择。",
+    "message": "\u6b64\u6570\u72ec\u65e8\u5728\u8ba9\u60a8\u6682\u505c\u5e76\u91cd\u65b0\u8003\u8651\u60a8\u7684\u9009\u62e9\u3002",
     "description": "Translation for: puzzleFooter"
   },
   "errorPleaseEnterAnswer": {
-    "message": "请输入答案。",
+    "message": "\u8bf7\u8f93\u5165\u7b54\u6848\u3002",
     "description": "Translation for: errorPleaseEnterAnswer"
   },
   "feedbackCorrectAnswer": {
-    "message": "正确！做得好。",
+    "message": "\u6b63\u786e\uff01\u505a\u5f97\u597d\u3002",
     "description": "Translation for: feedbackCorrectAnswer"
   },
   "feedbackIncorrectAnswer": {
-    "message": "不正确。请再试一次。尝试次数：$ATTEMPTS$",
+    "message": "\u4e0d\u6b63\u786e\u3002\u8bf7\u518d\u8bd5\u4e00\u6b21\u3002\u5c1d\u8bd5\u6b21\u6570\uff1a$ATTEMPTS$",
     "placeholders": {
       "attempts": {
         "content": "$1",
-        "example": "1/5"
+        "example": 1
       }
     },
     "description": "Translation for: feedbackIncorrectAnswer"
   },
   "feedbackMaxAttempts": {
-    "message": "已达到最大尝试次数。页面将重新加载并显示新数独。",
+    "message": "\u5df2\u8fbe\u5230\u6700\u5927\u5c1d\u8bd5\u6b21\u6570\u3002\u9875\u9762\u5c06\u91cd\u65b0\u52a0\u8f7d\u5e76\u663e\u793a\u65b0\u6570\u72ec\u3002",
     "description": "Translation for: feedbackMaxAttempts"
   },
   "feedbackTimeout": {
-    "message": "时间到！页面将重新加载并显示新数独。",
+    "message": "\u65f6\u95f4\u5230\uff01\u9875\u9762\u5c06\u91cd\u65b0\u52a0\u8f7d\u5e76\u663e\u793a\u65b0\u6570\u72ec\u3002",
     "description": "Translation for: feedbackTimeout"
   },
   "hintMessage": {
-    "message": "提示：$HINT$",
+    "message": "\u63d0\u793a\uff1a$HINT$",
     "placeholders": {
       "hint": {
         "content": "$1",
-        "example": "考虑质数"
+        "example": "\u8003\u8651\u8d28\u6570"
       }
     },
     "description": "Translation for: hintMessage"
   },
   "hardBlockTitle": {
-    "message": "自尊 - 严格阻止",
+    "message": "\u81ea\u5c0a - \u4e25\u683c\u963b\u6b62",
     "description": "Translation for: hardBlockTitle"
   },
   "hardBlockMessage": {
-    "message": "对 $DOMAIN$ 的访问已被永久阻止。",
+    "message": "\u5bf9 $DOMAIN$ \u7684\u8bbf\u95ee\u5df2\u88ab\u6c38\u4e45\u963b\u6b62\u3002",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -530,19 +530,69 @@
     "description": "Translation for: hardBlockMessage"
   },
   "hardBlockDescription": {
-    "message": "此网站与您的自尊目标不兼容。在任何情况下都不允许访问。",
+    "message": "\u6b64\u7f51\u7ad9\u4e0e\u60a8\u7684\u81ea\u5c0a\u76ee\u6807\u4e0d\u517c\u5bb9\u3002\u5728\u4efb\u4f55\u60c5\u51b5\u4e0b\u90fd\u4e0d\u5141\u8bb8\u8bbf\u95ee\u3002",
     "description": "Translation for: hardBlockDescription"
   },
   "hardBlockWarning": {
-    "message": "严格阻止已激活",
+    "message": "\u4e25\u683c\u963b\u6b62\u5df2\u6fc0\u6d3b",
     "description": "Translation for: hardBlockWarning"
   },
   "hardBlockWarningDesc": {
-    "message": "这是您的最高保护级别。没有可用的绕过选项。",
+    "message": "\u8fd9\u662f\u60a8\u7684\u6700\u9ad8\u4fdd\u62a4\u7ea7\u522b\u3002\u6ca1\u6709\u53ef\u7528\u7684\u7ed5\u8fc7\u9009\u9879\u3002",
     "description": "Translation for: hardBlockWarningDesc"
   },
   "hardBlockFooter": {
-    "message": "此严格阻止保护您免受与核心价值观冲突的网站的影响。",
+    "message": "\u6b64\u4e25\u683c\u963b\u6b62\u4fdd\u62a4\u60a8\u514d\u53d7\u4e0e\u6838\u5fc3\u4ef7\u503c\u89c2\u51b2\u7a81\u7684\u7f51\u7ad9\u7684\u5f71\u54cd\u3002",
     "description": "Translation for: hardBlockFooter"
+  },
+  "sudokuTimeLabel": {
+    "message": "\u65f6\u95f4",
+    "description": "Label for the timer in the Sudoku puzzle overlay"
+  },
+  "sudokuDifficultyLabel": {
+    "message": "\u96be\u5ea6",
+    "description": "Label for the difficulty stat in the Sudoku puzzle overlay"
+  },
+  "sudokuHowToTitle": {
+    "message": "\u5982\u4f55\u89e3\u51b3\u6570\u72ec",
+    "description": "Title of the instructions section in the Sudoku overlay"
+  },
+  "sudokuRule1": {
+    "message": "\u586b\u5199\u7f51\u683c\uff0c\u4f7f\u6bcf\u884c\u3001\u6bcf\u5217\u548c\u6bcf\u4e2a3\u00d73\u65b9\u683c\u5305\u542b\u6570\u5b571\u20139",
+    "description": "First Sudoku rule shown in instructions"
+  },
+  "sudokuRule2": {
+    "message": "\u70b9\u51fb\u5355\u5143\u683c\u9009\u4e2d\u5b83\uff0c\u7136\u540e\u4ece\u6570\u5b57\u952e\u76d8\u9009\u62e9\u6570\u5b57",
+    "description": "Second Sudoku rule shown in instructions"
+  },
+  "sudokuRule3": {
+    "message": "\u4f7f\u7528\u300c\u68c0\u67e5\u7b54\u6848\u300d\u9a8c\u8bc1\u60a8\u7684\u8fdb\u5ea6",
+    "description": "Third Sudoku rule shown in instructions"
+  },
+  "sudokuRule4": {
+    "message": "\u5b8c\u6210\u8c1c\u9898\u540e\u5373\u53ef\u8bbf\u95ee\u7f51\u7ad9",
+    "description": "Fourth Sudoku rule shown in instructions"
+  },
+  "sudokuSolvedTitle": {
+    "message": "\ud83c\udf89 \u8c1c\u9898\u5df2\u89e3\u51b3\uff01",
+    "description": "Heading shown when the Sudoku puzzle is solved"
+  },
+  "sudokuSolvedMessage": {
+    "message": "\u60a8\u5728 $TIME$ \u5185\u6210\u529f\u5b8c\u6210\u4e86\u6570\u72ec\u8c1c\u9898\u3002",
+    "description": "Message shown when Sudoku is solved, includes elapsed time",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "02:45"
+      }
+    }
+  },
+  "sudokuCheckSolution": {
+    "message": "\u68c0\u67e5\u7b54\u6848",
+    "description": "Button label to check the current Sudoku solution"
+  },
+  "sudokuClearBtn": {
+    "message": "\u6e05\u9664",
+    "description": "Button label to clear a Sudoku cell"
   }
 }

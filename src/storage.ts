@@ -1,6 +1,8 @@
 // Storage management for Self Respect extension
 // Handles blocked sites, custom domains, and user preferences
 
+import { DOMAIN_CATEGORIES } from "./constants";
+
 declare const chrome: any;
 
 export interface BlockedSite {
@@ -201,24 +203,26 @@ export async function incrementBlockCounter(): Promise<void> {
   });
 }
 
-// Check if a domain is blocked
+// Check if a domain is blocked (custom or predefined, respects settings)
 export async function isDomainBlocked(domain: string): Promise<boolean> {
   const settings = await getSettings();
   if (!settings?.enabled) return false;
-  
-  const sites = await getBlockedSites();
+
   const normalizedDomain = normalizeDomain(domain);
-  
-  // Check custom domains first
-  const customBlock = sites.find(
+
+  // Check predefined categories, filtered by which categories are enabled
+  const matchedCategory = DOMAIN_CATEGORIES.find((cat) =>
+    cat.domains.some((d) => d.toLowerCase() === normalizedDomain),
+  );
+  if (matchedCategory && (settings.blockedCategories ?? []).includes(matchedCategory.name)) {
+    return true;
+  }
+
+  // Check custom domains
+  const sites = await getBlockedSites();
+  return sites.some(
     (site) => site.enabled && site.custom && site.domain === normalizedDomain,
   );
-  
-  if (customBlock) return true;
-  
-  // Check predefined categories if enabled
-  // This would integrate with the existing constants.ts logic
-  return false;
 }
 
 // Helper functions

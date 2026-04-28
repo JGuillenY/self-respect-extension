@@ -1,14 +1,14 @@
 {
   "extDescription": {
-    "message": "Ajuda você a evitar sites que não se alinham com seus objetivos de auto-respeito redirecionando para alternativas mais saudáveis.",
+    "message": "Ajuda voc\u00ea a evitar sites que n\u00e3o se alinham com seus objetivos de auto-respeito redirecionando para alternativas mais saud\u00e1veis.",
     "description": "Page description used in manifest."
   },
   "extPopupTitle": {
-    "message": "Configurações de Auto-Respeito",
+    "message": "Configura\u00e7\u00f5es de Auto-Respeito",
     "description": "Popup default title."
   },
   "redirectDelayMessage": {
-    "message": "Você será redirecionado para uma alternativa mais saudável em $DELAY$ segundos.",
+    "message": "Voc\u00ea ser\u00e1 redirecionado para uma alternativa mais saud\u00e1vel em $DELAY$ segundos.",
     "description": "Message that is displayed when redirect is enabled.",
     "placeholders": {
       "delay": {
@@ -18,7 +18,7 @@
     }
   },
   "noRedirectDelayMessage": {
-    "message": "Este site pode não se alinhar com seus objetivos de auto-respeito e bem-estar.",
+    "message": "Este site pode n\u00e3o se alinhar com seus objetivos de auto-respeito e bem-estar.",
     "description": "Message that is displayed when redirect is not enabled."
   },
   "redirectingTo": {
@@ -26,7 +26,7 @@
     "description": "Translation for: redirectingTo"
   },
   "youWereAboutToVisit": {
-    "message": "Você estava prestes a visitar",
+    "message": "Voc\u00ea estava prestes a visitar",
     "description": "Translation for: youWereAboutToVisit"
   },
   "redirectNow": {
@@ -34,7 +34,7 @@
     "description": "Translation for: redirectNow"
   },
   "healthierAlternative": {
-    "message": "Ir para Alternativa Mais Saudável",
+    "message": "Ir para Alternativa Mais Saud\u00e1vel",
     "description": "Translation for: healthierAlternative"
   },
   "cancelMessage": {
@@ -42,7 +42,7 @@
     "description": "Translation for: cancelMessage"
   },
   "phrase1": {
-    "message": "Lembre-se: Cada escolha que você faz molda quem você se torna.",
+    "message": "Lembre-se: Cada escolha que voc\u00ea faz molda quem voc\u00ea se torna.",
     "description": "Translation for: phrase1"
   },
   "extensionStatusActive": {
@@ -58,7 +58,7 @@
     "description": "Translation for: blockingLevelSoft"
   },
   "blockingLevelPuzzle": {
-    "message": "Quebra-cabeça",
+    "message": "Quebra-cabe\u00e7a",
     "description": "Translation for: blockingLevelPuzzle"
   },
   "blockingLevelHard": {
@@ -66,7 +66,7 @@
     "description": "Translation for: blockingLevelHard"
   },
   "popupExtensionStatus": {
-    "message": "Status da Extensão:",
+    "message": "Status da Extens\u00e3o:",
     "description": "Translation for: popupExtensionStatus"
   },
   "popupProtectedCategories": {
@@ -74,7 +74,7 @@
     "description": "Translation for: popupProtectedCategories"
   },
   "popupBlockedDomains": {
-    "message": "Domínios Bloqueados:",
+    "message": "Dom\u00ednios Bloqueados:",
     "description": "Translation for: popupBlockedDomains"
   },
   "popupStatus": {
@@ -82,7 +82,7 @@
     "description": "Translation for: popupStatus"
   },
   "popupBlockingLevel": {
-    "message": "Nível de Bloqueio:",
+    "message": "N\u00edvel de Bloqueio:",
     "description": "Translation for: popupBlockingLevel"
   },
   "popupTotalBlocks": {
@@ -94,7 +94,7 @@
     "description": "Translation for: popupBlocksToday"
   },
   "popupCustomDomains": {
-    "message": "Domínios Personalizados:",
+    "message": "Dom\u00ednios Personalizados:",
     "description": "Translation for: popupCustomDomains"
   },
   "popupCategoriesTitle": {
@@ -102,7 +102,7 @@
     "description": "Translation for: popupCategoriesTitle"
   },
   "categoryAdultContent": {
-    "message": "Conteúdo Adulto (30+ sites)",
+    "message": "Conte\u00fado Adulto (30+ sites)",
     "description": "Translation for: categoryAdultContent"
   },
   "categorySocialMedia": {
@@ -114,15 +114,15 @@
     "description": "Translation for: categoryGambling"
   },
   "buttonOpenSettings": {
-    "message": "Abrir Configurações",
+    "message": "Abrir Configura\u00e7\u00f5es",
     "description": "Translation for: buttonOpenSettings"
   },
   "popupFooter": {
-    "message": "Protegendo seu auto-respeito e bem-estar digital. Cada redirecionamento é um passo em direção ao seu eu melhor. Se esta extensão te ajudou, considere doar",
+    "message": "Protegendo seu auto-respeito e bem-estar digital. Cada redirecionamento \u00e9 um passo em dire\u00e7\u00e3o ao seu eu melhor. Se esta extens\u00e3o te ajudou, considere doar",
     "description": "Translation for: popupFooter"
   },
   "settingsTitle": {
-    "message": "Auto-Respeito - Configurações",
+    "message": "Auto-Respeito - Configura\u00e7\u00f5es",
     "description": "Translation for: settingsTitle"
   },
   "buttonBack": {
@@ -130,35 +130,35 @@
     "description": "Translation for: buttonBack"
   },
   "settingsHeading": {
-    "message": "Configurações",
+    "message": "Configura\u00e7\u00f5es",
     "description": "Translation for: settingsHeading"
   },
   "settingsGeneral": {
-    "message": "Configurações Gerais",
+    "message": "Configura\u00e7\u00f5es Gerais",
     "description": "Translation for: settingsGeneral"
   },
   "settingsExtensionStatus": {
-    "message": "Status da Extensão",
+    "message": "Status da Extens\u00e3o",
     "description": "Translation for: settingsExtensionStatus"
   },
   "settingsExtensionStatusDesc": {
-    "message": "Ativar ou desativar a extensão",
+    "message": "Ativar ou desativar a extens\u00e3o",
     "description": "Translation for: settingsExtensionStatusDesc"
   },
   "settingsShowNotifications": {
-    "message": "Mostrar Notificações",
+    "message": "Mostrar Notifica\u00e7\u00f5es",
     "description": "Translation for: settingsShowNotifications"
   },
   "settingsShowNotificationsDesc": {
-    "message": "Mostrar mensagens de confirmação ao bloquear sites",
+    "message": "Mostrar mensagens de confirma\u00e7\u00e3o ao bloquear sites",
     "description": "Translation for: settingsShowNotificationsDesc"
   },
   "settingsAutoRedirect": {
-    "message": "Redirecionamento Automático",
+    "message": "Redirecionamento Autom\u00e1tico",
     "description": "Translation for: settingsAutoRedirect"
   },
   "settingsAutoRedirectDesc": {
-    "message": "Redirecionar automaticamente para alternativas mais saudáveis",
+    "message": "Redirecionar automaticamente para alternativas mais saud\u00e1veis",
     "description": "Translation for: settingsAutoRedirectDesc"
   },
   "settingsRedirectDelay": {
@@ -186,15 +186,15 @@
     "description": "Translation for: optionTenSeconds"
   },
   "settingsBlockingLevel": {
-    "message": "Nível de Bloqueio",
+    "message": "N\u00edvel de Bloqueio",
     "description": "Translation for: settingsBlockingLevel"
   },
   "optionSoftBlock": {
-    "message": "Bloqueio Suave (Atual - Mostra sobreposição)",
+    "message": "Bloqueio Suave (Atual - Mostra sobreposi\u00e7\u00e3o)",
     "description": "Translation for: optionSoftBlock"
   },
   "optionPuzzleBlock": {
-    "message": "Desafio de Sudoku (Sudoku difícil para resolver)",
+    "message": "Desafio de Sudoku (Sudoku dif\u00edcil para resolver)",
     "description": "Translation for: optionPuzzleBlock"
   },
   "optionHardBlock": {
@@ -206,11 +206,11 @@
     "description": "Translation for: settingsBlockedCategories"
   },
   "settingsCustomDomains": {
-    "message": "Domínios Personalizados",
+    "message": "Dom\u00ednios Personalizados",
     "description": "Translation for: settingsCustomDomains"
   },
   "settingsCustomDomainsDesc": {
-    "message": "Adicione seus próprios domínios para bloquear. Digite nomes de domínio sem http:// ou www.",
+    "message": "Adicione seus pr\u00f3prios dom\u00ednios para bloquear. Digite nomes de dom\u00ednio sem http:// ou www.",
     "description": "Translation for: settingsCustomDomainsDesc"
   },
   "placeholderDomainExample": {
@@ -222,7 +222,7 @@
     "description": "Translation for: optionCategoryCustom"
   },
   "optionCategoryAdultContent": {
-    "message": "Conteúdo Adulto",
+    "message": "Conte\u00fado Adulto",
     "description": "Translation for: optionCategoryAdultContent"
   },
   "optionCategorySocialMedia": {
@@ -234,7 +234,7 @@
     "description": "Translation for: optionCategoryGambling"
   },
   "optionCategoryDistracting": {
-    "message": "Distração",
+    "message": "Distra\u00e7\u00e3o",
     "description": "Translation for: optionCategoryDistracting"
   },
   "optionCategoryShopping": {
@@ -242,15 +242,15 @@
     "description": "Translation for: optionCategoryShopping"
   },
   "buttonAddDomain": {
-    "message": "Adicionar Domínio",
+    "message": "Adicionar Dom\u00ednio",
     "description": "Translation for: buttonAddDomain"
   },
   "emptyCustomDomains": {
-    "message": "Nenhum domínio personalizado adicionado ainda",
+    "message": "Nenhum dom\u00ednio personalizado adicionado ainda",
     "description": "Translation for: emptyCustomDomains"
   },
   "settingsStatistics": {
-    "message": "Estatísticas",
+    "message": "Estat\u00edsticas",
     "description": "Translation for: settingsStatistics"
   },
   "statTotalBlocks": {
@@ -262,43 +262,43 @@
     "description": "Translation for: statBlocksToday"
   },
   "statCustomDomains": {
-    "message": "Domínios Personalizados",
+    "message": "Dom\u00ednios Personalizados",
     "description": "Translation for: statCustomDomains"
   },
   "statLastUpdated": {
-    "message": "Última Atualização",
+    "message": "\u00daltima Atualiza\u00e7\u00e3o",
     "description": "Translation for: statLastUpdated"
   },
   "buttonResetStatistics": {
-    "message": "Redefinir Estatísticas",
+    "message": "Redefinir Estat\u00edsticas",
     "description": "Translation for: buttonResetStatistics"
   },
   "settingsFooter": {
-    "message": "Extensão de Auto-Respeito v1.0.0 Protegendo seu bem-estar digital e auto-respeito",
+    "message": "Extens\u00e3o de Auto-Respeito v1.0.0 Protegendo seu bem-estar digital e auto-respeito",
     "description": "Translation for: settingsFooter"
   },
   "notificationExtensionEnabled": {
-    "message": "Extensão ativada",
+    "message": "Extens\u00e3o ativada",
     "description": "Translation for: notificationExtensionEnabled"
   },
   "notificationExtensionDisabled": {
-    "message": "Extensão desativada",
+    "message": "Extens\u00e3o desativada",
     "description": "Translation for: notificationExtensionDisabled"
   },
   "notificationNotificationsEnabled": {
-    "message": "Notificações ativadas",
+    "message": "Notifica\u00e7\u00f5es ativadas",
     "description": "Translation for: notificationNotificationsEnabled"
   },
   "notificationNotificationsDisabled": {
-    "message": "Notificações desativadas",
+    "message": "Notifica\u00e7\u00f5es desativadas",
     "description": "Translation for: notificationNotificationsDisabled"
   },
   "notificationAutoRedirectEnabled": {
-    "message": "Redirecionamento automático ativado",
+    "message": "Redirecionamento autom\u00e1tico ativado",
     "description": "Translation for: notificationAutoRedirectEnabled"
   },
   "notificationAutoRedirectDisabled": {
-    "message": "Redirecionamento automático desativado",
+    "message": "Redirecionamento autom\u00e1tico desativado",
     "description": "Translation for: notificationAutoRedirectDisabled"
   },
   "notificationRedirectDelaySet": {
@@ -312,7 +312,7 @@
     "description": "Translation for: notificationRedirectDelaySet"
   },
   "notificationBlockingLevelSet": {
-    "message": "Nível de bloqueio definido para $LEVEL$",
+    "message": "N\u00edvel de bloqueio definido para $LEVEL$",
     "placeholders": {
       "level": {
         "content": "$1",
@@ -326,7 +326,7 @@
     "placeholders": {
       "category": {
         "content": "$1",
-        "example": "Conteúdo Adulto"
+        "example": "Conte\u00fado Adulto"
       }
     },
     "description": "Translation for: notificationCategoryEnabled"
@@ -336,7 +336,7 @@
     "placeholders": {
       "category": {
         "content": "$1",
-        "example": "Conteúdo Adulto"
+        "example": "Conte\u00fado Adulto"
       }
     },
     "description": "Translation for: notificationCategoryDisabled"
@@ -372,23 +372,23 @@
     "description": "Translation for: notificationDomainRemoved"
   },
   "confirmResetStatistics": {
-    "message": "Tem certeza de que deseja redefinir todas as estatísticas?",
+    "message": "Tem certeza de que deseja redefinir todas as estat\u00edsticas?",
     "description": "Translation for: confirmResetStatistics"
   },
   "notificationStatisticsReset": {
-    "message": "Estatísticas redefinidas",
+    "message": "Estat\u00edsticas redefinidas",
     "description": "Translation for: notificationStatisticsReset"
   },
   "errorPleaseEnterDomain": {
-    "message": "Por favor, digite um domínio",
+    "message": "Por favor, digite um dom\u00ednio",
     "description": "Translation for: errorPleaseEnterDomain"
   },
   "errorInvalidDomain": {
-    "message": "Por favor, digite um domínio válido (ex., exemplo.com)",
+    "message": "Por favor, digite um dom\u00ednio v\u00e1lido (ex., exemplo.com)",
     "description": "Translation for: errorInvalidDomain"
   },
   "notificationDomainAdded": {
-    "message": "$DOMAIN$ adicionado à lista de bloqueados",
+    "message": "$DOMAIN$ adicionado \u00e0 lista de bloqueados",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -398,15 +398,15 @@
     "description": "Translation for: notificationDomainAdded"
   },
   "errorAddingDomain": {
-    "message": "Erro ao adicionar domínio",
+    "message": "Erro ao adicionar dom\u00ednio",
     "description": "Translation for: errorAddingDomain"
   },
   "categoryAdultContentName": {
-    "message": "Conteúdo Adulto",
+    "message": "Conte\u00fado Adulto",
     "description": "Translation for: categoryAdultContentName"
   },
   "categoryAdultContentDesc": {
-    "message": "Sites adultos que os usuários podem querer evitar por auto-respeito e bem-estar",
+    "message": "Sites adultos que os usu\u00e1rios podem querer evitar por auto-respeito e bem-estar",
     "description": "Translation for: categoryAdultContentDesc"
   },
   "categorySocialMediaName": {
@@ -422,7 +422,7 @@
     "description": "Translation for: categoryGamblingName"
   },
   "categoryGamblingDesc": {
-    "message": "Sites de jogos de azar online que podem levar ao vício e danos financeiros",
+    "message": "Sites de jogos de azar online que podem levar ao v\u00edcio e danos financeiros",
     "description": "Translation for: categoryGamblingDesc"
   },
   "puzzleBlockTitle": {
@@ -430,7 +430,7 @@
     "description": "Translation for: puzzleBlockTitle"
   },
   "puzzleBlockDescription": {
-    "message": "Para acessar este site, você deve resolver um Sudoku difícil. Isso é para garantir que você realmente queira prosseguir.",
+    "message": "Para acessar este site, voc\u00ea deve resolver um Sudoku dif\u00edcil. Isso \u00e9 para garantir que voc\u00ea realmente queira prosseguir.",
     "description": "Translation for: puzzleBlockDescription"
   },
   "puzzleChallengeTitle": {
@@ -458,7 +458,7 @@
     "description": "Translation for: buttonShowHint"
   },
   "puzzleSuccessMessage": {
-    "message": "Sudoku resolvido corretamente! Você pode prosseguir se ainda desejar.",
+    "message": "Sudoku resolvido corretamente! Voc\u00ea pode prosseguir se ainda desejar.",
     "description": "Translation for: puzzleSuccessMessage"
   },
   "buttonProceedToSite": {
@@ -472,11 +472,11 @@
     "description": "Translation for: buttonProceedToSite"
   },
   "buttonChooseAlternative": {
-    "message": "Escolher Alternativa Mais Saudável",
+    "message": "Escolher Alternativa Mais Saud\u00e1vel",
     "description": "Translation for: buttonChooseAlternative"
   },
   "puzzleFooter": {
-    "message": "Este Sudoku foi projetado para fazer você pausar e reconsiderar sua escolha.",
+    "message": "Este Sudoku foi projetado para fazer voc\u00ea pausar e reconsiderar sua escolha.",
     "description": "Translation for: puzzleFooter"
   },
   "errorPleaseEnterAnswer": {
@@ -492,17 +492,17 @@
     "placeholders": {
       "attempts": {
         "content": "$1",
-        "example": "1/5"
+        "example": 1
       }
     },
     "description": "Translation for: feedbackIncorrectAnswer"
   },
   "feedbackMaxAttempts": {
-    "message": "Máximo de tentativas atingido. A página será recarregada com um novo Sudoku.",
+    "message": "M\u00e1ximo de tentativas atingido. A p\u00e1gina ser\u00e1 recarregada com um novo Sudoku.",
     "description": "Translation for: feedbackMaxAttempts"
   },
   "feedbackTimeout": {
-    "message": "Tempo esgotado! A página será recarregada com um novo Sudoku.",
+    "message": "Tempo esgotado! A p\u00e1gina ser\u00e1 recarregada com um novo Sudoku.",
     "description": "Translation for: feedbackTimeout"
   },
   "hintMessage": {
@@ -510,7 +510,7 @@
     "placeholders": {
       "hint": {
         "content": "$1",
-        "example": "Pense em números primos"
+        "example": "Pense em n\u00fameros primos"
       }
     },
     "description": "Translation for: hintMessage"
@@ -520,7 +520,7 @@
     "description": "Translation for: hardBlockTitle"
   },
   "hardBlockMessage": {
-    "message": "O acesso a $DOMAIN$ está permanentemente bloqueado.",
+    "message": "O acesso a $DOMAIN$ est\u00e1 permanentemente bloqueado.",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -530,7 +530,7 @@
     "description": "Translation for: hardBlockMessage"
   },
   "hardBlockDescription": {
-    "message": "Este site é incompatível com seus objetivos de auto-respeito. O acesso não é permitido em nenhuma circunstância.",
+    "message": "Este site \u00e9 incompat\u00edvel com seus objetivos de auto-respeito. O acesso n\u00e3o \u00e9 permitido em nenhuma circunst\u00e2ncia.",
     "description": "Translation for: hardBlockDescription"
   },
   "hardBlockWarning": {
@@ -538,11 +538,61 @@
     "description": "Translation for: hardBlockWarning"
   },
   "hardBlockWarningDesc": {
-    "message": "Este é seu nível mais alto de proteção. Nenhuma opção de bypass está disponível.",
+    "message": "Este \u00e9 seu n\u00edvel mais alto de prote\u00e7\u00e3o. Nenhuma op\u00e7\u00e3o de bypass est\u00e1 dispon\u00edvel.",
     "description": "Translation for: hardBlockWarningDesc"
   },
   "hardBlockFooter": {
-    "message": "Este bloqueio duro protege você de sites que entram em conflito com seus valores fundamentais.",
+    "message": "Este bloqueio duro protege voc\u00ea de sites que entram em conflito com seus valores fundamentais.",
     "description": "Translation for: hardBlockFooter"
+  },
+  "sudokuTimeLabel": {
+    "message": "Tempo",
+    "description": "Label for the timer in the Sudoku puzzle overlay"
+  },
+  "sudokuDifficultyLabel": {
+    "message": "Dificuldade",
+    "description": "Label for the difficulty stat in the Sudoku puzzle overlay"
+  },
+  "sudokuHowToTitle": {
+    "message": "Como resolver o Sudoku",
+    "description": "Title of the instructions section in the Sudoku overlay"
+  },
+  "sudokuRule1": {
+    "message": "Preencha a grade para que cada linha, coluna e caixa 3\u00d73 contenha os d\u00edgitos 1\u20139",
+    "description": "First Sudoku rule shown in instructions"
+  },
+  "sudokuRule2": {
+    "message": "Clique em uma c\u00e9lula para selecion\u00e1-la, depois escolha um n\u00famero no teclado",
+    "description": "Second Sudoku rule shown in instructions"
+  },
+  "sudokuRule3": {
+    "message": "Use Verificar solu\u00e7\u00e3o para validar seu progresso",
+    "description": "Third Sudoku rule shown in instructions"
+  },
+  "sudokuRule4": {
+    "message": "Complete o puzzle para acessar o site",
+    "description": "Fourth Sudoku rule shown in instructions"
+  },
+  "sudokuSolvedTitle": {
+    "message": "\ud83c\udf89 Puzzle resolvido!",
+    "description": "Heading shown when the Sudoku puzzle is solved"
+  },
+  "sudokuSolvedMessage": {
+    "message": "Voc\u00ea completou o puzzle de Sudoku em $TIME$.",
+    "description": "Message shown when Sudoku is solved, includes elapsed time",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "02:45"
+      }
+    }
+  },
+  "sudokuCheckSolution": {
+    "message": "Verificar solu\u00e7\u00e3o",
+    "description": "Button label to check the current Sudoku solution"
+  },
+  "sudokuClearBtn": {
+    "message": "Limpar",
+    "description": "Button label to clear a Sudoku cell"
   }
 }

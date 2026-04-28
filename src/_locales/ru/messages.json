@@ -1,14 +1,14 @@
 {
   "extDescription": {
-    "message": "Помогает избегать сайтов, которые не соответствуют вашим целям самоуважения, перенаправляя на более здоровые альтернативы.",
+    "message": "\u041f\u043e\u043c\u043e\u0433\u0430\u0435\u0442 \u0438\u0437\u0431\u0435\u0433\u0430\u0442\u044c \u0441\u0430\u0439\u0442\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043d\u0435 \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0432\u0430\u0448\u0438\u043c \u0446\u0435\u043b\u044f\u043c \u0441\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u044f, \u043f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u044f\u044f \u043d\u0430 \u0431\u043e\u043b\u0435\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044b\u0435 \u0430\u043b\u044c\u0442\u0435\u0440\u043d\u0430\u0442\u0438\u0432\u044b.",
     "description": "Page description used in manifest."
   },
   "extPopupTitle": {
-    "message": "Настройки Самоуважения",
+    "message": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0421\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u044f",
     "description": "Popup default title."
   },
   "redirectDelayMessage": {
-    "message": "Вы будете перенаправлены на более здоровую альтернативу через $DELAY$ секунд.",
+    "message": "\u0412\u044b \u0431\u0443\u0434\u0435\u0442\u0435 \u043f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u044b \u043d\u0430 \u0431\u043e\u043b\u0435\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u0443\u044e \u0430\u043b\u044c\u0442\u0435\u0440\u043d\u0430\u0442\u0438\u0432\u0443 \u0447\u0435\u0440\u0435\u0437 $DELAY$ \u0441\u0435\u043a\u0443\u043d\u0434.",
     "description": "Message that is displayed when redirect is enabled.",
     "placeholders": {
       "delay": {
@@ -18,199 +18,199 @@
     }
   },
   "noRedirectDelayMessage": {
-    "message": "Этот сайт может не соответствовать вашим целям самоуважения и благополучия.",
+    "message": "\u042d\u0442\u043e\u0442 \u0441\u0430\u0439\u0442 \u043c\u043e\u0436\u0435\u0442 \u043d\u0435 \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u0432\u0430\u0448\u0438\u043c \u0446\u0435\u043b\u044f\u043c \u0441\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u044f \u0438 \u0431\u043b\u0430\u0433\u043e\u043f\u043e\u043b\u0443\u0447\u0438\u044f.",
     "description": "Message that is displayed when redirect is not enabled."
   },
   "redirectingTo": {
-    "message": "Перенаправление на:",
+    "message": "\u041f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0430:",
     "description": "Translation for: redirectingTo"
   },
   "youWereAboutToVisit": {
-    "message": "Вы собирались посетить",
+    "message": "\u0412\u044b \u0441\u043e\u0431\u0438\u0440\u0430\u043b\u0438\u0441\u044c \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u044c",
     "description": "Translation for: youWereAboutToVisit"
   },
   "redirectNow": {
-    "message": "Перенаправить Сейчас",
+    "message": "\u041f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0421\u0435\u0439\u0447\u0430\u0441",
     "description": "Translation for: redirectNow"
   },
   "healthierAlternative": {
-    "message": "Перейти к Более Здоровой Альтернативе",
+    "message": "\u041f\u0435\u0440\u0435\u0439\u0442\u0438 \u043a \u0411\u043e\u043b\u0435\u0435 \u0417\u0434\u043e\u0440\u043e\u0432\u043e\u0439 \u0410\u043b\u044c\u0442\u0435\u0440\u043d\u0430\u0442\u0438\u0432\u0435",
     "description": "Translation for: healthierAlternative"
   },
   "cancelMessage": {
-    "message": "Отмена (Временно Разрешить)",
+    "message": "\u041e\u0442\u043c\u0435\u043d\u0430 (\u0412\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u0420\u0430\u0437\u0440\u0435\u0448\u0438\u0442\u044c)",
     "description": "Translation for: cancelMessage"
   },
   "phrase1": {
-    "message": "Помните: каждый ваш выбор формирует то, кем вы становитесь.",
+    "message": "\u041f\u043e\u043c\u043d\u0438\u0442\u0435: \u043a\u0430\u0436\u0434\u044b\u0439 \u0432\u0430\u0448 \u0432\u044b\u0431\u043e\u0440 \u0444\u043e\u0440\u043c\u0438\u0440\u0443\u0435\u0442 \u0442\u043e, \u043a\u0435\u043c \u0432\u044b \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435\u0441\u044c.",
     "description": "Translation for: phrase1"
   },
   "extensionStatusActive": {
-    "message": "Активно",
+    "message": "\u0410\u043a\u0442\u0438\u0432\u043d\u043e",
     "description": "Translation for: extensionStatusActive"
   },
   "extensionStatusPaused": {
-    "message": "Приостановлено",
+    "message": "\u041f\u0440\u0438\u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
     "description": "Translation for: extensionStatusPaused"
   },
   "blockingLevelSoft": {
-    "message": "Мягкий",
+    "message": "\u041c\u044f\u0433\u043a\u0438\u0439",
     "description": "Translation for: blockingLevelSoft"
   },
   "blockingLevelPuzzle": {
-    "message": "Головоломка",
+    "message": "\u0413\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0430",
     "description": "Translation for: blockingLevelPuzzle"
   },
   "blockingLevelHard": {
-    "message": "Строгий",
+    "message": "\u0421\u0442\u0440\u043e\u0433\u0438\u0439",
     "description": "Translation for: blockingLevelHard"
   },
   "popupExtensionStatus": {
-    "message": "Статус Расширения:",
+    "message": "\u0421\u0442\u0430\u0442\u0443\u0441 \u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f:",
     "description": "Translation for: popupExtensionStatus"
   },
   "popupProtectedCategories": {
-    "message": "Защищенные Категории:",
+    "message": "\u0417\u0430\u0449\u0438\u0449\u0435\u043d\u043d\u044b\u0435 \u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438:",
     "description": "Translation for: popupProtectedCategories"
   },
   "popupBlockedDomains": {
-    "message": "Заблокированные Домены:",
+    "message": "\u0417\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0414\u043e\u043c\u0435\u043d\u044b:",
     "description": "Translation for: popupBlockedDomains"
   },
   "popupStatus": {
-    "message": "Статус:",
+    "message": "\u0421\u0442\u0430\u0442\u0443\u0441:",
     "description": "Translation for: popupStatus"
   },
   "popupBlockingLevel": {
-    "message": "Уровень Блокировки:",
+    "message": "\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0438:",
     "description": "Translation for: popupBlockingLevel"
   },
   "popupTotalBlocks": {
-    "message": "Всего Блокировок:",
+    "message": "\u0412\u0441\u0435\u0433\u043e \u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043e\u043a:",
     "description": "Translation for: popupTotalBlocks"
   },
   "popupBlocksToday": {
-    "message": "Блокировок Сегодня:",
+    "message": "\u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043e\u043a \u0421\u0435\u0433\u043e\u0434\u043d\u044f:",
     "description": "Translation for: popupBlocksToday"
   },
   "popupCustomDomains": {
-    "message": "Пользовательские Домены:",
+    "message": "\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0435 \u0414\u043e\u043c\u0435\u043d\u044b:",
     "description": "Translation for: popupCustomDomains"
   },
   "popupCategoriesTitle": {
-    "message": "Защищенные Категории:",
+    "message": "\u0417\u0430\u0449\u0438\u0449\u0435\u043d\u043d\u044b\u0435 \u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438:",
     "description": "Translation for: popupCategoriesTitle"
   },
   "categoryAdultContent": {
-    "message": "Контент для Взрослых (30+ сайтов)",
+    "message": "\u041a\u043e\u043d\u0442\u0435\u043d\u0442 \u0434\u043b\u044f \u0412\u0437\u0440\u043e\u0441\u043b\u044b\u0445 (30+ \u0441\u0430\u0439\u0442\u043e\u0432)",
     "description": "Translation for: categoryAdultContent"
   },
   "categorySocialMedia": {
-    "message": "Социальные Сети (10+ сайтов)",
+    "message": "\u0421\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0421\u0435\u0442\u0438 (10+ \u0441\u0430\u0439\u0442\u043e\u0432)",
     "description": "Translation for: categorySocialMedia"
   },
   "categoryGambling": {
-    "message": "Азартные Игры (15+ сайтов)",
+    "message": "\u0410\u0437\u0430\u0440\u0442\u043d\u044b\u0435 \u0418\u0433\u0440\u044b (15+ \u0441\u0430\u0439\u0442\u043e\u0432)",
     "description": "Translation for: categoryGambling"
   },
   "buttonOpenSettings": {
-    "message": "Открыть Настройки",
+    "message": "\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438",
     "description": "Translation for: buttonOpenSettings"
   },
   "popupFooter": {
-    "message": "Защищаем ваше самоуважение и цифровое благополучие. Каждое перенаправление - это шаг к лучшей версии себя. Если это расширение помогло вам, рассмотрите возможность пожертвования",
+    "message": "\u0417\u0430\u0449\u0438\u0449\u0430\u0435\u043c \u0432\u0430\u0448\u0435 \u0441\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u0435 \u0438 \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0435 \u0431\u043b\u0430\u0433\u043e\u043f\u043e\u043b\u0443\u0447\u0438\u0435. \u041a\u0430\u0436\u0434\u043e\u0435 \u043f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 - \u044d\u0442\u043e \u0448\u0430\u0433 \u043a \u043b\u0443\u0447\u0448\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u0441\u0435\u0431\u044f. \u0415\u0441\u043b\u0438 \u044d\u0442\u043e \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u043f\u043e\u043c\u043e\u0433\u043b\u043e \u0432\u0430\u043c, \u0440\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u043f\u043e\u0436\u0435\u0440\u0442\u0432\u043e\u0432\u0430\u043d\u0438\u044f",
     "description": "Translation for: popupFooter"
   },
   "settingsTitle": {
-    "message": "Самоуважение - Настройки",
+    "message": "\u0421\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u0435 - \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438",
     "description": "Translation for: settingsTitle"
   },
   "buttonBack": {
-    "message": "Назад",
+    "message": "\u041d\u0430\u0437\u0430\u0434",
     "description": "Translation for: buttonBack"
   },
   "settingsHeading": {
-    "message": "Настройки",
+    "message": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438",
     "description": "Translation for: settingsHeading"
   },
   "settingsGeneral": {
-    "message": "Основные Настройки",
+    "message": "\u041e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438",
     "description": "Translation for: settingsGeneral"
   },
   "settingsExtensionStatus": {
-    "message": "Статус Расширения",
+    "message": "\u0421\u0442\u0430\u0442\u0443\u0441 \u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f",
     "description": "Translation for: settingsExtensionStatus"
   },
   "settingsExtensionStatusDesc": {
-    "message": "Включить или отключить расширение",
+    "message": "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0438\u043b\u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435",
     "description": "Translation for: settingsExtensionStatusDesc"
   },
   "settingsShowNotifications": {
-    "message": "Показывать Уведомления",
+    "message": "\u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u0423\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f",
     "description": "Translation for: settingsShowNotifications"
   },
   "settingsShowNotificationsDesc": {
-    "message": "Показывать сообщения подтверждения при блокировке сайтов",
+    "message": "\u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0438\u044f \u043f\u0440\u0438 \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0435 \u0441\u0430\u0439\u0442\u043e\u0432",
     "description": "Translation for: settingsShowNotificationsDesc"
   },
   "settingsAutoRedirect": {
-    "message": "Автоматическое Перенаправление",
+    "message": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u041f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435",
     "description": "Translation for: settingsAutoRedirect"
   },
   "settingsAutoRedirectDesc": {
-    "message": "Автоматически перенаправлять на более здоровые альтернативы",
+    "message": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u043f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u043d\u0430 \u0431\u043e\u043b\u0435\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044b\u0435 \u0430\u043b\u044c\u0442\u0435\u0440\u043d\u0430\u0442\u0438\u0432\u044b",
     "description": "Translation for: settingsAutoRedirectDesc"
   },
   "settingsRedirectDelay": {
-    "message": "Задержка Перенаправления (секунд)",
+    "message": "\u0417\u0430\u0434\u0435\u0440\u0436\u043a\u0430 \u041f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f (\u0441\u0435\u043a\u0443\u043d\u0434)",
     "description": "Translation for: settingsRedirectDelay"
   },
   "optionOneSecond": {
-    "message": "1 секунда",
+    "message": "1 \u0441\u0435\u043a\u0443\u043d\u0434\u0430",
     "description": "Translation for: optionOneSecond"
   },
   "optionTwoSeconds": {
-    "message": "2 секунды",
+    "message": "2 \u0441\u0435\u043a\u0443\u043d\u0434\u044b",
     "description": "Translation for: optionTwoSeconds"
   },
   "optionThreeSeconds": {
-    "message": "3 секунды",
+    "message": "3 \u0441\u0435\u043a\u0443\u043d\u0434\u044b",
     "description": "Translation for: optionThreeSeconds"
   },
   "optionFiveSeconds": {
-    "message": "5 секунд",
+    "message": "5 \u0441\u0435\u043a\u0443\u043d\u0434",
     "description": "Translation for: optionFiveSeconds"
   },
   "optionTenSeconds": {
-    "message": "10 секунд",
+    "message": "10 \u0441\u0435\u043a\u0443\u043d\u0434",
     "description": "Translation for: optionTenSeconds"
   },
   "settingsBlockingLevel": {
-    "message": "Уровень Блокировки",
+    "message": "\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0438",
     "description": "Translation for: settingsBlockingLevel"
   },
   "optionSoftBlock": {
-    "message": "Мягкая Блокировка (Текущая - Показывает наложение)",
+    "message": "\u041c\u044f\u0433\u043a\u0430\u044f \u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 (\u0422\u0435\u043a\u0443\u0449\u0430\u044f - \u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u043d\u0430\u043b\u043e\u0436\u0435\u043d\u0438\u0435)",
     "description": "Translation for: optionSoftBlock"
   },
   "optionPuzzleBlock": {
-    "message": "Испытание Судоку (Сложное Судоку для решения)",
+    "message": "\u0418\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0435 \u0421\u0443\u0434\u043e\u043a\u0443 (\u0421\u043b\u043e\u0436\u043d\u043e\u0435 \u0421\u0443\u0434\u043e\u043a\u0443 \u0434\u043b\u044f \u0440\u0435\u0448\u0435\u043d\u0438\u044f)",
     "description": "Translation for: optionPuzzleBlock"
   },
   "optionHardBlock": {
-    "message": "Строгая Блокировка (Доступ полностью запрещен)",
+    "message": "\u0421\u0442\u0440\u043e\u0433\u0430\u044f \u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 (\u0414\u043e\u0441\u0442\u0443\u043f \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0437\u0430\u043f\u0440\u0435\u0449\u0435\u043d)",
     "description": "Translation for: optionHardBlock"
   },
   "settingsBlockedCategories": {
-    "message": "Заблокированные Категории",
+    "message": "\u0417\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438",
     "description": "Translation for: settingsBlockedCategories"
   },
   "settingsCustomDomains": {
-    "message": "Пользовательские Домены",
+    "message": "\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0435 \u0414\u043e\u043c\u0435\u043d\u044b",
     "description": "Translation for: settingsCustomDomains"
   },
   "settingsCustomDomainsDesc": {
-    "message": "Добавьте свои собственные домены для блокировки. Вводите имена доменов без http:// или www.",
+    "message": "\u0414\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u0441\u0432\u043e\u0438 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0434\u043e\u043c\u0435\u043d\u044b \u0434\u043b\u044f \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0438. \u0412\u0432\u043e\u0434\u0438\u0442\u0435 \u0438\u043c\u0435\u043d\u0430 \u0434\u043e\u043c\u0435\u043d\u043e\u0432 \u0431\u0435\u0437 http:// \u0438\u043b\u0438 www.",
     "description": "Translation for: settingsCustomDomainsDesc"
   },
   "placeholderDomainExample": {
@@ -218,91 +218,91 @@
     "description": "Translation for: placeholderDomainExample"
   },
   "optionCategoryCustom": {
-    "message": "Пользовательский",
+    "message": "\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0439",
     "description": "Translation for: optionCategoryCustom"
   },
   "optionCategoryAdultContent": {
-    "message": "Контент для Взрослых",
+    "message": "\u041a\u043e\u043d\u0442\u0435\u043d\u0442 \u0434\u043b\u044f \u0412\u0437\u0440\u043e\u0441\u043b\u044b\u0445",
     "description": "Translation for: optionCategoryAdultContent"
   },
   "optionCategorySocialMedia": {
-    "message": "Социальные Сети",
+    "message": "\u0421\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0421\u0435\u0442\u0438",
     "description": "Translation for: optionCategorySocialMedia"
   },
   "optionCategoryGambling": {
-    "message": "Азартные Игры",
+    "message": "\u0410\u0437\u0430\u0440\u0442\u043d\u044b\u0435 \u0418\u0433\u0440\u044b",
     "description": "Translation for: optionCategoryGambling"
   },
   "optionCategoryDistracting": {
-    "message": "Отвлекающие",
+    "message": "\u041e\u0442\u0432\u043b\u0435\u043a\u0430\u044e\u0449\u0438\u0435",
     "description": "Translation for: optionCategoryDistracting"
   },
   "optionCategoryShopping": {
-    "message": "Покупки",
+    "message": "\u041f\u043e\u043a\u0443\u043f\u043a\u0438",
     "description": "Translation for: optionCategoryShopping"
   },
   "buttonAddDomain": {
-    "message": "Добавить Домен",
+    "message": "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0414\u043e\u043c\u0435\u043d",
     "description": "Translation for: buttonAddDomain"
   },
   "emptyCustomDomains": {
-    "message": "Пользовательские домены еще не добавлены",
+    "message": "\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0435 \u0434\u043e\u043c\u0435\u043d\u044b \u0435\u0449\u0435 \u043d\u0435 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u044b",
     "description": "Translation for: emptyCustomDomains"
   },
   "settingsStatistics": {
-    "message": "Статистика",
+    "message": "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430",
     "description": "Translation for: settingsStatistics"
   },
   "statTotalBlocks": {
-    "message": "Всего Блокировок",
+    "message": "\u0412\u0441\u0435\u0433\u043e \u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043e\u043a",
     "description": "Translation for: statTotalBlocks"
   },
   "statBlocksToday": {
-    "message": "Блокировок Сегодня",
+    "message": "\u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043e\u043a \u0421\u0435\u0433\u043e\u0434\u043d\u044f",
     "description": "Translation for: statBlocksToday"
   },
   "statCustomDomains": {
-    "message": "Пользовательские Домены",
+    "message": "\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u0435 \u0414\u043e\u043c\u0435\u043d\u044b",
     "description": "Translation for: statCustomDomains"
   },
   "statLastUpdated": {
-    "message": "Последнее Обновление",
+    "message": "\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435",
     "description": "Translation for: statLastUpdated"
   },
   "buttonResetStatistics": {
-    "message": "Сбросить Статистику",
+    "message": "\u0421\u0431\u0440\u043e\u0441\u0438\u0442\u044c \u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0443",
     "description": "Translation for: buttonResetStatistics"
   },
   "settingsFooter": {
-    "message": "Расширение Самоуважения v1.0.0 Защищаем ваше цифровое благополучие и самоуважение",
+    "message": "\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u0421\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u044f v1.0.0 \u0417\u0430\u0449\u0438\u0449\u0430\u0435\u043c \u0432\u0430\u0448\u0435 \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0435 \u0431\u043b\u0430\u0433\u043e\u043f\u043e\u043b\u0443\u0447\u0438\u0435 \u0438 \u0441\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u0435",
     "description": "Translation for: settingsFooter"
   },
   "notificationExtensionEnabled": {
-    "message": "Расширение включено",
+    "message": "\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u043e",
     "description": "Translation for: notificationExtensionEnabled"
   },
   "notificationExtensionDisabled": {
-    "message": "Расширение отключено",
+    "message": "\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u043e",
     "description": "Translation for: notificationExtensionDisabled"
   },
   "notificationNotificationsEnabled": {
-    "message": "Уведомления включены",
+    "message": "\u0423\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u044b",
     "description": "Translation for: notificationNotificationsEnabled"
   },
   "notificationNotificationsDisabled": {
-    "message": "Уведомления отключены",
+    "message": "\u0423\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u044b",
     "description": "Translation for: notificationNotificationsDisabled"
   },
   "notificationAutoRedirectEnabled": {
-    "message": "Автоматическое перенаправление включено",
+    "message": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u043f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u043e",
     "description": "Translation for: notificationAutoRedirectEnabled"
   },
   "notificationAutoRedirectDisabled": {
-    "message": "Автоматическое перенаправление отключено",
+    "message": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u043f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u043e",
     "description": "Translation for: notificationAutoRedirectDisabled"
   },
   "notificationRedirectDelaySet": {
-    "message": "Задержка перенаправления установлена на $DELAY$ секунд",
+    "message": "\u0417\u0430\u0434\u0435\u0440\u0436\u043a\u0430 \u043f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0430 \u043d\u0430 $DELAY$ \u0441\u0435\u043a\u0443\u043d\u0434",
     "placeholders": {
       "delay": {
         "content": "$1",
@@ -312,37 +312,37 @@
     "description": "Translation for: notificationRedirectDelaySet"
   },
   "notificationBlockingLevelSet": {
-    "message": "Уровень блокировки установлен на $LEVEL$",
+    "message": "\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0438 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u043d\u0430 $LEVEL$",
     "placeholders": {
       "level": {
         "content": "$1",
-        "example": "мягкий"
+        "example": "\u043c\u044f\u0433\u043a\u0438\u0439"
       }
     },
     "description": "Translation for: notificationBlockingLevelSet"
   },
   "notificationCategoryEnabled": {
-    "message": "Блокировка $CATEGORY$ включена",
+    "message": "\u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 $CATEGORY$ \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u0430",
     "placeholders": {
       "category": {
         "content": "$1",
-        "example": "Контент для Взрослых"
+        "example": "\u041a\u043e\u043d\u0442\u0435\u043d\u0442 \u0434\u043b\u044f \u0412\u0437\u0440\u043e\u0441\u043b\u044b\u0445"
       }
     },
     "description": "Translation for: notificationCategoryEnabled"
   },
   "notificationCategoryDisabled": {
-    "message": "Блокировка $CATEGORY$ отключена",
+    "message": "\u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 $CATEGORY$ \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u0430",
     "placeholders": {
       "category": {
         "content": "$1",
-        "example": "Контент для Взрослых"
+        "example": "\u041a\u043e\u043d\u0442\u0435\u043d\u0442 \u0434\u043b\u044f \u0412\u0437\u0440\u043e\u0441\u043b\u044b\u0445"
       }
     },
     "description": "Translation for: notificationCategoryDisabled"
   },
   "notificationDomainEnabled": {
-    "message": "$DOMAIN$ включен",
+    "message": "$DOMAIN$ \u0432\u043a\u043b\u044e\u0447\u0435\u043d",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -352,7 +352,7 @@
     "description": "Translation for: notificationDomainEnabled"
   },
   "notificationDomainDisabled": {
-    "message": "$DOMAIN$ отключен",
+    "message": "$DOMAIN$ \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -362,7 +362,7 @@
     "description": "Translation for: notificationDomainDisabled"
   },
   "notificationDomainRemoved": {
-    "message": "$DOMAIN$ удален",
+    "message": "$DOMAIN$ \u0443\u0434\u0430\u043b\u0435\u043d",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -372,23 +372,23 @@
     "description": "Translation for: notificationDomainRemoved"
   },
   "confirmResetStatistics": {
-    "message": "Вы уверены, что хотите сбросить всю статистику?",
+    "message": "\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b, \u0447\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u0441\u0431\u0440\u043e\u0441\u0438\u0442\u044c \u0432\u0441\u044e \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0443?",
     "description": "Translation for: confirmResetStatistics"
   },
   "notificationStatisticsReset": {
-    "message": "Статистика сброшена",
+    "message": "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430 \u0441\u0431\u0440\u043e\u0448\u0435\u043d\u0430",
     "description": "Translation for: notificationStatisticsReset"
   },
   "errorPleaseEnterDomain": {
-    "message": "Пожалуйста, введите домен",
+    "message": "\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u043e\u043c\u0435\u043d",
     "description": "Translation for: errorPleaseEnterDomain"
   },
   "errorInvalidDomain": {
-    "message": "Пожалуйста, введите действительный домен (например, example.com)",
+    "message": "\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0434\u043e\u043c\u0435\u043d (\u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, example.com)",
     "description": "Translation for: errorInvalidDomain"
   },
   "notificationDomainAdded": {
-    "message": "$DOMAIN$ добавлен в список блокировки",
+    "message": "$DOMAIN$ \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d \u0432 \u0441\u043f\u0438\u0441\u043e\u043a \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0438",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -398,71 +398,71 @@
     "description": "Translation for: notificationDomainAdded"
   },
   "errorAddingDomain": {
-    "message": "Ошибка при добавлении домена",
+    "message": "\u041e\u0448\u0438\u0431\u043a\u0430 \u043f\u0440\u0438 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0438 \u0434\u043e\u043c\u0435\u043d\u0430",
     "description": "Translation for: errorAddingDomain"
   },
   "categoryAdultContentName": {
-    "message": "Контент для Взрослых",
+    "message": "\u041a\u043e\u043d\u0442\u0435\u043d\u0442 \u0434\u043b\u044f \u0412\u0437\u0440\u043e\u0441\u043b\u044b\u0445",
     "description": "Translation for: categoryAdultContentName"
   },
   "categoryAdultContentDesc": {
-    "message": "Веб-сайты для взрослых, которые пользователи могут захотеть избегать из-за самоуважения и благополучия",
+    "message": "\u0412\u0435\u0431-\u0441\u0430\u0439\u0442\u044b \u0434\u043b\u044f \u0432\u0437\u0440\u043e\u0441\u043b\u044b\u0445, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438 \u043c\u043e\u0433\u0443\u0442 \u0437\u0430\u0445\u043e\u0442\u0435\u0442\u044c \u0438\u0437\u0431\u0435\u0433\u0430\u0442\u044c \u0438\u0437-\u0437\u0430 \u0441\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u044f \u0438 \u0431\u043b\u0430\u0433\u043e\u043f\u043e\u043b\u0443\u0447\u0438\u044f",
     "description": "Translation for: categoryAdultContentDesc"
   },
   "categorySocialMediaName": {
-    "message": "Социальные Сети",
+    "message": "\u0421\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0421\u0435\u0442\u0438",
     "description": "Translation for: categorySocialMediaName"
   },
   "categorySocialMediaDesc": {
-    "message": "Основные платформы социальных сетей, которые могут отнимать время и влиять на самооценку",
+    "message": "\u041e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u044b \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0445 \u0441\u0435\u0442\u0435\u0439, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043c\u043e\u0433\u0443\u0442 \u043e\u0442\u043d\u0438\u043c\u0430\u0442\u044c \u0432\u0440\u0435\u043c\u044f \u0438 \u0432\u043b\u0438\u044f\u0442\u044c \u043d\u0430 \u0441\u0430\u043c\u043e\u043e\u0446\u0435\u043d\u043a\u0443",
     "description": "Translation for: categorySocialMediaDesc"
   },
   "categoryGamblingName": {
-    "message": "Азартные Игры",
+    "message": "\u0410\u0437\u0430\u0440\u0442\u043d\u044b\u0435 \u0418\u0433\u0440\u044b",
     "description": "Translation for: categoryGamblingName"
   },
   "categoryGamblingDesc": {
-    "message": "Сайты онлайн-азартных игр, которые могут привести к зависимости и финансовому ущербу",
+    "message": "\u0421\u0430\u0439\u0442\u044b \u043e\u043d\u043b\u0430\u0439\u043d-\u0430\u0437\u0430\u0440\u0442\u043d\u044b\u0445 \u0438\u0433\u0440, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043c\u043e\u0433\u0443\u0442 \u043f\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u043a \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u0438 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u043c\u0443 \u0443\u0449\u0435\u0440\u0431\u0443",
     "description": "Translation for: categoryGamblingDesc"
   },
   "puzzleBlockTitle": {
-    "message": "Самоуважение - Испытание Судоку",
+    "message": "\u0421\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u0435 - \u0418\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0435 \u0421\u0443\u0434\u043e\u043a\u0443",
     "description": "Translation for: puzzleBlockTitle"
   },
   "puzzleBlockDescription": {
-    "message": "Чтобы получить доступ к этому сайту, вы должны решить сложное Судоку. Это необходимо, чтобы убедиться, что вы действительно хотите продолжить.",
+    "message": "\u0427\u0442\u043e\u0431\u044b \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0434\u043e\u0441\u0442\u0443\u043f \u043a \u044d\u0442\u043e\u043c\u0443 \u0441\u0430\u0439\u0442\u0443, \u0432\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u0440\u0435\u0448\u0438\u0442\u044c \u0441\u043b\u043e\u0436\u043d\u043e\u0435 \u0421\u0443\u0434\u043e\u043a\u0443. \u042d\u0442\u043e \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e, \u0447\u0442\u043e\u0431\u044b \u0443\u0431\u0435\u0434\u0438\u0442\u044c\u0441\u044f, \u0447\u0442\u043e \u0432\u044b \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c.",
     "description": "Translation for: puzzleBlockDescription"
   },
   "puzzleChallengeTitle": {
-    "message": "Испытание Судоку",
+    "message": "\u0418\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0435 \u0421\u0443\u0434\u043e\u043a\u0443",
     "description": "Translation for: puzzleChallengeTitle"
   },
   "placeholderEnterAnswer": {
-    "message": "Введите ваш ответ...",
+    "message": "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0432\u0430\u0448 \u043e\u0442\u0432\u0435\u0442...",
     "description": "Translation for: placeholderEnterAnswer"
   },
   "buttonSubmit": {
-    "message": "Отправить",
+    "message": "\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c",
     "description": "Translation for: buttonSubmit"
   },
   "labelAttempts": {
-    "message": "Попытки:",
+    "message": "\u041f\u043e\u043f\u044b\u0442\u043a\u0438:",
     "description": "Translation for: labelAttempts"
   },
   "labelTimeout": {
-    "message": "Тайм-аут:",
+    "message": "\u0422\u0430\u0439\u043c-\u0430\u0443\u0442:",
     "description": "Translation for: labelTimeout"
   },
   "buttonShowHint": {
-    "message": "Показать Подсказку",
+    "message": "\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u041f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0443",
     "description": "Translation for: buttonShowHint"
   },
   "puzzleSuccessMessage": {
-    "message": "Судоку решено правильно! Вы можете продолжить, если все еще хотите.",
+    "message": "\u0421\u0443\u0434\u043e\u043a\u0443 \u0440\u0435\u0448\u0435\u043d\u043e \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e! \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c, \u0435\u0441\u043b\u0438 \u0432\u0441\u0435 \u0435\u0449\u0435 \u0445\u043e\u0442\u0438\u0442\u0435.",
     "description": "Translation for: puzzleSuccessMessage"
   },
   "buttonProceedToSite": {
-    "message": "Перейти на $DOMAIN$",
+    "message": "\u041f\u0435\u0440\u0435\u0439\u0442\u0438 \u043d\u0430 $DOMAIN$",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -472,55 +472,55 @@
     "description": "Translation for: buttonProceedToSite"
   },
   "buttonChooseAlternative": {
-    "message": "Выбрать Более Здоровую Альтернативу",
+    "message": "\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0411\u043e\u043b\u0435\u0435 \u0417\u0434\u043e\u0440\u043e\u0432\u0443\u044e \u0410\u043b\u044c\u0442\u0435\u0440\u043d\u0430\u0442\u0438\u0432\u0443",
     "description": "Translation for: buttonChooseAlternative"
   },
   "puzzleFooter": {
-    "message": "Это Судоку предназначено для того, чтобы заставить вас остановиться и пересмотреть свой выбор.",
+    "message": "\u042d\u0442\u043e \u0421\u0443\u0434\u043e\u043a\u0443 \u043f\u0440\u0435\u0434\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u043e \u0434\u043b\u044f \u0442\u043e\u0433\u043e, \u0447\u0442\u043e\u0431\u044b \u0437\u0430\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u0432\u0430\u0441 \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c\u0441\u044f \u0438 \u043f\u0435\u0440\u0435\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0441\u0432\u043e\u0439 \u0432\u044b\u0431\u043e\u0440.",
     "description": "Translation for: puzzleFooter"
   },
   "errorPleaseEnterAnswer": {
-    "message": "Пожалуйста, введите ответ.",
+    "message": "\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043e\u0442\u0432\u0435\u0442.",
     "description": "Translation for: errorPleaseEnterAnswer"
   },
   "feedbackCorrectAnswer": {
-    "message": "Правильно! Молодец.",
+    "message": "\u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e! \u041c\u043e\u043b\u043e\u0434\u0435\u0446.",
     "description": "Translation for: feedbackCorrectAnswer"
   },
   "feedbackIncorrectAnswer": {
-    "message": "Неверно. Попробуйте еще раз. Попытки: $ATTEMPTS$",
+    "message": "\u041d\u0435\u0432\u0435\u0440\u043d\u043e. \u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0435 \u0440\u0430\u0437. \u041f\u043e\u043f\u044b\u0442\u043a\u0438: $ATTEMPTS$",
     "placeholders": {
       "attempts": {
         "content": "$1",
-        "example": "1/5"
+        "example": 1
       }
     },
     "description": "Translation for: feedbackIncorrectAnswer"
   },
   "feedbackMaxAttempts": {
-    "message": "Достигнуто максимальное количество попыток. Страница будет перезагружена с новым Судоку.",
+    "message": "\u0414\u043e\u0441\u0442\u0438\u0433\u043d\u0443\u0442\u043e \u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043e\u043f\u044b\u0442\u043e\u043a. \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0431\u0443\u0434\u0435\u0442 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u0430 \u0441 \u043d\u043e\u0432\u044b\u043c \u0421\u0443\u0434\u043e\u043a\u0443.",
     "description": "Translation for: feedbackMaxAttempts"
   },
   "feedbackTimeout": {
-    "message": "Время вышло! Страница будет перезагружена с новым Судоку.",
+    "message": "\u0412\u0440\u0435\u043c\u044f \u0432\u044b\u0448\u043b\u043e! \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0431\u0443\u0434\u0435\u0442 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u0430 \u0441 \u043d\u043e\u0432\u044b\u043c \u0421\u0443\u0434\u043e\u043a\u0443.",
     "description": "Translation for: feedbackTimeout"
   },
   "hintMessage": {
-    "message": "Подсказка: $HINT$",
+    "message": "\u041f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0430: $HINT$",
     "placeholders": {
       "hint": {
         "content": "$1",
-        "example": "Подумайте о простых числах"
+        "example": "\u041f\u043e\u0434\u0443\u043c\u0430\u0439\u0442\u0435 \u043e \u043f\u0440\u043e\u0441\u0442\u044b\u0445 \u0447\u0438\u0441\u043b\u0430\u0445"
       }
     },
     "description": "Translation for: hintMessage"
   },
   "hardBlockTitle": {
-    "message": "Самоуважение - Строгая Блокировка",
+    "message": "\u0421\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u0435 - \u0421\u0442\u0440\u043e\u0433\u0430\u044f \u0411\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430",
     "description": "Translation for: hardBlockTitle"
   },
   "hardBlockMessage": {
-    "message": "Доступ к $DOMAIN$ permanently blocked.",
+    "message": "\u0414\u043e\u0441\u0442\u0443\u043f \u043a $DOMAIN$ permanently blocked.",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -530,19 +530,69 @@
     "description": "Translation for: hardBlockMessage"
   },
   "hardBlockDescription": {
-    "message": "Этот сайт несовместим с вашими целями самоуважения. Доступ не разрешен ни при каких обстоятельствах.",
+    "message": "\u042d\u0442\u043e\u0442 \u0441\u0430\u0439\u0442 \u043d\u0435\u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c \u0441 \u0432\u0430\u0448\u0438\u043c\u0438 \u0446\u0435\u043b\u044f\u043c\u0438 \u0441\u0430\u043c\u043e\u0443\u0432\u0430\u0436\u0435\u043d\u0438\u044f. \u0414\u043e\u0441\u0442\u0443\u043f \u043d\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d \u043d\u0438 \u043f\u0440\u0438 \u043a\u0430\u043a\u0438\u0445 \u043e\u0431\u0441\u0442\u043e\u044f\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430\u0445.",
     "description": "Translation for: hardBlockDescription"
   },
   "hardBlockWarning": {
-    "message": "СТРОГАЯ БЛОКИРОВКА АКТИВИРОВАНА",
+    "message": "\u0421\u0422\u0420\u041e\u0413\u0410\u042f \u0411\u041b\u041e\u041a\u0418\u0420\u041e\u0412\u041a\u0410 \u0410\u041a\u0422\u0418\u0412\u0418\u0420\u041e\u0412\u0410\u041d\u0410",
     "description": "Translation for: hardBlockWarning"
   },
   "hardBlockWarningDesc": {
-    "message": "Это ваш самый высокий уровень защиты. Нет доступных вариантов обхода.",
+    "message": "\u042d\u0442\u043e \u0432\u0430\u0448 \u0441\u0430\u043c\u044b\u0439 \u0432\u044b\u0441\u043e\u043a\u0438\u0439 \u0443\u0440\u043e\u0432\u0435\u043d\u044c \u0437\u0430\u0449\u0438\u0442\u044b. \u041d\u0435\u0442 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u0445 \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u043e\u0432 \u043e\u0431\u0445\u043e\u0434\u0430.",
     "description": "Translation for: hardBlockWarningDesc"
   },
   "hardBlockFooter": {
-    "message": "Эта строгая блокировка защищает вас от сайтов, которые конфликтуют с вашими основными ценностями.",
+    "message": "\u042d\u0442\u0430 \u0441\u0442\u0440\u043e\u0433\u0430\u044f \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0430 \u0437\u0430\u0449\u0438\u0449\u0430\u0435\u0442 \u0432\u0430\u0441 \u043e\u0442 \u0441\u0430\u0439\u0442\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043a\u043e\u043d\u0444\u043b\u0438\u043a\u0442\u0443\u044e\u0442 \u0441 \u0432\u0430\u0448\u0438\u043c\u0438 \u043e\u0441\u043d\u043e\u0432\u043d\u044b\u043c\u0438 \u0446\u0435\u043d\u043d\u043e\u0441\u0442\u044f\u043c\u0438.",
     "description": "Translation for: hardBlockFooter"
+  },
+  "sudokuTimeLabel": {
+    "message": "\u0412\u0440\u0435\u043c\u044f",
+    "description": "Label for the timer in the Sudoku puzzle overlay"
+  },
+  "sudokuDifficultyLabel": {
+    "message": "\u0421\u043b\u043e\u0436\u043d\u043e\u0441\u0442\u044c",
+    "description": "Label for the difficulty stat in the Sudoku puzzle overlay"
+  },
+  "sudokuHowToTitle": {
+    "message": "\u041a\u0430\u043a \u0440\u0435\u0448\u0438\u0442\u044c \u0441\u0443\u0434\u043e\u043a\u0443",
+    "description": "Title of the instructions section in the Sudoku overlay"
+  },
+  "sudokuRule1": {
+    "message": "\u0417\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u0435 \u0441\u0435\u0442\u043a\u0443 \u0442\u0430\u043a, \u0447\u0442\u043e\u0431\u044b \u043a\u0430\u0436\u0434\u0430\u044f \u0441\u0442\u0440\u043e\u043a\u0430, \u0441\u0442\u043e\u043b\u0431\u0435\u0446 \u0438 \u0431\u043b\u043e\u043a 3\u00d73 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u043b\u0438 \u0446\u0438\u0444\u0440\u044b 1\u20139",
+    "description": "First Sudoku rule shown in instructions"
+  },
+  "sudokuRule2": {
+    "message": "\u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u044f\u0447\u0435\u0439\u043a\u0443, \u0447\u0442\u043e\u0431\u044b \u0432\u044b\u0431\u0440\u0430\u0442\u044c \u0435\u0451, \u0437\u0430\u0442\u0435\u043c \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0446\u0438\u0444\u0440\u0443 \u043d\u0430 \u043f\u0430\u043d\u0435\u043b\u0438",
+    "description": "Second Sudoku rule shown in instructions"
+  },
+  "sudokuRule3": {
+    "message": "\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0439\u0442\u0435 \u00ab\u041f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u0440\u0435\u0448\u0435\u043d\u0438\u0435\u00bb \u0434\u043b\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438 \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0430",
+    "description": "Third Sudoku rule shown in instructions"
+  },
+  "sudokuRule4": {
+    "message": "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u0435 \u0433\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0443, \u0447\u0442\u043e\u0431\u044b \u043f\u0435\u0440\u0435\u0439\u0442\u0438 \u043d\u0430 \u0441\u0430\u0439\u0442",
+    "description": "Fourth Sudoku rule shown in instructions"
+  },
+  "sudokuSolvedTitle": {
+    "message": "\ud83c\udf89 \u0413\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0430 \u0440\u0435\u0448\u0435\u043d\u0430!",
+    "description": "Heading shown when the Sudoku puzzle is solved"
+  },
+  "sudokuSolvedMessage": {
+    "message": "\u0412\u044b \u0440\u0435\u0448\u0438\u043b\u0438 \u0441\u0443\u0434\u043e\u043a\u0443 \u0437\u0430 $TIME$.",
+    "description": "Message shown when Sudoku is solved, includes elapsed time",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "02:45"
+      }
+    }
+  },
+  "sudokuCheckSolution": {
+    "message": "\u041f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u0440\u0435\u0448\u0435\u043d\u0438\u0435",
+    "description": "Button label to check the current Sudoku solution"
+  },
+  "sudokuClearBtn": {
+    "message": "\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c",
+    "description": "Button label to clear a Sudoku cell"
   }
 }
