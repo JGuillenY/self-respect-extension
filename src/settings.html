@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>__MSG_settingsTitle__</title>
+    <title>Self Respect - Settings</title>
     <style>
       body {
         width: auto;
@@ -536,26 +536,6 @@
     <div id="notification" class="notification" style="display: none"></div>
 
     <script src="settings.js"></script>
-    <script>
-      // Localize all elements with data-i18n attributes
-      document.addEventListener('DOMContentLoaded', function() {
-        const elements = document.querySelectorAll('[data-i18n]');
-        elements.forEach(element => {
-          const messageKey = element.getAttribute('data-i18n');
-          const message = chrome.i18n.getMessage(messageKey);
-          if (message) {
-            // Check if element is an input placeholder
-            if (element.hasAttribute('placeholder')) {
-              element.setAttribute('placeholder', message);
-            } else if (element.tagName === 'OPTION') {
-              // For option elements, we need to set textContent
-              element.textContent = message;
-            } else {
-              element.textContent = message;
-            }
-          }
-        });
-      });
-    </script>
+
   </body>
 </html>

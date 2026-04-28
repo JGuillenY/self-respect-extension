@@ -143,13 +143,13 @@ function showSoftBlockOverlay(
   removeExistingOverlay();
 
   const countdownMessage = autoRedirect
-    ? chrome.i18n.getMessage("redirectDelayMessage", [redirectDelay])
-    : chrome.i18n.getMessage("noRedirectDelayMessage");
+    ? `You'll be redirected to a healthier alternative in ${redirectDelay} seconds.`
+    : "This site may not align with your goals for self-respect and wellbeing.";
 
   const redirectInfo = autoRedirect
     ? `<div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
         <p style="margin: 0; font-size: 1em;">
-          ${chrome.i18n.getMessage("redirectingTo")} <br>
+          Redirecting to: <br>
           <a href="${redirectUrl}" style="color: #a3e4d7; text-decoration: underline; word-break: break-all;">
             ${redirectUrl}
           </a>
@@ -162,7 +162,7 @@ function showSoftBlockOverlay(
     <div style="max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px);">
       <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊</h1>
       <p style="font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
-        ${chrome.i18n.getMessage("youWereAboutToVisit")} <strong>${blockedDomain}</strong>.
+        You were about to visit <strong>${blockedDomain}</strong>.
       </p>
       <p style="font-size: 1.1em; margin-bottom: 40px; line-height: 1.6;">
         ${countdownMessage}
@@ -170,14 +170,14 @@ function showSoftBlockOverlay(
       ${redirectInfo}
       <div style="display: flex; gap: 15px; justify-content: center;">
         <button id="redirect-now" class="overlay-button primary">
-          ${autoRedirect ? chrome.i18n.getMessage("redirectNow") : chrome.i18n.getMessage("healthierAlternative")}
+          ${autoRedirect ? "Redirect Now" : "Go to Healthier Alternative"}
         </button>
         <button id="cancel-redirect" class="overlay-button secondary">
-          ${chrome.i18n.getMessage("cancelMessage")}
+          Cancel (Temporarily Allow)
         </button>
       </div>
       <div style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
-        <p>${chrome.i18n.getMessage("phrase1")}</p>
+        <p>Remember: Every choice you make shapes who you become.</p>
       </div>
     </div>
   `;
@@ -565,22 +565,22 @@ function showPuzzleBlockOverlay(
   overlay.innerHTML += `
     <div class="sudoku-container">
       <div class="sudoku-header">
-        <h1>${chrome.i18n.getMessage("puzzleBlockTitle")}</h1>
+        <h1>Self Respect ✊ - Sudoku Challenge</h1>
         <p>
-          ${chrome.i18n.getMessage("youWereAboutToVisit")} <strong>${blockedDomain}</strong>.
-          ${chrome.i18n.getMessage("puzzleBlockDescription")}
+          You were about to visit <strong>${blockedDomain}</strong>.
+          To access this site, you must solve a hard Sudoku puzzle. This is to ensure you truly want to proceed.
         </p>
       </div>
 
       <div class="sudoku-game-area">
         <div class="sudoku-stats">
           <div class="sudoku-stat">
-            <div class="sudoku-stat-label">${chrome.i18n.getMessage("sudokuTimeLabel")}</div>
+            <div class="sudoku-stat-label">Time</div>
             <div class="sudoku-stat-value" id="sudoku-timer">00:00</div>
           </div>
           <div class="sudoku-stat">
-            <div class="sudoku-stat-label">${chrome.i18n.getMessage("sudokuDifficultyLabel")}</div>
-            <div class="sudoku-stat-value">${chrome.i18n.getMessage("blockingLevelHard")}</div>
+            <div class="sudoku-stat-label">Difficulty</div>
+            <div class="sudoku-stat-value">Hard</div>
           </div>
         </div>
 
@@ -598,36 +598,36 @@ function showPuzzleBlockOverlay(
               <button class="sudoku-number-btn" data-number="7">7</button>
               <button class="sudoku-number-btn" data-number="8">8</button>
               <button class="sudoku-number-btn" data-number="9">9</button>
-              <button class="sudoku-number-btn sudoku-number-btn-clear" data-number="0">${chrome.i18n.getMessage("sudokuClearBtn")}</button>
+              <button class="sudoku-number-btn sudoku-number-btn-clear" data-number="0">Clear</button>
             </div>
 
             <div class="sudoku-action-buttons">
               <button id="sudoku-check" class="sudoku-action-btn sudoku-action-btn-secondary">
-                ${chrome.i18n.getMessage("sudokuCheckSolution")}
+                Check Solution
               </button>
             </div>
           </div>
         </div>
 
         <div class="sudoku-instructions">
-          <h3>${chrome.i18n.getMessage("sudokuHowToTitle")}</h3>
+          <h3>How to Solve Sudoku</h3>
           <ul>
-            <li>${chrome.i18n.getMessage("sudokuRule1")}</li>
-            <li>${chrome.i18n.getMessage("sudokuRule2")}</li>
-            <li>${chrome.i18n.getMessage("sudokuRule3")}</li>
-            <li>${chrome.i18n.getMessage("sudokuRule4")}</li>
+            <li>Fill the grid so every row, column, and 3×3 box contains digits 1–9</li>
+            <li>Click a cell to select it, then choose a number from the pad</li>
+            <li>Use Check Solution to validate your progress</li>
+            <li>Complete the puzzle to proceed to the website</li>
           </ul>
         </div>
 
         <div class="sudoku-success" id="sudoku-success">
-          <h3>${chrome.i18n.getMessage("sudokuSolvedTitle")}</h3>
+          <h3>🎉 Puzzle Solved!</h3>
           <p id="sudoku-solved-msg"></p>
           <div class="sudoku-action-buttons">
             <button id="proceed-to-site" class="sudoku-action-btn sudoku-action-btn-primary">
-              ${chrome.i18n.getMessage("buttonProceedToSite", [blockedDomain])}
+              Proceed to ${blockedDomain}
             </button>
             <button id="choose-alternative" class="sudoku-action-btn sudoku-action-btn-secondary">
-              ${autoRedirect ? chrome.i18n.getMessage("buttonChooseAlternative") : chrome.i18n.getMessage("healthierAlternative")}
+              ${autoRedirect ? "Choose Healthier Alternative" : "Go to Healthier Alternative"}
             </button>
           </div>
         </div>
@@ -989,7 +989,7 @@ function placeSudokuNumber(num: number): void {
     if (successElement) {
       if (solvedMsgElement) {
         const elapsed = Math.floor((Date.now() - sudokuGameState.startTime) / 1000);
-        solvedMsgElement.textContent = chrome.i18n.getMessage("sudokuSolvedMessage", [formatTime(elapsed)]);
+        solvedMsgElement.textContent = `You successfully completed the Sudoku puzzle in ${formatTime(elapsed)}.`;
       }
       successElement.classList.add('show');
     }
@@ -1059,7 +1059,7 @@ function checkSudokuSolution(): void {
     if (successElement) {
       if (solvedMsgElement) {
         const elapsed = Math.floor((Date.now() - sudokuGameState.startTime) / 1000);
-        solvedMsgElement.textContent = chrome.i18n.getMessage("sudokuSolvedMessage", [formatTime(elapsed)]);
+        solvedMsgElement.textContent = `You successfully completed the Sudoku puzzle in ${formatTime(elapsed)}.`;
       }
       successElement.classList.add('show');
     }
@@ -1164,20 +1164,20 @@ function showHardBlockOverlay(
   const overlay = createBaseOverlay();
   overlay.innerHTML = `
     <div style="max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px);">
-      <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊ - ${chrome.i18n.getMessage("hardBlockTitle")}</h1>
+      <h1 style="font-size: 2.5em; margin-bottom: 20px;">Self Respect ✊ - Hard Block</h1>
       <p style="font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
-        ${chrome.i18n.getMessage("hardBlockMessage", [blockedDomain])}
+        Access to ${blockedDomain} is permanently blocked.
       </p>
       <p style="font-size: 1.1em; margin-bottom: 40px; line-height: 1.6;">
-        ${chrome.i18n.getMessage("hardBlockDescription")}
-        ${autoRedirect ? chrome.i18n.getMessage("redirectDelayMessage", [redirectDelay]) : ""}
+        This site is incompatible with your self-respect goals. Access is not permitted under any circumstances.
+        ${autoRedirect ? `You'll be redirected to a healthier alternative in ${redirectDelay} seconds.` : ""}
       </p>
       <div style="background: rgba(244, 67, 54, 0.2); padding: 25px; border-radius: 15px; margin-bottom: 30px; border: 2px solid rgba(244, 67, 54, 0.5);">
         <p style="font-size: 1.3em; margin: 0; color: #f44336; text-align: center;">
-          ⚠️ ${chrome.i18n.getMessage("hardBlockWarning")} ⚠️
+          ⚠️ HARD BLOCK ACTIVATED ⚠️
         </p>
         <p style="margin: 15px 0 0 0; font-size: 1.1em; opacity: 0.9;">
-          ${chrome.i18n.getMessage("hardBlockWarningDesc")}
+          This is your highest level of protection. No bypass options are available.
         </p>
       </div>
       ${
@@ -1185,7 +1185,7 @@ function showHardBlockOverlay(
           ? `
       <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
         <p style="margin: 0; font-size: 1em;">
-          ${chrome.i18n.getMessage("redirectingTo")} <br>
+          Redirecting to: <br>
           <a href="${redirectUrl}" style="color: #a3e4d7; text-decoration: underline; word-break: break-all;">
             ${redirectUrl}
           </a>
@@ -1195,11 +1195,11 @@ function showHardBlockOverlay(
       }
       <div style="display: flex; gap: 15px; justify-content: center;">
         <button id="redirect-now" class="overlay-button primary">
-          ${chrome.i18n.getMessage("healthierAlternative")}
+          Go to Healthier Alternative
         </button>
       </div>
       <div style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
-        <p>${chrome.i18n.getMessage("hardBlockFooter")}</p>
+        <p>This hard block protects you from sites that conflict with your core values.</p>
       </div>
     </div>
   `;

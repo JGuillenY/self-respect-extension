@@ -193,11 +193,7 @@ async function loadSettings() {
     if (updatedSettings) {
       updatedSettings.enabled = this.checked;
       await saveSettings(updatedSettings);
-      showNotification(
-        this.checked
-          ? chrome.i18n.getMessage("notificationExtensionEnabled")
-          : chrome.i18n.getMessage("notificationExtensionDisabled"),
-      );
+      showNotification(this.checked ? "Extension enabled" : "Extension disabled");
     }
   });
 
@@ -206,11 +202,7 @@ async function loadSettings() {
     if (updatedSettings) {
       updatedSettings.showNotifications = this.checked;
       await saveSettings(updatedSettings);
-      showNotification(
-        this.checked
-          ? chrome.i18n.getMessage("notificationNotificationsEnabled")
-          : chrome.i18n.getMessage("notificationNotificationsDisabled"),
-      );
+      showNotification(this.checked ? "Notifications enabled" : "Notifications disabled");
     }
   });
 
@@ -224,11 +216,7 @@ async function loadSettings() {
       const redirectDelayContainer = document.getElementById("redirectDelayContainer");
       redirectDelayContainer.style.display = this.checked ? "flex" : "none";
       
-      showNotification(
-        this.checked
-          ? chrome.i18n.getMessage("notificationAutoRedirectEnabled")
-          : chrome.i18n.getMessage("notificationAutoRedirectDisabled"),
-      );
+      showNotification(this.checked ? "Auto redirect enabled" : "Auto redirect disabled");
     }
   });
 
@@ -237,7 +225,7 @@ async function loadSettings() {
     if (updatedSettings) {
       updatedSettings.redirectDelay = parseInt(this.value);
       await saveSettings(updatedSettings);
-      showNotification(chrome.i18n.getMessage("notificationRedirectDelaySet", [this.value]));
+      showNotification(`Redirect delay set to ${this.value} seconds`);
     }
   });
 
@@ -246,7 +234,7 @@ async function loadSettings() {
     if (updatedSettings) {
       updatedSettings.blockingLevel = this.value;
       await saveSettings(updatedSettings);
-      showNotification(chrome.i18n.getMessage("notificationBlockingLevelSet", [this.value]));
+      showNotification(`Blocking level set to ${this.value}`);
     }
   });
 }
@@ -263,8 +251,8 @@ async function loadCategories() {
     const categoryItem = document.createElement("div");
     categoryItem.className = "category-item";
     // Get localized name and description
-    const localizedName = chrome.i18n.getMessage(category.i18nKey || category.name);
-    const localizedDescription = chrome.i18n.getMessage(category.descriptionI18nKey || category.description);
+    const localizedName = category.name;
+    const localizedDescription = category.description;
     
     categoryItem.innerHTML = `
       <input type="checkbox" id="category-${category.name
@@ -293,11 +281,7 @@ async function loadCategories() {
             );
         }
         await saveSettings(updatedSettings);
-        showNotification(
-          this.checked
-            ? chrome.i18n.getMessage("notificationCategoryEnabled", [category.name])
-            : chrome.i18n.getMessage("notificationCategoryDisabled", [category.name]),
-        );
+        showNotification(this.checked ? `${category.name} blocking enabled` : `${category.name} blocking disabled`);
       }
     });
 
@@ -369,9 +353,7 @@ async function loadCustomDomains() {
         this.textContent = newEnabled ? "Disable" : "Enable";
         this.dataset.enabled = newEnabled;
         showNotification(
-          newEnabled
-            ? chrome.i18n.getMessage("notificationDomainEnabled", [site.domain])
-            : chrome.i18n.getMessage("notificationDomainDisabled", [site.domain]),
+          newEnabled ? `${site.domain} enabled` : `${site.domain} disabled`,
         );
       }
     });
@@ -380,7 +362,7 @@ async function loadCustomDomains() {
       const success = await removeBlockedSite(site.id);
       if (success) {
         domainItem.remove();
-        showNotification(chrome.i18n.getMessage("notificationDomainRemoved", [site.domain]));
+        showNotification(`${site.domain} removed`);
         
         // Show empty state if no domains left
         const remainingDomains = await getBlockedSites();
@@ -420,15 +402,6 @@ async function loadStatistics() {
     </div>
   `;
   
-  // Localize the stat labels
-  const statLabels = statsGrid.querySelectorAll('[data-i18n]');
-  statLabels.forEach(label => {
-    const messageKey = label.getAttribute('data-i18n');
-    const message = chrome.i18n.getMessage(messageKey);
-    if (message) {
-      label.textContent = message;
-    }
-  });
 }
 
 // Setup event listeners
@@ -450,7 +423,7 @@ function setupEventListeners() {
 
   // Reset statistics button
   document.getElementById("resetStatsBtn").addEventListener("click", async function () {
-    if (confirm(chrome.i18n.getMessage("confirmResetStatistics"))) {
+    if (confirm("Are you sure you want to reset all statistics?")) {
       // Reset stats in storage
       const resetStats = {
         totalBlocks: 0,
@@ -460,7 +433,7 @@ function setupEventListeners() {
       };
       
       chrome.storage.sync.set({ blockingStats: resetStats }, function () {
-        showNotification(chrome.i18n.getMessage("notificationStatisticsReset"));
+        showNotification("Statistics reset");
         loadStatistics();
       });
     }
@@ -476,19 +449,19 @@ async function addNewDomain() {
   const category = categorySelect.value;
   
   if (!domain) {
-    showNotification(chrome.i18n.getMessage("errorPleaseEnterDomain"), "error");
+    showNotification("Please enter a domain", "error");
     return;
   }
   
   // Basic domain validation
   if (!isValidDomain(domain)) {
-    showNotification(chrome.i18n.getMessage("errorInvalidDomain"), "error");
+    showNotification("Please enter a valid domain (e.g., example.com)", "error");
     return;
   }
   
   try {
     const newSite = await addCustomDomain(domain, category);
-    showNotification(chrome.i18n.getMessage("notificationDomainAdded", [domain]));
+    showNotification(`${domain} added to blocked list`);
     
     // Clear input
     domainInput.value = "";
@@ -497,7 +470,7 @@ async function addNewDomain() {
     await loadCustomDomains();
     await loadStatistics();
   } catch (error) {
-    showNotification(chrome.i18n.getMessage("errorAddingDomain"), "error");
+    showNotification("Error adding domain", "error");
     console.error("Error adding domain:", error);
   }
 }

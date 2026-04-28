@@ -6,12 +6,6 @@ echo ""
 # Creating directories
 rm -rf ./dist
 mkdir ./dist
-mkdir ./dist/_locales
-mkdir ./dist/_locales/en
-mkdir ./dist/_locales/es
-mkdir ./dist/_locales/pt_BR
-mkdir ./dist/_locales/zh_CN
-mkdir ./dist/_locales/ru
 
 # Copy non-javascript files
 echo ""
@@ -21,11 +15,6 @@ cp -r src/icons dist/icons
 cp src/manifest.json dist/manifest.json
 cp src/popup.html dist/popup.html
 cp src/settings.html dist/settings.html
-
-# Minify locale files
-echo ""
-echo "Minifying locale files..."
-node minify-locales.js
 
 # Compile TypeScript
 echo ""
